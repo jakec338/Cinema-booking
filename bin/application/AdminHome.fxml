@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminHomeController">
+   <children>
+      <Button fx:id="toFilmsBtn" layoutX="54.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleAdminBtns" text="Films -&gt;" />
+      <Button fx:id="logOutBtn" layoutX="54.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleAdminBtns" text="Log out" />
+      <Button fx:id="exportBtn" layoutX="54.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleAdminBtns" text="Export Films" />
+   </children>
+</AnchorPane>
