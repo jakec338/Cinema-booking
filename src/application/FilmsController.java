@@ -74,14 +74,14 @@ public class FilmsController implements Initializable {
         	String film = new String("");
         }
        	
-        switch (selectedFilm){
-        case filmList.get(0):
-        	newPage("Login.fxml");
-        }
-        
-        if (selectedFilm == filmList.get(0)){
-        	newPage("Login.fxml");
-        }
+//        switch (selectedFilm){
+//        case filmList.get():
+//        	newPage("AdminLogin.fxml");
+//        }
+//
+//        if (selectedFilm == filmList.get(0)){
+//        	newPage("AdminLogin.fxml");
+//        }
     }
     
 //    @FXML public void handleMouseClick(MouseEvent arg0) throws IOException {
@@ -92,7 +92,7 @@ public class FilmsController implements Initializable {
 //	    
 //	    if (arg0.getSource() == filmList.get(0)){
 //	    	stage=(Stage) filmListView.getScene().getWindow();
-//		    root = FXMLLoader.load(getClass().getResource("Login.fxml"));      // ??????????????????????
+//		    root = FXMLLoader.load(getClass().getResource("AdminLogin.fxml"));      // ??????????????????????
 //		    Scene scene = new Scene(root, 400, 400);
 //		    stage.setScene(scene);
 //		    stage.show();

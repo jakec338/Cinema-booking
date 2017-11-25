@@ -42,7 +42,7 @@ public class MainController {
 			
 			stage=(Stage) loginBtn.getScene().getWindow();
 			root = FXMLLoader.load(getClass().getResource("adminHome.fxml"));
-			Scene scene = new Scene(root, 400, 400);
+			Scene scene = new Scene(root, 1440, 900);
 		    stage.setScene(scene);
 		    stage.show();
 			
@@ -66,14 +66,14 @@ public class MainController {
 	        //get reference to the button's stage         
 	        stage=(Stage) adminButton.getScene().getWindow();
 	        //load up OTHER FXML document
-	  root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+	  root = FXMLLoader.load(getClass().getResource("AdminLogin.fxml"));
 	      }
 	     else{
 	       stage=(Stage) userButton.getScene().getWindow();
-	  root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+	  root = FXMLLoader.load(getClass().getResource("UserLogin.fxml"));
 	      }
 	     //create a new scene with root and set the stage
-	      Scene scene = new Scene(root, 400, 400);
+	      Scene scene = new Scene(root, 1440, 900);
 	      stage.setScene(scene);
 	      stage.show();
 	    
