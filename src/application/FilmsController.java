@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ public class FilmsController implements Initializable {
     @FXML
     public ListView filmListView;
 
-    protected List<String> filmList = new ArrayList<>();
+    protected List<String> filmList = new ArrayList<String>();
 
     protected ListProperty<String> listProperty = new SimpleListProperty<>();
 
@@ -70,14 +71,13 @@ public class FilmsController implements Initializable {
     @FXML public void handleMouseClick(MouseEvent arg0) throws IOException {
     	
         String selectedFilm = (String) filmListView.getSelectionModel().getSelectedItem();
-        for (int i = 0; i < filmList.size(); i++){
-        	String film = new String("");
-        }
+
+        String[] arr = filmList.toArray(new String[filmList.size()]);
        	
-        switch (selectedFilm){
-        case filmList.get(0):
-        	newPage("Login.fxml");
-        }
+//        switch (selectedFilm){
+//        case arr[0]:                   // cannot use arrays in switch statement 
+//        	newPage("Login.fxml");
+//        }
         
         if (selectedFilm == filmList.get(0)){
         	newPage("Login.fxml");
