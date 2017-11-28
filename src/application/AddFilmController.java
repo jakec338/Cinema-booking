@@ -35,11 +35,13 @@ public class AddFilmController {
 	
 	  @FXML
 	  private Label titleLabel;
+
 	  @FXML
 	  private TextField titleTextField;
 	  
 	  @FXML
 	  private Label dirLabel;
+
 	  @FXML
 	  private TextField dirTextField;
 	    

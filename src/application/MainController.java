@@ -35,14 +35,14 @@ public class MainController {
 	
 	@FXML
 	public void Login(ActionEvent event) throws IOException{
-		if (txtName.getText().equals("user") && txtPass.getText().equals("pass") ){
+		if (txtName.getText().equals("admin") && txtPass.getText().equals("pass") ){
 			Stage stage; 
 		    Parent root;
 			lblStatus.setText("Login successful");
 			
 			stage=(Stage) loginBtn.getScene().getWindow();
 			root = FXMLLoader.load(getClass().getResource("adminHome.fxml"));
-			Scene scene = new Scene(root, 1440, 900);
+			Scene scene = new Scene(root, 540, 400);
 		    stage.setScene(scene);
 		    stage.show();
 			
@@ -73,7 +73,7 @@ public class MainController {
 	  root = FXMLLoader.load(getClass().getResource("UserLogin.fxml"));
 	      }
 	     //create a new scene with root and set the stage
-	      Scene scene = new Scene(root, 1440, 900);
+	      Scene scene = new Scene(root, 540, 400);
 	      stage.setScene(scene);
 	      stage.show();
 	    

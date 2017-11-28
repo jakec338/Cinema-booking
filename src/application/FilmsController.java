@@ -43,7 +43,7 @@ public class FilmsController implements Initializable {
 	    Parent root;
 	    stage=(Stage) addFilmBtn.getScene().getWindow();
 	    root = FXMLLoader.load(getClass().getResource("addFilm.fxml"));
-	    Scene scene = new Scene(root, 400, 400);
+	    Scene scene = new Scene(root, 540, 400);
 	    stage.setScene(scene);
 	    stage.show();
 	    
@@ -111,7 +111,7 @@ public class FilmsController implements Initializable {
     	Parent root;
     	stage=(Stage) filmListView.getScene().getWindow();
 	    root = FXMLLoader.load(getClass().getResource(fxmlFile));     
-	    Scene scene = new Scene(root, 400, 400);
+	    Scene scene = new Scene(root, 540, 400);
 	    stage.setScene(scene);
 	    stage.show();
     }
