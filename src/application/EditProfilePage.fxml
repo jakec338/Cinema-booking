@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.EditProfilePage"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UpdateProfilePageController">
+    <children>
+        <Label fx:id="Welcome" layoutX="120.0" layoutY="42.0" text="My User Details" textFill="#500778" />
 
+        <Label fx:id="NameLbl" layoutX="50.0" layoutY="100.0" text="Name" textFill="#500778" />
+        <TextField fx:id="FirstName" layoutX="120.0" layoutY="100.0" promptText="first" text="User" />
+        <TextField fx:id="Surname" layoutX="300.0" layoutY="100.0" promptText="last" text="Name" />
+
+        <Label fx:id="EmailLbl" layoutX="50.0" layoutY="200.0" text="Email" textFill="#500778" />
+        <TextField fx:id="Email" layoutX="120.0" layoutY="200.0" promptText="email" text="username@mail.com" />
+
+        <Label fx:id="PasswordLbl" layoutX="50.0" layoutY="300.0" text="Password" textFill="#500778" />
+        <TextField fx:id="Password" layoutX="120.0" layoutY="300.0" promptText="password" />
+
+        <Button fx:id="EditBtn" layoutX="400.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleEdit" text="Edit Profile" />
+    </children>
 </AnchorPane>

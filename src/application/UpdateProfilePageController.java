@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class UpdateProfilePageController {
+
     @FXML
     private Button EditBtn;
 
