@@ -27,15 +27,27 @@ public class UserLoginController {
     private Button loginBtn;
 
     @FXML
-    private Button backButton;
+    private Button backBtn;
+
+    @FXML
+    private Button registerBtn;
 
     @FXML
     public void handleUserLogin(ActionEvent event) throws IOException {
-        if (event.getSource()==backButton){
+        if (event.getSource()== backBtn){
             Stage stage;
             Parent root;
-            stage=(Stage) backButton.getScene().getWindow();
+            stage=(Stage) backBtn.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+            Scene scene = new Scene(root, 540, 400);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (event.getSource()== registerBtn){
+            Stage stage;
+            Parent root;
+            stage=(Stage) registerBtn.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("Register.fxml"));
             Scene scene = new Scene(root, 540, 400);
             stage.setScene(scene);
             stage.show();
