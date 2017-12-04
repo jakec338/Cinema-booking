@@ -36,7 +36,7 @@ public class AdminHomeController {
 	  root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 	      }
 	     //create a new scene with root and set the stage
-	      Scene scene = new Scene(root, 400, 400);
+	      Scene scene = new Scene(root, 540, 400);
 	      stage.setScene(scene);
 	      stage.show();
 	    

@@ -44,7 +44,7 @@ public class FilmsController implements Initializable {
 	    Parent root;
 	    stage=(Stage) addFilmBtn.getScene().getWindow();
 	    root = FXMLLoader.load(getClass().getResource("addFilm.fxml"));
-	    Scene scene = new Scene(root, 400, 400);
+	    Scene scene = new Scene(root, 540, 400);
 	    stage.setScene(scene);
 	    stage.show();
 	    
@@ -75,13 +75,14 @@ public class FilmsController implements Initializable {
         String[] arr = filmList.toArray(new String[filmList.size()]);
        	
 //        switch (selectedFilm){
-//        case arr[0]:                   // cannot use arrays in switch statement 
+//        case arr[0]:                   // cannot use arrays in switch statement
 //        	newPage("Login.fxml");
 //        }
         
         if (selectedFilm == filmList.get(0)){
         	newPage("Login.fxml");
         }
+
     }
     
 //    @FXML public void handleMouseClick(MouseEvent arg0) throws IOException {
@@ -92,7 +93,7 @@ public class FilmsController implements Initializable {
 //	    
 //	    if (arg0.getSource() == filmList.get(0)){
 //	    	stage=(Stage) filmListView.getScene().getWindow();
-//		    root = FXMLLoader.load(getClass().getResource("Login.fxml"));      // ??????????????????????
+//		    root = FXMLLoader.load(getClass().getResource("AdminLogin.fxml"));      // ??????????????????????
 //		    Scene scene = new Scene(root, 400, 400);
 //		    stage.setScene(scene);
 //		    stage.show();
@@ -111,7 +112,7 @@ public class FilmsController implements Initializable {
     	Parent root;
     	stage=(Stage) filmListView.getScene().getWindow();
 	    root = FXMLLoader.load(getClass().getResource(fxmlFile));     
-	    Scene scene = new Scene(root, 400, 400);
+	    Scene scene = new Scene(root, 540, 400);
 	    stage.setScene(scene);
 	    stage.show();
     }
