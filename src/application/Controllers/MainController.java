@@ -1,4 +1,4 @@
-package application;
+package application.Controllers;
 
 
 import java.io.IOException;
@@ -41,7 +41,7 @@ public class MainController {
 			lblStatus.setText("Login successful");
 			
 			stage=(Stage) loginBtn.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("adminHome.fxml"));
+			root = FXMLLoader.load(getClass().getResource("Views/AdminHome.fxml"));
 			Scene scene = new Scene(root, 540, 400);
 		    stage.setScene(scene);
 		    stage.show();
@@ -66,11 +66,11 @@ public class MainController {
 	        //get reference to the button's stage         
 	        stage=(Stage) adminButton.getScene().getWindow();
 	        //load up OTHER FXML document
-	  root = FXMLLoader.load(getClass().getResource("AdminLogin.fxml"));
+	  root = FXMLLoader.load(getClass().getResource("Views/AdminLogin.fxml"));
 	      }
 	     else{
 	       stage=(Stage) userButton.getScene().getWindow();
-	  root = FXMLLoader.load(getClass().getResource("UserLogin.fxml"));
+	  root = FXMLLoader.load(getClass().getResource("Views/UserLogin.fxml"));
 	      }
 	     //create a new scene with root and set the stage
 	      Scene scene = new Scene(root, 540, 400);

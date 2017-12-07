@@ -1,4 +1,4 @@
-package application;
+package application.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -38,7 +38,7 @@ public class UserLoginController {
             Stage stage;
             Parent root;
             stage=(Stage) backBtn.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+            root = FXMLLoader.load(getClass().getResource("Views/Main.fxml"));
             Scene scene = new Scene(root, 540, 400);
             stage.setScene(scene);
             stage.show();
@@ -47,7 +47,7 @@ public class UserLoginController {
             Stage stage;
             Parent root;
             stage=(Stage) registerBtn.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("Register.fxml"));
+            root = FXMLLoader.load(getClass().getResource("Views/Register.fxml"));
             Scene scene = new Scene(root, 540, 400);
             stage.setScene(scene);
             stage.show();
@@ -58,7 +58,7 @@ public class UserLoginController {
             lblStatus.setText("Login successful");
 
             stage = (Stage) loginBtn.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("UserHome.fxml"));
+            root = FXMLLoader.load(getClass().getResource("Views/UserHome.fxml"));
             Scene scene = new Scene(root, 540, 400);
             stage.setScene(scene);
             stage.show();

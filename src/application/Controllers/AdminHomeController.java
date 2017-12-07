@@ -1,7 +1,7 @@
-package application;
+package application.Controllers;
 
 import java.io.IOException;
-import java.util.Random;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,11 +29,11 @@ public class AdminHomeController {
 	        //get reference to the button's stage         
 	        stage=(Stage) toFilmsBtn.getScene().getWindow();
 	        //load up OTHER FXML document
-	  root = FXMLLoader.load(getClass().getResource("Films.fxml"));
+	  root = FXMLLoader.load(getClass().getResource("Views/Films.fxml"));
 	      }
 	     else{
 	       stage=(Stage) logOutBtn.getScene().getWindow();
-	  root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+	  root = FXMLLoader.load(getClass().getResource("Views/Main.fxml"));
 	      }
 	     //create a new scene with root and set the stage
 	      Scene scene = new Scene(root, 540, 400);

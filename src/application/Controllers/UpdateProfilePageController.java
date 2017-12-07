@@ -1,7 +1,7 @@
-package application;
+package application.Controllers;
 
 import java.io.IOException;
-import java.util.Random;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +22,7 @@ public class UpdateProfilePageController {
             //get reference to the button's stage
             stage=(Stage) EditBtn.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("EditProfilePage.fxml"));
+            root = FXMLLoader.load(getClass().getResource("Views/EditProfilePage.fxml"));
             Scene scene = new Scene(root, 540, 400);
             stage.setScene(scene);
             stage.show();

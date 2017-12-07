@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="322.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FilmsController">
+<AnchorPane id="AnchorPane" prefHeight="322.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.FilmsController">
     <children>
       <Button fx:id="addFilmBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAddFilm" text="Add Film -&gt;" />
       <ListView fx:id="filmListView" layoutX="14.0" layoutY="56.0" onMouseClicked="#handleMouseClick" prefHeight="252.0" prefWidth="288.0" />

@@ -8,26 +8,26 @@
 
 <?import javafx.scene.text.Text?>
 <?import javafx.geometry.Insets?>
-<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application.RegisterController" prefHeight="400.0" prefWidth="540.0" vgap="5" hgap="5">
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application.Controllers.RegisterController" prefHeight="400.0" prefWidth="540.0" vgap="5" hgap="5">
     <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
     <children>
         <Text text="Register" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
 
         <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
-        <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
         <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
 
-        <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
         <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
 
-        <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
         <Label text="Repeat Password:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
 
-        <PasswordField fx:id="confirmPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        <PasswordField fx:id="confirmPassword" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
         <Button fx:id="registerBtn" GridPane.columnIndex="2" GridPane.rowIndex="4" onAction="#Register" text="Register"/>
 

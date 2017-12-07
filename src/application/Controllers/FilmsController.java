@@ -1,4 +1,4 @@
-package application;
+package application.Controllers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,7 +42,7 @@ public class FilmsController implements Initializable {
     	Stage stage; 
 	    Parent root;
 	    stage=(Stage) addFilmBtn.getScene().getWindow();
-	    root = FXMLLoader.load(getClass().getResource("addFilm.fxml"));
+	    root = FXMLLoader.load(getClass().getResource("Views/AddFilm.fxml"));
 	    Scene scene = new Scene(root, 540, 400);
 	    stage.setScene(scene);
 	    stage.show();
