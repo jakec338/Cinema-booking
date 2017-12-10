@@ -18,17 +18,27 @@ public class AdminHomeController {
 	
 	@FXML
 	public void toFilmsListScene() throws IOException{
-		main.showFilmsListScene();
+		Main.showFilmsListScene();
 	}
 	
 	@FXML
 	public void toAddFilmScene() throws IOException{
-		main.showAddFilmScene();
+		Main.showAddFilmScene();
 	}
 	
 	@FXML
 	public void toHomeScene() throws IOException{
-		main.showMainItems();
+		Main.showMainItems();
+	}
+
+	@FXML
+	public void toCurrentUsersScene() throws IOException{
+		Main.showCurrentUsersScene();
+	}
+
+	@FXML
+	public void toCurrentAdminsScene() throws IOException{
+		Main.showCurrentAdminsScene();
 	}
 	
 }

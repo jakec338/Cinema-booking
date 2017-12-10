@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.AddFilmController">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="220.0">
+         <children>
+            <Label fx:id="titleLabel" text="Title" />
+            <TextField fx:id="titleTextField" />
+         </children>
+      </HBox>
+      <Button fx:id="submitFilmBtn" layoutX="27.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
+      <Button fx:id="readBtn" layoutX="27.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleRead" text="Read" />
+      <HBox layoutX="14.0" layoutY="77.0" prefHeight="38.0" prefWidth="220.0">
+         <children>
+            <Label fx:id="dirLabel" text="Director" />
+            <TextField fx:id="dirTextField" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

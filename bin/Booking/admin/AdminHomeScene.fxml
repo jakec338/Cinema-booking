@@ -15,6 +15,8 @@
          <children>
             <Button fx:id="filmListBtn" mnemonicParsing="false" onAction="#toFilmsListScene" prefHeight="27.0" prefWidth="164.0" text="Films" />
             <Button fx:id="addFilmBtn" mnemonicParsing="false" onAction="#toAddFilmScene" prefHeight="27.0" prefWidth="166.0" text="Add Film" />
+            <Button fx:id="currentUsersBtn" mnemonicParsing="false" onAction="#toCurrentUsersScene" prefHeight="27.0" prefWidth="166" text="Manage Users"/>
+            <Button fx:id="currentAdminsBtn" mnemonicParsing="false" onAction="#toCurrentAdminsScene" prefHeight="27.0" prefWidth="166" text="Manage Admins"/>
             <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#toHomeScene" prefHeight="27.0" prefWidth="172.0" text="Logout" />
          </children>
       </VBox>

@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0370e391-95d8-40b6-8a05-9fbbe9196170" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/Admins.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/Films.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/Users.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/AddUserScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/AddUserSceneController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/CurrentAdminsScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/CurrentAdminsSceneController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/CurrentUsersScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/CurrentUsersSceneController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/EditSingleUserScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/SingleAdminScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/SingleUserScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/currentUsers/SingleUserSceneController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/register/AlertHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/register/RegisterScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/register/RegisterSceneController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/updateProfile/UpdateProfileScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/updateProfile/UpdateProfileSceneController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/user/UserData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/user/UserHomeScene.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Booking/user/UserHomeSceneController.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Booking/filename.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/Main.class" afterPath="$PROJECT_DIR$/bin/Booking/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/addFilm/AddFilmSceneController.class" afterPath="$PROJECT_DIR$/bin/Booking/addFilm/AddFilmSceneController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/admin/AdminHomeController.class" afterPath="$PROJECT_DIR$/bin/Booking/admin/AdminHomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/filmList/FilmData.class" afterPath="$PROJECT_DIR$/bin/Booking/filmList/FilmData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/filmList/FilmListSceneController.class" afterPath="$PROJECT_DIR$/bin/Booking/filmList/FilmListSceneController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/login/LoginSceneController.class" afterPath="$PROJECT_DIR$/bin/Booking/login/LoginSceneController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/singleFilm/SingleFilmSceneController.class" afterPath="$PROJECT_DIR$/bin/Booking/singleFilm/SingleFilmSceneController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/view/MainItemsController.class" afterPath="$PROJECT_DIR$/bin/Booking/view/MainItemsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/admin/AdminHomeScene.fxml" afterPath="$PROJECT_DIR$/bin/Booking/admin/AdminHomeScene.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/filename.txt" afterPath="$PROJECT_DIR$/bin/Booking/filename.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/login/LoginScene.fxml" afterPath="$PROJECT_DIR$/bin/Booking/login/LoginScene.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/view/MainItems.fxml" afterPath="$PROJECT_DIR$/bin/Booking/view/MainItems.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Booking/view/MainView.fxml" afterPath="$PROJECT_DIR$/bin/Booking/view/MainView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/Main.java" afterPath="$PROJECT_DIR$/src/Booking/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/addFilm/AddFilmSceneController.java" afterPath="$PROJECT_DIR$/src/Booking/addFilm/AddFilmSceneController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/admin/AdminHomeController.java" afterPath="$PROJECT_DIR$/src/Booking/admin/AdminHomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/admin/AdminHomeScene.fxml" afterPath="$PROJECT_DIR$/src/Booking/admin/AdminHomeScene.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/filmList/FilmListSceneController.java" afterPath="$PROJECT_DIR$/src/Booking/filmList/FilmListSceneController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/login/LoginScene.fxml" afterPath="$PROJECT_DIR$/src/Booking/login/LoginScene.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/login/LoginSceneController.java" afterPath="$PROJECT_DIR$/src/Booking/login/LoginSceneController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/singleFilm/SingleFilmSceneController.java" afterPath="$PROJECT_DIR$/src/Booking/singleFilm/SingleFilmSceneController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/view/MainItems.fxml" afterPath="$PROJECT_DIR$/src/Booking/view/MainItems.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/view/MainItemsController.java" afterPath="$PROJECT_DIR$/src/Booking/view/MainItemsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Booking/view/MainView.fxml" afterPath="$PROJECT_DIR$/src/Booking/view/MainView.fxml" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.idea/bin/" />
+    <ignored path="$PROJECT_DIR$/bin/bin/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="LoginSceneController.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/Booking/login/LoginSceneController.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="471">
+                    <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                      <element signature="e#1087#1095#0" expanded="true" />
+                      <element signature="e#1757#1765#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Booking/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="218" column="55" lean-forward="false" selection-start-line="218" selection-start-column="55" selection-end-line="218" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentUsersSceneController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/CurrentUsersSceneController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SingleUserSceneController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/SingleUserSceneController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="method#deleteUser#0;class#SingleUserSceneController#0" expanded="false" />
+                <element signature="method#deleteAdmin#0;class#SingleUserSceneController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditSingleUserScene.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/EditSingleUserScene.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="67" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SingleAdminScene.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/SingleAdminScene.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentAdminsScene.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/CurrentAdminsScene.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentAdminsSceneController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/CurrentAdminsSceneController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>adminHome</find>
+      <find>showC</find>
+      <find>init</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Booking/user/UserData.java" />
+        <option value="$PROJECT_DIR$/src/Booking/updateProfile/UpdateProfileSceneController.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/login/ValidateUser.java" />
+        <option value="$PROJECT_DIR$/src/Booking/register/AlertHelper.java" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/AddCurrentUserScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/AddCurrentUserSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/view/MainItems.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/login/ValidateLoginDetails.java" />
+        <option value="$PROJECT_DIR$/src/Booking/view/MainItemsController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/view/MainView.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/CurrentUsersScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/filmList/FilmListSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/SingleUserScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/login/ValidateDetails.java" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/CurrentUsersSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/login/LoginScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/login/LoginSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/Users.txt" />
+        <option value="$PROJECT_DIR$/src/Booking/user/UserHome.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/user/UserHomeController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/user/UserHomeSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/updateProfile/UpdateProfileScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/updateProfile/UpdateProfileSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/AddUserScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/AddUserSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/register/RegisterSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/register/RegisterScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/admin/AdminHomeScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/admin/AdminHomeController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/CurrentAdminsScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/CurrentAdminsSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/SingleAdminScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/SingleUserSceneController.java" />
+        <option value="$PROJECT_DIR$/src/Booking/currentUsers/EditSingleUserScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Booking/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="443" />
+    <option name="y" value="23" />
+    <option name="width" value="1236" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="addFilm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="currentUsers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="filmList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="singleFilm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="updateProfile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cinema-booking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cinema-booking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Booking" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="initData&#9;PSI&#9;JAVA://Booking.currentUsers.SingleUserSceneController#initData&#10;BufferedR&#9;PSI&#9;JAVA://java.io.BufferedReader&#10;showCur&#9;PSI&#9;JAVA://Booking.Main#showCurrentUsersScene&#10;email&#9;PSI&#9;JAVA://com.sun.tools.internal.xjc.reader.xmlschema.parser.XMLSchemaInternalizationLogic" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Booking.register" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Booking/user" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Booking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Booking.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CinemaBooking" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0370e391-95d8-40b6-8a05-9fbbe9196170" name="Default" comment="" />
+      <created>1512770703683</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1512770703683</updated>
+      <workItem from="1512770713361" duration="135000" />
+      <workItem from="1512770862634" duration="50202000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="50337000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1679" height="1027" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14651579" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Booking/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/Films.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/addFilm/AddFilmScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="90" lean-forward="false" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/addFilm/AddFilmSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/login/ValidateUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/lib/tools.jar!/com/sun/tools/internal/xjc/reader/xmlschema/parser/XMLSchemaInternalizationLogic.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/register/AlertHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/filmList/FilmData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/login/ValidateLoginDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/view/MainView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/view/MainItemsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/filmList/FilmListScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/singleFilm/SingleFilmScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/login/ValidateDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/login/LoginScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/filmList/FilmListSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/user/UserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#700#701#0" expanded="false" />
+            <element signature="e#734#735#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/login/LoginSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1087#1095#0" expanded="true" />
+            <element signature="e#1757#1765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/user/UserHomeScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <marker date="1512937303784" expanded="true" signature="1430:1584" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/user/UserHomeSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/singleFilm/SingleFilmSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/Users.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/Admins.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/updateProfile/UpdateProfileScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/updateProfile/UpdateProfileSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/AddUserScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="39" column="103" lean-forward="false" selection-start-line="39" selection-start-column="103" selection-end-line="39" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/register/RegisterSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/AddUserSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/view/MainItems.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/admin/AdminHomeScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="155" lean-forward="false" selection-start-line="18" selection-start-column="155" selection-end-line="18" selection-end-column="155" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/SingleUserScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="14" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/CurrentUsersScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/register/RegisterScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/admin/AdminHomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/CurrentAdminsSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/CurrentUsersSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/SingleAdminScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/SingleUserSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="method#deleteUser#0;class#SingleUserSceneController#0" expanded="false" />
+            <element signature="method#deleteAdmin#0;class#SingleUserSceneController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/EditSingleUserScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="67" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/currentUsers/CurrentAdminsScene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="218" column="55" lean-forward="false" selection-start-line="218" selection-start-column="55" selection-end-line="218" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

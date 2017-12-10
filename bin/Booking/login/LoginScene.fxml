@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.login.LoginSceneController">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.login.LoginSceneController">
    <center>
       <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="loginBtn" layoutX="277.0" layoutY="274.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+            <Button fx:id="loginBtn" layoutX="275.0" layoutY="242.0" mnemonicParsing="false" onAction="#Login" text="Login" />
             <Label fx:id="loginLabel" layoutX="261.0" layoutY="95.0" text="Enter Details" />
-            <PasswordField fx:id="password" layoutX="222.0" layoutY="200.0" promptText="Password" />
-            <TextField fx:id="userName" layoutX="222.0" layoutY="144.0" promptText="Username" />
+            <PasswordField fx:id="password" layoutX="222.0" layoutY="187.0" promptText="Password" />
+            <TextField fx:id="username" layoutX="222.0" layoutY="144.0" promptText="Username" />
          </children>
       </AnchorPane>
    </center>

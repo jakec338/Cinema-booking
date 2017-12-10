@@ -33,9 +33,9 @@ public class FilmListSceneController implements Initializable {
     	
     	ObservableList<FilmData> films = FXCollections.observableArrayList();
     	
-    	String fileName = "src/Booking/filename.txt";
+    	String fileName = "src/Booking/Films.txt";
 		File file = new File(fileName);
-    	List<String> lines =  Files.readAllLines(Paths.get("src/Booking/filename.txt"), Charset.defaultCharset());
+    	List<String> lines =  Files.readAllLines(Paths.get("src/Booking/Films.txt"), Charset.defaultCharset());
 		int numberOfLines = lines.size();   // never used
 		Scanner inputStream = new Scanner(file);
 		
@@ -66,6 +66,6 @@ public class FilmListSceneController implements Initializable {
     
     @FXML public void toSingleFilmScene() throws IOException{
     	// if cell is not empty  TO ADD
-    	main.showSingleFilmScene(tableView);
+    	Main.showSingleFilmScene(tableView);
     }
 }

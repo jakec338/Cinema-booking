@@ -2,9 +2,13 @@ package Booking;
 
 import java.io.IOException;
 
+import Booking.currentUsers.SingleUserSceneController;
 import Booking.filmList.FilmData;
 import Booking.singleFilm.SingleFilmSceneController;
+import Booking.user.UserData;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
@@ -49,8 +53,59 @@ public class Main extends Application{
 		BorderPane loginScene = loader.load();
 		mainLayout.setCenter(loginScene);
 	}
-	
-	
+
+	public static void showCurrentUsersScene() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("currentUsers/CurrentUsersScene.fxml"));
+        BorderPane currentUsersScene = loader.load();
+        mainLayout.setCenter(currentUsersScene);
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+        BorderPane adminHomeScene = adminLoader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        // Sets the centre view to filmList
+        adminHomeScene.setCenter(currentUsersScene);
+    }
+
+    public static void showCurrentAdminsScene() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("currentUsers/CurrentAdminsScene.fxml"));
+        BorderPane currentAdminsScene = loader.load();
+        mainLayout.setCenter(currentAdminsScene);
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+        BorderPane adminHomeScene = adminLoader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        // Sets the centre view to filmList
+        adminHomeScene.setCenter(currentAdminsScene);
+    }
+
+    public static void showRegisterScene() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("register/RegisterScene.fxml"));
+        BorderPane loginScene = loader.load();
+        mainLayout.setCenter(loginScene);
+    }
+
+	public static void showAddUserScene() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("currentUsers/AddUserScene.fxml"));
+        BorderPane registerScene = loader.load();
+        mainLayout.setCenter(registerScene);
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+        BorderPane adminHomeScene = adminLoader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        // Sets the centre view to filmList
+        adminHomeScene.setCenter(registerScene);
+    }
+
 	public static void showAdminHomeScene() throws IOException{
 		
 		// Loads film list scene for admin home landing page
@@ -67,6 +122,23 @@ public class Main extends Application{
 		// Sets the centre view to filmList
 		adminHomeScene.setCenter(filmListScene);
 	}
+
+    public static void showUserHomeScene() throws IOException{
+
+        // Loads film list scene for admin home landing page
+        FXMLLoader filmListLoader = new FXMLLoader();
+        filmListLoader.setLocation(Main.class.getResource("updateProfile/updateProfileScene.fxml"));
+        BorderPane filmListScene = filmListLoader.load();
+
+        // Loads the admin home scaffolding
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("user/UserHomeScene.fxml"));
+        BorderPane adminHomeScene = loader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        // Sets the centre view to filmList
+        adminHomeScene.setCenter(filmListScene);
+    }
 	
 	public static void showFilmsListScene() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
@@ -118,6 +190,42 @@ public class Main extends Application{
 		
 		adminHomeScene.setCenter(singleFilmScene);
 	}
+
+	public static void showSingleUserScene(TableView tableView) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("currentUsers/SingleUserScene.fxml"));
+        BorderPane singleUserScene = loader.load();
+        mainLayout.setCenter(singleUserScene);
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+        BorderPane adminHomeScene = adminLoader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        // Sets the centre view to filmList
+        adminHomeScene.setCenter(singleUserScene);
+
+        SingleUserSceneController controller = loader.getController();
+        controller.initData((UserData)tableView.getSelectionModel().getSelectedItem());
+    }
+
+    public static void showSingleAdminScene(TableView tableView) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("currentUsers/SingleAdminScene.fxml"));
+        BorderPane singleAdminScene = loader.load();
+        mainLayout.setCenter(singleAdminScene);
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+        BorderPane adminHomeScene = adminLoader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        // Sets the centre view to filmList
+        adminHomeScene.setCenter(singleAdminScene);
+
+        SingleUserSceneController controller = loader.getController();
+        controller.initData((UserData)tableView.getSelectionModel().getSelectedItem());
+    }
 	
 	
 	public static void main(String[] args) {

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.currentUsers.CurrentUsersSceneController">
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableView" layoutX="22.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" onMouseClicked="#toSingleUserScene" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="username" prefWidth="109.0" text="Username" />
+                        <TableColumn fx:id="email" prefWidth="126.0" text="Email" />
+                        <TableColumn fx:id="password" prefWidth="126.0" text="Password" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane>
+            <children>
+                <Button mnemonicParsing="false" text="Add User" onAction="#toAddUserScene" />
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

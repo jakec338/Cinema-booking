@@ -39,7 +39,7 @@ public class SingleFilmSceneController {
 		String director = "";
 		
 		String tempFile = "src/Booking/temp.text";
-		String oldFileName = "src/Booking/filename.txt";
+		String oldFileName = "src/Booking/Films.txt";
 		
 		File oldFile = new File(oldFileName);
 		File newFile = new File(tempFile);

@@ -46,12 +46,12 @@ public class AddFilmSceneController {
 		  filmDetails.add(title);
 		  filmDetails.add(director);
 		  
-//		  List<String> lines =  Files.readAllLines(Paths.get("src/Booking/filename.txt"), Charset.defaultCharset());
+//		  List<String> lines =  Files.readAllLines(Paths.get("src/Booking/Films.txt"), Charset.defaultCharset());
 //		  int onLine = lines.size();
 		  
 		  
 		  
-		  PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
+		  PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/Films.txt"),true));
 	      writer.append(title + ";" + director + "\n");
 	      writer.close();
 	       
