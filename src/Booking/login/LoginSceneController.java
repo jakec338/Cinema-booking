@@ -10,14 +10,13 @@ import java.util.Scanner;
 import Booking.Main;
 import Booking.user.UserData;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class LoginSceneController {
 
 	private Main main;
+
+	@FXML private TableView<UserData> tableView;
 
 	@FXML private Label loginLabel;
 
@@ -34,7 +33,7 @@ public class LoginSceneController {
 		if(username.getText().equals("admin") && password.getText().equals("pass")){
 			Main.showAdminHomeScene();
 		} else if(username.getText().equals("user") && password.getText().equals("pass")) {
-			Main.showUserHomeScene();
+			Main.showUserHomeScene(tableView);
 		} else {
 			loginLabel.setText("Login Failed");
 		}
@@ -95,7 +94,7 @@ public class LoginSceneController {
 	@FXML
 	public void Login() throws IOException{
 		if (ValidateUserDetails()){
-			Main.showUserHomeScene();
+			Main.showUserHomeScene(tableView);
 		} else if(ValidateAdminDetails()){
 			Main.showAdminHomeScene();
 		} else {

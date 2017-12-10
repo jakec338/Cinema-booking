@@ -1,11 +1,14 @@
 package Booking;
 
+import java.awt.*;
 import java.io.IOException;
 
+import Booking.currentUsers.EditSingleUserSceneController;
 import Booking.currentUsers.SingleUserSceneController;
 import Booking.filmList.FilmData;
 import Booking.singleFilm.SingleFilmSceneController;
 import Booking.user.UserData;
+import Booking.user.UserHomeSceneController;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -123,12 +126,51 @@ public class Main extends Application{
 		adminHomeScene.setCenter(filmListScene);
 	}
 
-    public static void showUserHomeScene() throws IOException{
+//    public static void showUserHomeScene(TableView tableView) throws IOException{
+//
+//        // Loads film list scene for admin home landing page
+//        FXMLLoader filmListLoader = new FXMLLoader();
+//        filmListLoader.setLocation(Main.class.getResource("updateProfile/updateProfileScene.fxml"));
+//        BorderPane updateProfileScene = filmListLoader.load();
+//
+//        // Loads the admin home scaffolding
+//        FXMLLoader loader = new FXMLLoader();
+//        loader.setLocation(Main.class.getResource("user/UserHomeScene.fxml"));
+//        BorderPane adminHomeScene = loader.load();
+//        mainLayout.setCenter(adminHomeScene);
+//
+//        UserHomeSceneController controller = loader.getController();
+//        controller.initData((UserData) tableView.getSelectionModel().getSelectedItem());
+//
+//        // Sets the centre view to filmList
+//        adminHomeScene.setCenter(updateProfileScene);
+//    }
+
+    public static void showUserHomeScene(TableView tableView) throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("updateProfile/updateProfileScene.fxml"));
+        BorderPane updateProfileScene = loader.load();
+
+        FXMLLoader userLoader = new FXMLLoader();
+        userLoader.setLocation(Main.class.getResource("user/UserHomeScene.fxml"));
+        BorderPane adminHomeScene = userLoader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        adminHomeScene.setCenter(updateProfileScene);
+
+        /*
+        CURRENTLY DOESN'T CORRECTLY LOAD LABELS
+         */
+//        EditSingleUserSceneController controller = loader.getController();
+//        controller.initData((UserData) tableView.getSelectionModel().getSelectedItem());
+    }
+
+    public static void showEditSingleUserScene() throws IOException{
 
         // Loads film list scene for admin home landing page
-        FXMLLoader filmListLoader = new FXMLLoader();
-        filmListLoader.setLocation(Main.class.getResource("updateProfile/updateProfileScene.fxml"));
-        BorderPane filmListScene = filmListLoader.load();
+        FXMLLoader editLoader = new FXMLLoader();
+        editLoader.setLocation(Main.class.getResource("currentUsers/EditSingleUserScene.fxml"));
+        BorderPane editSingleUserScene = editLoader.load();
 
         // Loads the admin home scaffolding
         FXMLLoader loader = new FXMLLoader();
@@ -137,7 +179,7 @@ public class Main extends Application{
         mainLayout.setCenter(adminHomeScene);
 
         // Sets the centre view to filmList
-        adminHomeScene.setCenter(filmListScene);
+        adminHomeScene.setCenter(editSingleUserScene);
     }
 	
 	public static void showFilmsListScene() throws IOException{
@@ -156,7 +198,6 @@ public class Main extends Application{
 		adminHomeScene.setCenter(filmListScene);
 	}
 	
-	
 	public static void showAddFilmScene() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("addFilm/AddFilmScene.fxml"));     
@@ -173,8 +214,7 @@ public class Main extends Application{
 		adminHomeScene.setCenter(addFilmScene);
 		
 	}
-	
-	
+
 	public static void showSingleFilmScene(TableView tableView) throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("singleFilm/SingleFilmScene.fxml"));     

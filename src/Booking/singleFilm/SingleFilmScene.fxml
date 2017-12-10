@@ -31,7 +31,8 @@
                            </children>
                         </GridPane>
                         <Button fx:id="deleteBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteFilm" text="Delete" textAlignment="JUSTIFY" />
-                     </children></AnchorPane>
+                     </children>
+              </AnchorPane>
             </content>
           </Tab>
           <Tab text="Showing Times">

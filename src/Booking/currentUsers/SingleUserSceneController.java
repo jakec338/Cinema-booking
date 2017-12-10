@@ -15,6 +15,7 @@ import Booking.user.UserData;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class SingleUserSceneController {
 
@@ -43,7 +44,7 @@ It then deletes the initial file and renames the new one
         String email = "";
         String password = "";
 
-        String tempFile = "src/Booking/temp.text";
+        String tempFile = "src/Booking/temp.txt";
         String oldFileName = "src/Booking/Users.txt";
 
         File oldFile = new File(oldFileName);
@@ -81,7 +82,7 @@ It then deletes the initial file and renames the new one
         String email = "";
         String password = "";
 
-        String tempFile = "src/Booking/temp.text";
+        String tempFile = "src/Booking/temp.txt";
         String oldFileName = "src/Booking/Admins.txt";
 
         File oldFile = new File(oldFileName);
@@ -111,6 +112,9 @@ It then deletes the initial file and renames the new one
         newFile.renameTo(dump);
 
         Main.showCurrentAdminsScene();
+
+    }
+    public void saveUser() throws IOException{
 
     }
 }
