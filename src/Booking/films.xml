@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><Root>
+<Film id="k">
+    <Title>Thor</Title>
+    <Director>Taiko</Director> 
+    <ShowTimes>
+    	<ShowTime id="12:30">
+    		<Seats>
+    			<Seat id="A1">CustJuan</Seat>
+    			<Seat id="A2">Jean</Seat>
+    			<Seat id="A3"></Seat>
+    		</Seats>
+    	</ShowTime>
+    	<ShowTime id="16:00">
+    		<Seats>
+    			<Seat id="A3">CustJuanAgain</Seat>
+    		</Seats>
+    	</ShowTime>
+    </ShowTimes>  
+</Film>
+<Film id="t">
+    <Title>Film</Title>
+    <Director>Dirs</Director>
+     <ShowTimes>
+    	<ShowTime id="12:30">
+    		<Seats>
+    			<Seat id="A2">Cust1</Seat>
+    		</Seats>
+    	</ShowTime>
+    </ShowTimes>  
+</Film>
+
+
+
+
+
+
+
+
+</Root>

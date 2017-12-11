@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -30,13 +31,27 @@
                               <Label fx:id="directorLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
-                        <Button fx:id="deleteBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteFilm" text="Delete" textAlignment="JUSTIFY" />
+                        <Button fx:id="deleteBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" textAlignment="JUSTIFY" />
                      </children></AnchorPane>
             </content>
           </Tab>
           <Tab text="Showing Times">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane fx:id="flowPane" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="56.0">
+                           <children>
+                              <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0" />
+                           </children></FlowPane>
+                        <Rectangle fx:id="seatA2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="77.0" layoutX="427.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" width="83.0" />
+                        <FlowPane layoutX="273.0" layoutY="14.0" prefHeight="0.0" prefWidth="92.0">
+                           <children>
+                              <VBox fx:id="seatsVbox" prefHeight="14.0" prefWidth="92.0" />
+                           </children>
+                        </FlowPane>
+                        <AnchorPane fx:id="seatsAnchorPane" layoutX="236.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
+                        <StackPane fx:id="seatsStackPane" layoutX="427.0" layoutY="76.0" prefHeight="150.0" prefWidth="161.0" />
+                     </children></AnchorPane>
             </content>
           </Tab>
         </tabs>

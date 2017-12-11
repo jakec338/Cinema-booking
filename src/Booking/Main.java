@@ -2,6 +2,11 @@ package Booking;
 
 import java.io.IOException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
+
 import Booking.filmList.FilmData;
 import Booking.singleFilm.SingleFilmSceneController;
 import javafx.application.Application;
@@ -103,7 +108,7 @@ public class Main extends Application{
 	}
 	
 	
-	public static void showSingleFilmScene(TableView tableView) throws IOException{
+	public static void showSingleFilmScene(TableView tableView) throws IOException, XPathExpressionException, ParserConfigurationException, SAXException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("singleFilm/SingleFilmScene.fxml"));     
 		BorderPane singleFilmScene = loader.load();
