@@ -1,4 +1,4 @@
-package Booking.register;
+package Booking.addUser;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -28,7 +28,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-public class RegisterSceneController {
+public class AddUserSceneController {
 
     Main main;
     String username;
@@ -92,6 +92,48 @@ public class RegisterSceneController {
         File file = new File("src/Booking/Users.xml");
         StreamResult stream = new StreamResult(file);
         tran.transform(source, stream);
+        System.out.println("?????");
+
+        Main.showCurrentUsersScene();
+    }
+
+    private void writeToAdminXML(String usernameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
+
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+
+        Document xmlDoc = docBuilder.parse("src/Booking/Admins.xml");
+        Node root=xmlDoc.getFirstChild();
+
+        Element user = xmlDoc.createElement("User");
+
+        Element username = xmlDoc.createElement("Username");
+        username.appendChild(xmlDoc.createTextNode(usernameInput));
+        user.appendChild(username);
+
+        Element email = xmlDoc.createElement("Email");
+        email.appendChild(xmlDoc.createTextNode(emailInput));
+        user.appendChild(email);
+
+        Element password = xmlDoc.createElement("Password");
+        password.appendChild(xmlDoc.createTextNode(passwordInput));
+        user.appendChild(password);
+
+        root.appendChild(user);
+
+
+        TransformerFactory tf = TransformerFactory.newInstance();
+        Transformer tran = tf.newTransformer();
+        tran.setOutputProperty(OutputKeys.INDENT, "yes");
+        tran.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+        DOMSource source = new DOMSource(xmlDoc);
+
+        File file = new File("src/Booking/Admins.xml");
+        StreamResult stream = new StreamResult(file);
+        tran.transform(source, stream);
+        System.out.println("?????");
+
+        Main.showCurrentAdminsScene();
     }
 
     @FXML
@@ -104,7 +146,7 @@ public class RegisterSceneController {
         userDetails.add(email);
         userDetails.add(password);
 
-        { Window owner = submitDetailsBtn.getScene().getWindow();
+        Window owner = submitDetailsBtn.getScene().getWindow();
             //Checks username is entered
             if(usernameTextField.getText().isEmpty()) {
                 AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
@@ -150,17 +192,21 @@ public class RegisterSceneController {
 
 
             AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "User Added!",
-                    "Welcome " + usernameTextField.getText());}
+                    "Welcome " + usernameTextField.getText());
 
+        if(staffConfirm.isSelected()) {
+            writeToAdminXML(username, email, password);
 
+            PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
+            writer.append(username + ";" + email + ";" + password + "\n");
+            writer.close();
+        } else{
             writeToUserXML(username, email, password);
 
             PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
             writer.append(username + ";" + email + ";" + password + "\n");
             writer.close();
-
-
-        Main.showMainItems();
+        }
     }
 
     private boolean validateEmail() {

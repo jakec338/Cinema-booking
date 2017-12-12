@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.currentUsers.CurrentAdminsSceneController">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.currentAdmins.CurrentAdminsSceneController">
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
@@ -22,7 +22,7 @@
     <bottom>
         <AnchorPane>
             <children>
-                <Button mnemonicParsing="false" text="Add User" onAction="#toAddUserScene" />
+                <Button mnemonicParsing="false" text="Add Admin" onAction="#toAddUserScene" />
             </children>
         </AnchorPane>
     </bottom>

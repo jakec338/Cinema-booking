@@ -3,15 +3,12 @@ package Booking.user;
 import java.io.IOException;
 
 import Booking.Main;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
-import javafx.stage.Stage;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
 
 public class UserHomeSceneController {
 
@@ -27,20 +24,9 @@ public class UserHomeSceneController {
 
     @FXML private Button logoutBtn;
 
-    @FXML Label usernameLabel;
-    @FXML Label emailLabel;
-    @FXML Label passwordLabel;
-
-    public void initData(UserData userData){
-        selectedUser = userData;
-        usernameLabel.setText(selectedUser.getUsername());
-        emailLabel.setText(selectedUser.getEmail());
-        passwordLabel.setText(selectedUser.getPassword());
-    }
-
     @FXML
-    public void toUpdateProfileScene() throws IOException{
-        Main.showUserHomeScene(tableView);
+    public void toUpdateProfileScene() throws IOException, ParserConfigurationException, SAXException {
+        Main.showUserHomeScene();
     }
 
     @FXML

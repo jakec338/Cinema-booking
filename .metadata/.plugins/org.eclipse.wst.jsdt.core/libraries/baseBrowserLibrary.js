@@ -16,7 +16,7 @@
  * @augments Object
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Object
  */
 function DOMException(){};
@@ -28,7 +28,7 @@ DOMException.prototype = new Object();
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.          
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.INDEX_SIZE_ERR=1;
 /**
@@ -38,7 +38,7 @@ DOMException.INDEX_SIZE_ERR=1;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.         
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.DOMSTRING_SIZE_ERR=2;
 /**
@@ -48,7 +48,7 @@ DOMException.DOMSTRING_SIZE_ERR=2;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.           
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.HIERARCHY_REQUEST_ERR=3;
 /**
@@ -58,7 +58,7 @@ DOMException.HIERARCHY_REQUEST_ERR=3;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.         
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.WRONG_DOCUMENT_ERR=4;
 /**
@@ -68,7 +68,7 @@ DOMException.WRONG_DOCUMENT_ERR=4;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.          
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.INVALID_CHARACTER_ERR=5;
 /**
@@ -78,7 +78,7 @@ DOMException.INVALID_CHARACTER_ERR=5;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.         
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.NO_DATA_ALLOWED_ER=6;
 /**
@@ -88,7 +88,7 @@ DOMException.NO_DATA_ALLOWED_ER=6;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.         
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.NO_MODIFICATION_ALLOWED_ERR=7;
 /**
@@ -98,7 +98,7 @@ DOMException.NO_MODIFICATION_ALLOWED_ERR=7;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.          
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.NOT_FOUND_ERR=8;
 /**
@@ -108,7 +108,7 @@ DOMException.NOT_FOUND_ERR=8;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.        
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.NOT_SUPPORTED_ERR=9;
 /**
@@ -118,7 +118,7 @@ DOMException.NOT_SUPPORTED_ERR=9;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.         
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.INUSE_ATTRIBUTE_ERR=10;
 /**
@@ -128,7 +128,7 @@ DOMException.INUSE_ATTRIBUTE_ERR=10;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.         
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.INVALID_STATE_ERR=11;
 /**
@@ -138,7 +138,7 @@ DOMException.INVALID_STATE_ERR=11;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.        
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.SYNTAX_ERR=12;
 /**
@@ -148,7 +148,7 @@ DOMException.SYNTAX_ERR=12;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.           
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.INVALID_MODIFICATION_ER=13;
 /**
@@ -158,7 +158,7 @@ DOMException.INVALID_MODIFICATION_ER=13;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.          
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.NAMESPACE_ERR=14;
 /**
@@ -168,7 +168,7 @@ DOMException.NAMESPACE_ERR=14;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.         
+ * @since Level 2 Document Object model Core Definition.
  */
 DOMException.INVALID_ACCESS_ERR=15;
 /**
@@ -177,7 +177,7 @@ DOMException.INVALID_ACCESS_ERR=15;
   * 
   * @type Number
   * @since Standard ECMA-262 3rd. Edition 
-  * @since Level 2 Document Object Model Core Definition.   
+  * @since Level 2 Document Object model Core Definition.
   */
 DOMException.prototype.code=0;
 
@@ -188,7 +188,7 @@ DOMException.prototype.code=0;
  * @augments Object
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see   Object     
  */
 function DOMImplementation(){};
@@ -201,7 +201,7 @@ DOMImplementation.prototype = new Object();
  * @param {String} version
  * @returns {Boolean}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition. 
+ * @since Level 2 Document Object model Core Definition.
  */ 
 DOMImplementation.prototype.hasFeature = function(feature, version){return false;};
 /**
@@ -214,7 +214,7 @@ DOMImplementation.prototype.hasFeature = function(feature, version){return false
  * @returns {DocumentType}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see DocumentType
  */ 
 DOMImplementation.prototype.createDocumentType = function(qualifiedName, publicId, systemId){return new DocumentType();};
@@ -228,7 +228,7 @@ DOMImplementation.prototype.createDocumentType = function(qualifiedName, publicI
  * @returns {Document}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Document
  */ 
 DOMImplementation.prototype.createDocument = function(namespaceURI, qualifiedName, doctype){return new HTMLDocument();}; 
@@ -240,7 +240,7 @@ DOMImplementation.prototype.createDocument = function(namespaceURI, qualifiedNam
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see   Node    
  */
 function DocumentFragment(){};
@@ -253,7 +253,7 @@ DocumentFragment.prototype=new Node();
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node  
  */ 
 function Document(){};
@@ -264,7 +264,7 @@ Document.prototype = new Node();
  * 
  * @type  Window
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Window  
  */ 
 Document.prototype.defaultView = new Window(); 
@@ -274,7 +274,7 @@ Document.prototype.defaultView = new Window();
  * 
  * @type  DocumentType
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see DocumentType   
  */ 
 Document.prototype.doctype = new DocumentType(); 
@@ -284,7 +284,7 @@ Document.prototype.doctype = new DocumentType();
  *  
  * @type   DOMImplementation
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see DOMImplementation
  */ 
 Document.prototype.implementation = new DOMImplementation();
@@ -294,7 +294,7 @@ Document.prototype.implementation = new DOMImplementation();
  * 
  * @type   Element
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  * @see Element
  */ 
 Document.prototype.documentElement= new HTMLElement(); 
@@ -304,7 +304,7 @@ Document.prototype.documentElement= new HTMLElement();
  * 
  * @type   Array
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Document.prototype.styleSheets= new Array(); 
 /**
@@ -315,7 +315,7 @@ Document.prototype.styleSheets= new Array();
  * @returns {Element}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.  
+ * @since Level 2 Document Object model Core Definition.
  * @see Element  
  */  
 Document.prototype.createElement=function(tagName){return new HTMLElement();}; 
@@ -325,7 +325,7 @@ Document.prototype.createElement=function(tagName){return new HTMLElement();};
  * 
  * @returns {DocumentFragment}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition. 
+ * @since Level 2 Document Object model Core Definition.
  * @see DocumentFragment 
  */ 
 Document.prototype.createDocumentFragment=function(){return new DocumentFragment();}; 
@@ -336,7 +336,7 @@ Document.prototype.createDocumentFragment=function(){return new DocumentFragment
  * @param {String} data
  * @returns {Text}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.  
+ * @since Level 2 Document Object model Core Definition.
  * @see Text 
  */ 
 Document.prototype.createTextNode=function(data){return new Text();}; 
@@ -347,7 +347,7 @@ Document.prototype.createTextNode=function(data){return new Text();};
  * @param {String} data
  * @returns {Comment}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition. 
+ * @since Level 2 Document Object model Core Definition.
  * @see Comment   
  */ 
 Document.prototype.createComment=function(data){return new Comment();}; 
@@ -359,7 +359,7 @@ Document.prototype.createComment=function(data){return new Comment();};
  * @returns {CDATASection}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see CDATASection     
  */
 Document.prototype.createCDATASection=function(data){}; 
@@ -373,7 +373,7 @@ Document.prototype.createCDATASection=function(data){};
  * @returns {ProcessingInstruction}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see ProcessingInstruction      
 */
 Document.prototype.createProcessingInstruction=function(target, data){return new ProcessingInstruction();}; 
@@ -385,7 +385,7 @@ Document.prototype.createProcessingInstruction=function(target, data){return new
  * @returns {Attr}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Attr   
  */
 Document.prototype.createAttribute=function(name){return new Attr();}; 
@@ -397,7 +397,7 @@ Document.prototype.createAttribute=function(name){return new Attr();};
  * @returns {EntityReference}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see EntityReference     
  */
 Document.prototype.createEntityReference=function(name){return new EntityReference();}; 
@@ -408,7 +408,7 @@ Document.prototype.createEntityReference=function(name){return new EntityReferen
  * @param {String} tagname
  * @returns {NodeList}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see NodeList     
  */
 Document.prototype.getElementsByTagName=function(tagname){return new NodeList();}; 
@@ -421,7 +421,7 @@ Document.prototype.getElementsByTagName=function(tagname){return new NodeList();
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node        
  */
 Document.prototype.importNode=function(importedNode, deep){return new Node();}; 
@@ -434,7 +434,7 @@ Document.prototype.importNode=function(importedNode, deep){return new Node();};
  * @returns {Element}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Element        
  */
 Document.prototype.createElementNS=function(namespaceURI, qualifiedName){return new HTMLElement();}; 
@@ -446,7 +446,7 @@ Document.prototype.createElementNS=function(namespaceURI, qualifiedName){return 
  * @returns {Object}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Element        
  */
 Document.prototype.createEvent=function(eventType){return new Object();}; 
@@ -459,7 +459,7 @@ Document.prototype.createEvent=function(eventType){return new Object();};
  * @returns {Attr}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see  Attr       
  */
 Document.prototype.createAttributeNS=function(namespaceURI, qualifiedName){return new Attr();}; 
@@ -471,7 +471,7 @@ Document.prototype.createAttributeNS=function(namespaceURI, qualifiedName){retur
  * @param {String} localName
  * @returns {NodeList}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see  NodeList       
  */
 Document.prototype.getElementsByTagNameNS=function(namespaceURI, localName){return new NodeList();}; 
@@ -482,7 +482,7 @@ Document.prototype.getElementsByTagNameNS=function(namespaceURI, localName){retu
  * @param {String} elementId
  * @returns {Element}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Element         
  */ 
 Document.prototype.getElementById=function(elementId){return new HTMLElement();};
@@ -495,7 +495,7 @@ Document.prototype.getElementById=function(elementId){return new HTMLElement();}
  * @constructor
  * @memberOf Node
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see EventTarget    
  */
 function Node(){};
@@ -507,7 +507,7 @@ Node.prototype=new EventTarget();
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.ELEMENT_NODE=1; 
 /**
@@ -517,7 +517,7 @@ Node.ELEMENT_NODE=1;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.ATTRIBUTE_NODE=2;
 /**
@@ -527,7 +527,7 @@ Node.ATTRIBUTE_NODE=2;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.TEXT_NODE=3;
 /**
@@ -537,7 +537,7 @@ Node.TEXT_NODE=3;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.CDATA_SECTION_NODE=4; 
 /**
@@ -547,7 +547,7 @@ Node.CDATA_SECTION_NODE=4;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.ENTITY_REFERENCE_NODE=5; 
 /**
@@ -556,7 +556,7 @@ Node.ENTITY_REFERENCE_NODE=5;
  * @memberOf Node
  * @see Node 
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
 
  * @see    http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/ecma-script-binding.html     
 */
@@ -568,7 +568,7 @@ Node.ENTITY_NODE=6;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.PROCESSING_INSTRUCTION_NODE=7; 
 /**
@@ -578,7 +578,7 @@ Node.PROCESSING_INSTRUCTION_NODE=7;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.COMMENT_NODE=8;
 /**
@@ -588,7 +588,7 @@ Node.COMMENT_NODE=8;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.DOCUMENT_NODE=9;
 /**
@@ -598,7 +598,7 @@ Node.DOCUMENT_NODE=9;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.DOCUMENT_TYPE_NODE=10; 
 /**
@@ -608,7 +608,7 @@ Node.DOCUMENT_TYPE_NODE=10;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.DOCUMENT_FRAGMENT_NODE=11; 
 /**
@@ -618,7 +618,7 @@ Node.DOCUMENT_FRAGMENT_NODE=11;
  * @constant
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 Node.NOTATION_NODE=12;
 /**
@@ -627,7 +627,7 @@ Node.NOTATION_NODE=12;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.  
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.nodeName = ""; 
 /**
@@ -637,7 +637,7 @@ Node.prototype.nodeName = "";
  * @type String
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.nodeValue = ""; 
 /**
@@ -646,7 +646,7 @@ Node.prototype.nodeValue = "";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */  
 Node.prototype.nodeType = 0; 
 /**
@@ -655,7 +655,7 @@ Node.prototype.nodeType = 0;
  * 
  * @type Node
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */  
 Node.prototype.parentNode=new Node(); 
@@ -665,7 +665,7 @@ Node.prototype.parentNode=new Node();
  *  
  * @type NodeList
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see NodeList    
 */ 
 Node.prototype.childNodes=new NodeList(); 
@@ -675,7 +675,7 @@ Node.prototype.childNodes=new NodeList();
  * 
  * @type Node
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */  
 Node.prototype.firstChild=new Node(); 
@@ -685,7 +685,7 @@ Node.prototype.firstChild=new Node();
  * 
  * @type Node
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */  
 Node.prototype.lastChild=new Node();  
@@ -695,7 +695,7 @@ Node.prototype.lastChild=new Node();
  * 
  * @type Node
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */  
 Node.prototype.previousSibling=new Node(); 
@@ -705,7 +705,7 @@ Node.prototype.previousSibling=new Node();
  * 
  * @type Node
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */  
 Node.prototype.nextSibling=new Node(); 
@@ -715,7 +715,7 @@ Node.prototype.nextSibling=new Node();
  * 
  * @type NamedNodeMap
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  * @see NamedNodeMap
  */ 
 Node.prototype.attributes=new NamedNodeMap();
@@ -725,7 +725,7 @@ Node.prototype.attributes=new NamedNodeMap();
  *  
  * @type Document
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Document    
  */ 
 Node.prototype.ownerDocument = new HTMLDocument(); 
@@ -735,7 +735,7 @@ Node.prototype.ownerDocument = new HTMLDocument();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.namespaceURI=""; 
 /**
@@ -745,7 +745,7 @@ Node.prototype.namespaceURI="";
  * @type String
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.prefix = ""; 
 /**
@@ -754,7 +754,7 @@ Node.prototype.prefix = "";
  *   
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.localName= "";
 /**
@@ -766,7 +766,7 @@ Node.prototype.localName= "";
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node  
  */  
 Node.prototype.insertBefore = function(newChild, refChild){return new Node();}; 
@@ -779,7 +779,7 @@ Node.prototype.insertBefore = function(newChild, refChild){return new Node();};
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node  
  */ 
 Node.prototype.replaceChild = function(newChild, oldChild){return new Node();}; 
@@ -791,7 +791,7 @@ Node.prototype.replaceChild = function(newChild, oldChild){return new Node();};
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node  
  */ 
 Node.prototype.removeChild = function(oldChild){return new Node();}; 
@@ -803,7 +803,7 @@ Node.prototype.removeChild = function(oldChild){return new Node();};
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node  
  */  
 Node.prototype.appendChild = function(newChild){return new Node();}; 
@@ -813,7 +813,7 @@ Node.prototype.appendChild = function(newChild){return new Node();};
  * 
  * @returns {Boolean}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.  
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.hasChildNodes=function(){return false;}; 
 /**
@@ -823,7 +823,7 @@ Node.prototype.hasChildNodes=function(){return false;};
  * @param {Boolean} deep
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node  
  */ 
 Node.prototype.cloneNode=function(deep){return new Node();}; 
@@ -832,7 +832,7 @@ Node.prototype.cloneNode=function(deep){return new Node();};
  * http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/ecma-script-binding.html
  *   
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.normalize = function(){}; 
 /**
@@ -843,7 +843,7 @@ Node.prototype.normalize = function(){};
  * @param {String} version
  * @returns {Boolean}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition. 
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.isSupported=function(feature, version){return false;}; 
 /**
@@ -852,7 +852,7 @@ Node.prototype.isSupported=function(feature, version){return false;};
  *   
  * @returns {Boolean}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition. 
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Node.prototype.hasAttributes=function(){return false;};
 
@@ -863,7 +863,7 @@ Node.prototype.hasAttributes=function(){return false;};
  * @augments Object
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Object
  */
 function NodeList(){};
@@ -874,7 +874,7 @@ NodeList.prototype = new Object();
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.  
+ * @since Level 2 Document Object model Core Definition.
  */ 
 NodeList.prototype.length=0; 
 /**
@@ -885,7 +885,7 @@ NodeList.prototype.length=0;
  * @param {Number} index
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node     
 */ 
 NodeList.prototype.item = function(index){return new Node();}; 
@@ -897,7 +897,7 @@ NodeList.prototype.item = function(index){return new Node();};
  * @augments Object
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Object
  */
 function NamedNodeMap(){};
@@ -908,7 +908,7 @@ NamedNodeMap.prototype = new Object();
  * 
  * @type   Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.   
+ * @since Level 2 Document Object model Core Definition.
  */
 NamedNodeMap.prototype.length=0; 
 /**
@@ -918,7 +918,7 @@ NamedNodeMap.prototype.length=0;
  * @param {String} name
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */  
 NamedNodeMap.prototype.getNamedItem=function(name){return new Node();}; 
@@ -930,7 +930,7 @@ NamedNodeMap.prototype.getNamedItem=function(name){return new Node();};
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */ 
 NamedNodeMap.prototype.setNamedItem=function(arg){return new Node();}; 
@@ -942,7 +942,7 @@ NamedNodeMap.prototype.setNamedItem=function(arg){return new Node();};
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */ 
 NamedNodeMap.prototype.removeNamedItem=function(name){return new Node();}; 
@@ -954,7 +954,7 @@ NamedNodeMap.prototype.removeNamedItem=function(name){return new Node();};
  * @param {Number} index
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */ 
 NamedNodeMap.prototype.item=function(index){return new Node();}; 
@@ -966,7 +966,7 @@ NamedNodeMap.prototype.item=function(index){return new Node();};
  * @param {String} localName
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */ 
 NamedNodeMap.prototype.getNamedItemNS=function(namespaceURI, localName){return new Node();}; 
@@ -978,7 +978,7 @@ NamedNodeMap.prototype.getNamedItemNS=function(namespaceURI, localName){return n
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */ 
 NamedNodeMap.prototype.setNamedItemNS=function(arg){return new Node();}; 
@@ -991,7 +991,7 @@ NamedNodeMap.prototype.setNamedItemNS=function(arg){return new Node();};
  * @returns {Node}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node    
  */ 
 NamedNodeMap.prototype.removeNamedItemNS=function(namespaceURI, localName){return new Node();}; 
@@ -1003,7 +1003,7 @@ NamedNodeMap.prototype.removeNamedItemNS=function(namespaceURI, localName){retur
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node
  */ 
 function CharacterData(){};
@@ -1015,7 +1015,7 @@ CharacterData.prototype=new Node();
  * @type   String
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 CharacterData.prototype.data=""; 
 /**
@@ -1024,7 +1024,7 @@ CharacterData.prototype.data="";
  * 
  * @type   Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 CharacterData.prototype.length=0; 
 /**
@@ -1036,7 +1036,7 @@ CharacterData.prototype.length=0;
  * @returns {String}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 CharacterData.prototype.substringData=function(offset, count){return "";}; 
 /**
@@ -1046,7 +1046,7 @@ CharacterData.prototype.substringData=function(offset, count){return "";};
  * @param {String} arg
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */  
 CharacterData.prototype.appendData=function(arg){}; 
 /**
@@ -1057,7 +1057,7 @@ CharacterData.prototype.appendData=function(arg){};
  * @param {String} arg
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 CharacterData.prototype.insertData=function(offset, arg){};  
 /**
@@ -1068,7 +1068,7 @@ CharacterData.prototype.insertData=function(offset, arg){};
  * @param {Number} count
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 CharacterData.prototype.deleteData=function(offset, count){}; 
 /**
@@ -1080,7 +1080,7 @@ CharacterData.prototype.deleteData=function(offset, count){};
  * @param {String} arg
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 CharacterData.prototype.replaceData=function(offset, count, arg){}; 
 
@@ -1091,7 +1091,7 @@ CharacterData.prototype.replaceData=function(offset, count, arg){};
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node
  */
 function Attr(){};
@@ -1102,7 +1102,7 @@ Attr.prototype = new Node();
  * 
  * @type   String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Attr.prototype.name = ""; 
 /**
@@ -1111,7 +1111,7 @@ Attr.prototype.name = "";
  * 
  * @type   Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Attr.prototype.specified = false; 
 /**
@@ -1121,7 +1121,7 @@ Attr.prototype.specified = false;
  * @type   String
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Attr.prototype.value = "";
 /**
@@ -1130,7 +1130,7 @@ Attr.prototype.value = "";
  * 
  * @type   Element
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Element  
  */ 
 Attr.prototype.ownerElement = new Element();
@@ -1142,7 +1142,7 @@ Attr.prototype.ownerElement = new Element();
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node
  */
 function Element(){};
@@ -1151,7 +1151,7 @@ Element.prototype=new Node();
  * Property tagName  
  * @type   String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.tagName="";
 /**
@@ -1162,7 +1162,7 @@ Element.prototype.tagName="";
  * @param {Function} listener
  * @param {Boolean} useCapture
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.addEventListener=function(type, listener, useCapture){}; 
 /**
@@ -1172,7 +1172,7 @@ Element.prototype.addEventListener=function(type, listener, useCapture){};
  * @param {String} type
  * @param {Function} listener
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.attachEvent=function(type, listener){}; 
 /**
@@ -1182,7 +1182,7 @@ Element.prototype.attachEvent=function(type, listener){};
  * @param {String} type
  * @param {Function} listener
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.detachEvent=function(type, listener){}; 
 /**
@@ -1192,7 +1192,7 @@ Element.prototype.detachEvent=function(type, listener){};
  * @param {Object} event
  * @returns {Boolean}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.dispatchEvent=function(event){return false;}; 
 /**
@@ -1202,7 +1202,7 @@ Element.prototype.dispatchEvent=function(event){return false;};
  * @param {String} name
  * @returns {String}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.getAttribute=function(name){return "";}; 
 /**
@@ -1213,7 +1213,7 @@ Element.prototype.getAttribute=function(name){return "";};
  * @param {String} value
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.setAttribute=function(name, value){}; 
 /**
@@ -1223,7 +1223,7 @@ Element.prototype.setAttribute=function(name, value){};
  * @param {String} name
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.removeAttribute=function(name){}; 
 /**
@@ -1233,7 +1233,7 @@ Element.prototype.removeAttribute=function(name){};
  * @param {String} name
  * @returns {Attr}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.getAttributeNode=function(name){return new Attr();}; 
 /**
@@ -1244,7 +1244,7 @@ Element.prototype.getAttributeNode=function(name){return new Attr();};
  * @returns {Attr}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.setAttributeNode=function(newAttr){return new Attr();}; 
 /**
@@ -1255,7 +1255,7 @@ Element.prototype.setAttributeNode=function(newAttr){return new Attr();};
  * @returns {Attr}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Element.prototype.removeAttributeNode=function(oldAttr){return new Attr();}; 
 /**
@@ -1265,7 +1265,7 @@ Element.prototype.removeAttributeNode=function(oldAttr){return new Attr();};
  * @param {String} name
  * @returns {NodeList}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.getElementsByTagName=function(name){return new NodeList();}; 
 /**
@@ -1277,7 +1277,7 @@ Element.prototype.getElementsByTagName=function(name){return new NodeList();};
  * @returns {String}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.getAttributeNS=function(namespaceURI, localName){return "";}; 
 /**
@@ -1289,7 +1289,7 @@ Element.prototype.getAttributeNS=function(namespaceURI, localName){return "";};
  * @param {String} value
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.setAttributeNS=function(namespaceURI, qualifiedName, value){}; 
 /**
@@ -1300,7 +1300,7 @@ Element.prototype.setAttributeNS=function(namespaceURI, qualifiedName, value){};
  * @param {String} localName
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Element.prototype.removeAttributeNS=function(namespaceURI, localName){}; 
 /**
@@ -1311,7 +1311,7 @@ Element.prototype.removeAttributeNS=function(namespaceURI, localName){};
  * @param {String} localName
  * @returns {Attr}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.getAttributeNodeNS=function(namespaceURI, localName){return new Attr();}; 
 /**
@@ -1322,7 +1322,7 @@ Element.prototype.getAttributeNodeNS=function(namespaceURI, localName){return ne
  * @returns {Attr}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.setAttributeNodeNS=function(newAttr){return new Attr();}; 
 /**
@@ -1333,7 +1333,7 @@ Element.prototype.setAttributeNodeNS=function(newAttr){return new Attr();};
  * @param {String} localName
  * @returns {NodeList}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.getElementsByTagNameNS=function(namespaceURI, localName){return new NodeList();}; 
 /**
@@ -1343,7 +1343,7 @@ Element.prototype.getElementsByTagNameNS=function(namespaceURI, localName){retur
  * @param {String} name
  * @returns {Boolean}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Element.prototype.hasAttribute=function(name){return false;}; 
 /**
@@ -1354,7 +1354,7 @@ Element.prototype.hasAttribute=function(name){return false;};
  * @param {String} localName
  * @returns {Boolean}
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 Element.prototype.hasAttributeNS=function(namespaceURI, localName){return false;}; 
 
@@ -1365,7 +1365,7 @@ Element.prototype.hasAttributeNS=function(namespaceURI, localName){return false;
  * @augments CharacterData
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see CharacterData
  */
 function Text(){};
@@ -1378,7 +1378,7 @@ Text.prototype = new CharacterData();
  * @returns {Text}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Text
  */
 Text.prototype.splitText = function(offset) {return new Text();};
@@ -1390,7 +1390,7 @@ Text.prototype.splitText = function(offset) {return new Text();};
  * @augments CharacterData
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see CharacterData
  */
 function Comment(){};
@@ -1403,7 +1403,7 @@ Comment.prototype = new CharacterData();
  * @augments Text
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Text
  */
 function CDATASection(){};
@@ -1416,7 +1416,7 @@ CDATASection.prototype = new Text();
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node
  */
 function DocumentType(){};
@@ -1427,7 +1427,7 @@ DocumentType.prototype = new Node();
  * 
  * @type String 
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 DocumentType.prototype.name=""; 
 /**
@@ -1436,7 +1436,7 @@ DocumentType.prototype.name="";
  * 
  * @type NamedNodeMap 
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 DocumentType.prototype.entities = new NamedNodeMap();
 /**
@@ -1445,7 +1445,7 @@ DocumentType.prototype.entities = new NamedNodeMap();
  * 
  * @type NamedNodeMap 
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 DocumentType.prototype.notations=new NamedNodeMap(); 
 /**
@@ -1454,7 +1454,7 @@ DocumentType.prototype.notations=new NamedNodeMap();
  * 
  * @type String 
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 DocumentType.prototype.publicId=""; 
 /**
@@ -1463,7 +1463,7 @@ DocumentType.prototype.publicId="";
  * 
  * @type String 
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 DocumentType.prototype.systemId=""; 
 /**
@@ -1472,7 +1472,7 @@ DocumentType.prototype.systemId="";
  * 
  * @type String 
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.    
+ * @since Level 2 Document Object model Core Definition.
  */
 DocumentType.prototype.internalSubset="";
 
@@ -1483,7 +1483,7 @@ DocumentType.prototype.internalSubset="";
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node
  */
 function Notation(){};
@@ -1494,7 +1494,7 @@ Notation.prototype=new Node();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */  
 Notation.prototype.publicId=""; 
 /**
@@ -1503,7 +1503,7 @@ Notation.prototype.publicId="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */ 
 Notation.prototype.systemId="";
 
@@ -1514,7 +1514,7 @@ Notation.prototype.systemId="";
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node
  */ 
 function Entity(){}; 
@@ -1525,7 +1525,7 @@ Entity.prototype=new Node();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */  
 Entity.prototype.publicId="";
 /**
@@ -1534,7 +1534,7 @@ Entity.prototype.publicId="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */  
 Entity.prototype.systemId=""; 
 /**
@@ -1543,7 +1543,7 @@ Entity.prototype.systemId="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */  
 Entity.prototype.notationName=""; 
 
@@ -1554,7 +1554,7 @@ Entity.prototype.notationName="";
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node
  */ 
 function EntityReference(){};
@@ -1567,7 +1567,7 @@ EntityReference.prototype=new Node();
  * @augments Node
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Core Definition.
+ * @since Level 2 Document Object model Core Definition.
  * @see Node
  */ 
 function ProcessingInstruction(){}; 
@@ -1578,7 +1578,7 @@ ProcessingInstruction.prototype=new Node();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */ 
 ProcessingInstruction.prototype.target="";
 /**
@@ -1588,7 +1588,7 @@ ProcessingInstruction.prototype.target="";
  * @type String
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition 
- * @since Level 2 Document Object Model Core Definition.     
+ * @since Level 2 Document Object model Core Definition.
  */ 
 ProcessingInstruction.prototype.data=""; 
 
@@ -1602,7 +1602,7 @@ ProcessingInstruction.prototype.data="";
  * @augments Object
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */ 
 function HTMLCollection(){};
 HTMLCollection.prototype = new Object();
@@ -1612,7 +1612,7 @@ HTMLCollection.prototype = new Object();
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLCollection.prototype.length=0;
 /**
@@ -1622,7 +1622,7 @@ HTMLCollection.prototype.length=0;
  * @param {Number} index
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLCollection.prototype.item = function(index){return new Node();};
 /**
@@ -1632,7 +1632,7 @@ HTMLCollection.prototype.item = function(index){return new Node();};
  * @param {String} name
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLCollection.prototype.namedItem = function(index){return new Node();};
 
@@ -1643,7 +1643,7 @@ HTMLCollection.prototype.namedItem = function(index){return new Node();};
  * @augments Object
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */ 
 function HTMLOptionsCollection(){};
 HTMLOptionsCollection.prototype = new Object();
@@ -1654,7 +1654,7 @@ HTMLOptionsCollection.prototype = new Object();
  * @type Number
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionsCollection.prototype.length=0;
 /**
@@ -1664,7 +1664,7 @@ HTMLOptionsCollection.prototype.length=0;
  * @param {Number} index
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionsCollection.prototype.item = function(index){return new Node();};
 /**
@@ -1674,7 +1674,7 @@ HTMLOptionsCollection.prototype.item = function(index){return new Node();};
  * @param {String} name
  * @returns {Node}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionsCollection.prototype.namedItem = function(index){return new Node();};
 
@@ -1685,7 +1685,7 @@ HTMLOptionsCollection.prototype.namedItem = function(index){return new Node();};
  * @augments Document
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see Document
  */ 
 function HTMLDocument(){};
@@ -1696,7 +1696,7 @@ HTMLDocument.prototype = new Document();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.title="";
 /**
@@ -1705,7 +1705,7 @@ HTMLDocument.prototype.title="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.referrer="";
 /**
@@ -1714,7 +1714,7 @@ HTMLDocument.prototype.referrer="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.domain="";
 /**
@@ -1723,7 +1723,7 @@ HTMLDocument.prototype.domain="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.URL="";
 /**
@@ -1732,7 +1732,7 @@ HTMLDocument.prototype.URL="";
  * 
  * @type HTMLElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.body=new HTMLElement();
 /**
@@ -1741,7 +1741,7 @@ HTMLDocument.prototype.body=new HTMLElement();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.images=new HTMLCollection();
 /**
@@ -1750,7 +1750,7 @@ HTMLDocument.prototype.images=new HTMLCollection();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.applets=new HTMLCollection();
 /**
@@ -1759,7 +1759,7 @@ HTMLDocument.prototype.applets=new HTMLCollection();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.links=new HTMLCollection();
 /**
@@ -1768,7 +1768,7 @@ HTMLDocument.prototype.links=new HTMLCollection();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.forms=new HTMLCollection();
 /**
@@ -1777,7 +1777,7 @@ HTMLDocument.prototype.forms=new HTMLCollection();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.anchors=new HTMLCollection();
 /**
@@ -1787,7 +1787,7 @@ HTMLDocument.prototype.anchors=new HTMLCollection();
  * @type String
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.cookie="";
 /**
@@ -1796,7 +1796,7 @@ HTMLDocument.prototype.cookie="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.lastModified="";
 /**
@@ -1804,7 +1804,7 @@ HTMLDocument.prototype.lastModified="";
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.open = function(){};
 /**
@@ -1812,7 +1812,7 @@ HTMLDocument.prototype.open = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.close = function(){};
 /**
@@ -1821,7 +1821,7 @@ HTMLDocument.prototype.close = function(){};
  * 
  * @param {String} text
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.write = function(text){};
 /**
@@ -1830,7 +1830,7 @@ HTMLDocument.prototype.write = function(text){};
  * 
  * @param {String} text
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.writeln = function(text){};
 /**
@@ -1840,7 +1840,7 @@ HTMLDocument.prototype.writeln = function(text){};
  * @param {String} elementName
  * @returns {NodeList}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDocument.prototype.getElementsByName = function(elementName){return new NodeList();};
 
@@ -1851,7 +1851,7 @@ HTMLDocument.prototype.getElementsByName = function(elementName){return new Node
  * @augments Element
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see Element
  */ 
 function HTMLElement(){};
@@ -1862,7 +1862,7 @@ HTMLElement.prototype = new Element();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLElement.prototype.id="";
 /**
@@ -1871,7 +1871,7 @@ HTMLElement.prototype.id="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLElement.prototype.title="";
 /**
@@ -1880,7 +1880,7 @@ HTMLElement.prototype.title="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLElement.prototype.lang="";
 /**
@@ -1889,7 +1889,7 @@ HTMLElement.prototype.lang="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLElement.prototype.dir="";
 /**
@@ -1898,7 +1898,7 @@ HTMLElement.prototype.dir="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLElement.prototype.className="";
 /**
@@ -1975,7 +1975,7 @@ HTMLElement.prototype.style = new CSS2Properties();
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLHtmlElement(){};
@@ -1986,7 +1986,7 @@ HTMLHtmlElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLHtmlElement.prototype.version="";
 
@@ -1997,7 +1997,7 @@ HTMLHtmlElement.prototype.version="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLHeadElement(){};
@@ -2008,7 +2008,7 @@ HTMLHeadElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLHeadElement.prototype.profile="";
 
@@ -2019,7 +2019,7 @@ HTMLHeadElement.prototype.profile="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLLinkElement(){};
@@ -2030,7 +2030,7 @@ HTMLLinkElement.prototype = new HTMLElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.disabled=false;
 /**
@@ -2039,7 +2039,7 @@ HTMLLinkElement.prototype.disabled=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.charset="";
 /**
@@ -2048,7 +2048,7 @@ HTMLLinkElement.prototype.charset="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.href="";
 /**
@@ -2057,7 +2057,7 @@ HTMLLinkElement.prototype.href="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.hreflang="";
 /**
@@ -2066,7 +2066,7 @@ HTMLLinkElement.prototype.hreflang="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.media="";
 /**
@@ -2075,7 +2075,7 @@ HTMLLinkElement.prototype.media="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.rel="";
 /**
@@ -2084,7 +2084,7 @@ HTMLLinkElement.prototype.rel="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.rev="";
 /**
@@ -2093,7 +2093,7 @@ HTMLLinkElement.prototype.rev="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.target="";
 /**
@@ -2102,7 +2102,7 @@ HTMLLinkElement.prototype.target="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLinkElement.prototype.type="";
 
@@ -2113,7 +2113,7 @@ HTMLLinkElement.prototype.type="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLTitleElement(){};
@@ -2124,7 +2124,7 @@ HTMLTitleElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTitleElement.prototype.text="";
 
@@ -2135,7 +2135,7 @@ HTMLTitleElement.prototype.text="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLMetaElement(){};
@@ -2146,7 +2146,7 @@ HTMLMetaElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLMetaElement.prototype.content="";
 /**
@@ -2155,7 +2155,7 @@ HTMLMetaElement.prototype.content="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLMetaElement.prototype.httpEquiv="";
 /**
@@ -2164,7 +2164,7 @@ HTMLMetaElement.prototype.httpEquiv="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLMetaElement.prototype.name="";
 /**
@@ -2173,7 +2173,7 @@ HTMLMetaElement.prototype.name="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLMetaElement.prototype.scheme="";
 
@@ -2184,7 +2184,7 @@ HTMLMetaElement.prototype.scheme="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLBaseElement(){};
@@ -2195,7 +2195,7 @@ HTMLBaseElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBaseElement.prototype.href="";
 /**
@@ -2204,7 +2204,7 @@ HTMLBaseElement.prototype.href="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBaseElement.prototype.target="";
 
@@ -2215,7 +2215,7 @@ HTMLBaseElement.prototype.target="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLIsIndexElement(){};
@@ -2226,7 +2226,7 @@ HTMLIsIndexElement.prototype = new HTMLElement();
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIsIndexElement.prototype.form=new HTMLFormElement();
 /**
@@ -2235,7 +2235,7 @@ HTMLIsIndexElement.prototype.form=new HTMLFormElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIsIndexElement.prototype.prompt="";
 
@@ -2246,7 +2246,7 @@ HTMLIsIndexElement.prototype.prompt="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLStyleElement(){};
@@ -2257,7 +2257,7 @@ HTMLStyleElement.prototype = new HTMLElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLStyleElement.prototype.disabled=false;
 /**
@@ -2266,7 +2266,7 @@ HTMLStyleElement.prototype.disabled=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLStyleElement.prototype.media="";
 /**
@@ -2275,7 +2275,7 @@ HTMLStyleElement.prototype.media="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLStyleElement.prototype.type="";
 
@@ -2286,7 +2286,7 @@ HTMLStyleElement.prototype.type="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLBodyElement(){};
@@ -2297,7 +2297,7 @@ HTMLBodyElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBodyElement.prototype.aLink="";
 /**
@@ -2306,7 +2306,7 @@ HTMLBodyElement.prototype.aLink="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBodyElement.prototype.background="";
 /**
@@ -2315,7 +2315,7 @@ HTMLBodyElement.prototype.background="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBodyElement.prototype.bgColor="";
 /**
@@ -2324,7 +2324,7 @@ HTMLBodyElement.prototype.bgColor="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBodyElement.prototype.link="";
 /**
@@ -2333,7 +2333,7 @@ HTMLBodyElement.prototype.link="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBodyElement.prototype.text="";
 /**
@@ -2342,7 +2342,7 @@ HTMLBodyElement.prototype.text="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBodyElement.prototype.vLink="";
 
@@ -2353,7 +2353,7 @@ HTMLBodyElement.prototype.vLink="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLFormElement(){};
@@ -2364,7 +2364,7 @@ HTMLFormElement.prototype = new HTMLElement();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.elements=new HTMLCollection();
 /**
@@ -2373,7 +2373,7 @@ HTMLFormElement.prototype.elements=new HTMLCollection();
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.length=0;
 /**
@@ -2382,7 +2382,7 @@ HTMLFormElement.prototype.length=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.name="";
 /**
@@ -2391,7 +2391,7 @@ HTMLFormElement.prototype.name="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.acceptCharset="";
 /**
@@ -2400,7 +2400,7 @@ HTMLFormElement.prototype.acceptCharset="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.action="";
 /**
@@ -2409,7 +2409,7 @@ HTMLFormElement.prototype.action="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.enctype="";
 /**
@@ -2418,7 +2418,7 @@ HTMLFormElement.prototype.enctype="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.method="";
 /**
@@ -2427,7 +2427,7 @@ HTMLFormElement.prototype.method="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.target="";
 /**
@@ -2435,7 +2435,7 @@ HTMLFormElement.prototype.target="";
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.submit = function(){};
 /**
@@ -2443,7 +2443,7 @@ HTMLFormElement.prototype.submit = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFormElement.prototype.reset = function(){};
 
@@ -2454,7 +2454,7 @@ HTMLFormElement.prototype.reset = function(){};
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLSelectElement(){};
@@ -2465,7 +2465,7 @@ HTMLSelectElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.type="";
 /**
@@ -2474,7 +2474,7 @@ HTMLSelectElement.prototype.type="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.selectedIndex=0;
 /**
@@ -2483,7 +2483,7 @@ HTMLSelectElement.prototype.selectedIndex=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.value="";
 /**
@@ -2493,7 +2493,7 @@ HTMLSelectElement.prototype.value="";
  * @type Number
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.length=0;
 /**
@@ -2502,7 +2502,7 @@ HTMLSelectElement.prototype.length=0;
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.form = new HTMLFormElement();
 /**
@@ -2511,7 +2511,7 @@ HTMLSelectElement.prototype.form = new HTMLFormElement();
  * 
  * @type HTMLOptionsCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.options= new HTMLOptionsCollection();
 /**
@@ -2520,7 +2520,7 @@ HTMLSelectElement.prototype.options= new HTMLOptionsCollection();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.disabled=false;
 /**
@@ -2529,7 +2529,7 @@ HTMLSelectElement.prototype.disabled=false;
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.multiple=false;
 /**
@@ -2538,7 +2538,7 @@ HTMLSelectElement.prototype.multiple=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.name="";
 /**
@@ -2547,7 +2547,7 @@ HTMLSelectElement.prototype.name="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.size=0;
 /**
@@ -2556,7 +2556,7 @@ HTMLSelectElement.prototype.size=0;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.tabIndex=0;
 /**
@@ -2567,7 +2567,7 @@ HTMLSelectElement.prototype.tabIndex=0;
  * @param {HTMLElement} before
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.add = function(element, before){};
 /**
@@ -2576,7 +2576,7 @@ HTMLSelectElement.prototype.add = function(element, before){};
  * 
  * @param {Number} index
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.remove = function(index){};
 /**
@@ -2584,7 +2584,7 @@ HTMLSelectElement.prototype.remove = function(index){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.blur = function(){};
 /**
@@ -2592,7 +2592,7 @@ HTMLSelectElement.prototype.blur = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLSelectElement.prototype.focus = function(){};
 
@@ -2603,7 +2603,7 @@ HTMLSelectElement.prototype.focus = function(){};
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLOptGroupElement(){};
@@ -2614,7 +2614,7 @@ HTMLOptGroupElement.prototype = new HTMLElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptGroupElement.prototype.disabled=false;
 /**
@@ -2623,7 +2623,7 @@ HTMLOptGroupElement.prototype.disabled=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptGroupElement.prototype.label="";
 
@@ -2644,7 +2644,7 @@ Option.prototype = new HTMLOptionElement();
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLOptionElement(){};
@@ -2655,7 +2655,7 @@ HTMLOptionElement.prototype = new HTMLElement();
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionElement.prototype.form = new HTMLFormElement();
 /**
@@ -2664,7 +2664,7 @@ HTMLOptionElement.prototype.form = new HTMLFormElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionElement.prototype.defaultSelected=false;
 /**
@@ -2673,7 +2673,7 @@ HTMLOptionElement.prototype.defaultSelected=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionElement.prototype.text="";
 /**
@@ -2682,7 +2682,7 @@ HTMLOptionElement.prototype.text="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionElement.prototype.index=0;
 /**
@@ -2691,7 +2691,7 @@ HTMLOptionElement.prototype.index=0;
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionElement.prototype.disabled=false;
 /**
@@ -2700,7 +2700,7 @@ HTMLOptionElement.prototype.disabled=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionElement.prototype.label="";
 /**
@@ -2709,7 +2709,7 @@ HTMLOptionElement.prototype.label="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionElement.prototype.selected=false;
 /**
@@ -2718,7 +2718,7 @@ HTMLOptionElement.prototype.selected=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOptionElement.prototype.value="";
 
@@ -2729,7 +2729,7 @@ HTMLOptionElement.prototype.value="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLInputElement(){};
@@ -2740,7 +2740,7 @@ HTMLInputElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.defaultValue="";
 /**
@@ -2749,7 +2749,7 @@ HTMLInputElement.prototype.defaultValue="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.defaultChecked=false;
 /**
@@ -2758,7 +2758,7 @@ HTMLInputElement.prototype.defaultChecked=false;
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.form = new HTMLFormElement();
 /**
@@ -2767,7 +2767,7 @@ HTMLInputElement.prototype.form = new HTMLFormElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.accept="";
 /**
@@ -2776,7 +2776,7 @@ HTMLInputElement.prototype.accept="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.accessKey="";
 /**
@@ -2785,7 +2785,7 @@ HTMLInputElement.prototype.accessKey="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.align="";
 /**
@@ -2794,7 +2794,7 @@ HTMLInputElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.alt="";
 /**
@@ -2803,7 +2803,7 @@ HTMLInputElement.prototype.alt="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.checked=false;
 /**
@@ -2812,7 +2812,7 @@ HTMLInputElement.prototype.checked=false;
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.disabled=false;
 /**
@@ -2821,7 +2821,7 @@ HTMLInputElement.prototype.disabled=false;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.maxLenght=0;
 /**
@@ -2830,7 +2830,7 @@ HTMLInputElement.prototype.maxLenght=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.name="";
 /**
@@ -2839,7 +2839,7 @@ HTMLInputElement.prototype.name="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.readOnly=false;
 /**
@@ -2848,7 +2848,7 @@ HTMLInputElement.prototype.readOnly=false;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.size=0;
 /**
@@ -2857,7 +2857,7 @@ HTMLInputElement.prototype.size=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.src="";
 /**
@@ -2866,7 +2866,7 @@ HTMLInputElement.prototype.src="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.tabIndex=0;
 /**
@@ -2875,7 +2875,7 @@ HTMLInputElement.prototype.tabIndex=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.type="";
 /**
@@ -2884,7 +2884,7 @@ HTMLInputElement.prototype.type="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.useMap="";
 /**
@@ -2893,7 +2893,7 @@ HTMLInputElement.prototype.useMap="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.value="";
 /**
@@ -2901,7 +2901,7 @@ HTMLInputElement.prototype.value="";
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.blur = function(){};
 /**
@@ -2909,7 +2909,7 @@ HTMLInputElement.prototype.blur = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.focus = function(){};
 /**
@@ -2917,7 +2917,7 @@ HTMLInputElement.prototype.focus = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.select = function(){};
 /**
@@ -2925,7 +2925,7 @@ HTMLInputElement.prototype.select = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLInputElement.prototype.click = function(){};
 
@@ -2936,7 +2936,7 @@ HTMLInputElement.prototype.click = function(){};
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLTextAreaElement(){};
@@ -2947,7 +2947,7 @@ HTMLTextAreaElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.defaultValue="";
 /**
@@ -2956,7 +2956,7 @@ HTMLTextAreaElement.prototype.defaultValue="";
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.form= new HTMLFormElement();
 /**
@@ -2965,7 +2965,7 @@ HTMLTextAreaElement.prototype.form= new HTMLFormElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.accessKey="";
 /**
@@ -2974,7 +2974,7 @@ HTMLTextAreaElement.prototype.accessKey="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.cols=0;
 /**
@@ -2983,7 +2983,7 @@ HTMLTextAreaElement.prototype.cols=0;
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.disabled=false;
 /**
@@ -2992,7 +2992,7 @@ HTMLTextAreaElement.prototype.disabled=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.name="";
 /**
@@ -3001,7 +3001,7 @@ HTMLTextAreaElement.prototype.name="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.readOnly=false;
 /**
@@ -3010,7 +3010,7 @@ HTMLTextAreaElement.prototype.readOnly=false;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.rows=0;
 /**
@@ -3019,7 +3019,7 @@ HTMLTextAreaElement.prototype.rows=0;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.tabIndex=0;
 /**
@@ -3028,7 +3028,7 @@ HTMLTextAreaElement.prototype.tabIndex=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.type="";
 /**
@@ -3037,7 +3037,7 @@ HTMLTextAreaElement.prototype.type="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.value="";
 /**
@@ -3045,7 +3045,7 @@ HTMLTextAreaElement.prototype.value="";
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.blur = function(){};
 /**
@@ -3053,7 +3053,7 @@ HTMLTextAreaElement.prototype.blur = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.focus = function(){};
 /**
@@ -3061,7 +3061,7 @@ HTMLTextAreaElement.prototype.focus = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTextAreaElement.prototype.select = function(){};
 
@@ -3072,7 +3072,7 @@ HTMLTextAreaElement.prototype.select = function(){};
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLButtonElement(){};
@@ -3083,7 +3083,7 @@ HTMLButtonElement.prototype = new HTMLElement();
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLButtonElement.prototype.form = new HTMLFormElement();
 /**
@@ -3092,7 +3092,7 @@ HTMLButtonElement.prototype.form = new HTMLFormElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLButtonElement.prototype.accessKey = "";
 /**
@@ -3101,7 +3101,7 @@ HTMLButtonElement.prototype.accessKey = "";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLButtonElement.prototype.disabled=false;
 /**
@@ -3110,7 +3110,7 @@ HTMLButtonElement.prototype.disabled=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLButtonElement.prototype.name="";
 /**
@@ -3119,7 +3119,7 @@ HTMLButtonElement.prototype.name="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLButtonElement.prototype.tabIndex=0;
 /**
@@ -3128,7 +3128,7 @@ HTMLButtonElement.prototype.tabIndex=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLButtonElement.prototype.type="";
 /**
@@ -3137,7 +3137,7 @@ HTMLButtonElement.prototype.type="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLButtonElement.prototype.value="";
 
@@ -3148,7 +3148,7 @@ HTMLButtonElement.prototype.value="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLLabelElement(){};
@@ -3159,7 +3159,7 @@ HTMLLabelElement.prototype = new HTMLElement();
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLabelElement.prototype.form = new HTMLFormElement();
 /**
@@ -3168,7 +3168,7 @@ HTMLLabelElement.prototype.form = new HTMLFormElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLabelElement.prototype.accessKey="";
 /**
@@ -3177,7 +3177,7 @@ HTMLLabelElement.prototype.accessKey="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLabelElement.prototype.htmlFor="";
 
@@ -3188,7 +3188,7 @@ HTMLLabelElement.prototype.htmlFor="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLFieldSetElement(){};
@@ -3199,7 +3199,7 @@ HTMLFieldSetElement.prototype = new HTMLElement();
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFieldSetElement.prototype.form = new HTMLFormElement();
 
@@ -3210,7 +3210,7 @@ HTMLFieldSetElement.prototype.form = new HTMLFormElement();
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLLegendElement(){};
@@ -3221,7 +3221,7 @@ HTMLLegendElement.prototype = new HTMLElement();
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLegendElement.prototype.form = new HTMLFormElement();
 /**
@@ -3230,7 +3230,7 @@ HTMLLegendElement.prototype.form = new HTMLFormElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLegendElement.prototype.accessKey="";
 /**
@@ -3239,7 +3239,7 @@ HTMLLegendElement.prototype.accessKey="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLegendElement.prototype.align="";
 
@@ -3250,7 +3250,7 @@ HTMLLegendElement.prototype.align="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLUListElement(){};
@@ -3261,7 +3261,7 @@ HTMLUListElement.prototype = new HTMLElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLUListElement.prototype.compact=false;
 /**
@@ -3270,7 +3270,7 @@ HTMLUListElement.prototype.compact=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLUListElement.prototype.type="";
 
@@ -3281,7 +3281,7 @@ HTMLUListElement.prototype.type="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLOListElement(){};
@@ -3292,7 +3292,7 @@ HTMLOListElement.prototype = new HTMLElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOListElement.prototype.compact=false;
 /**
@@ -3301,7 +3301,7 @@ HTMLOListElement.prototype.compact=false;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOListElement.prototype.start=0;
 /**
@@ -3310,7 +3310,7 @@ HTMLOListElement.prototype.start=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLOListElement.prototype.type="";
 
@@ -3321,7 +3321,7 @@ HTMLOListElement.prototype.type="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLDListElement(){};
@@ -3332,7 +3332,7 @@ HTMLDListElement.prototype = new HTMLElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDListElement.prototype.compact=false;
 
@@ -3343,7 +3343,7 @@ HTMLDListElement.prototype.compact=false;
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLDirectoryElement(){};
@@ -3354,7 +3354,7 @@ HTMLDirectoryElement.prototype = new HTMLElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDirectoryElement.prototype.compact=false;
 
@@ -3365,7 +3365,7 @@ HTMLDirectoryElement.prototype.compact=false;
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLMenuElement(){};
@@ -3376,7 +3376,7 @@ HTMLMenuElement.prototype = new HTMLElement();
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLMenuElement.prototype.compact=false;
 
@@ -3387,7 +3387,7 @@ HTMLMenuElement.prototype.compact=false;
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLLIElement(){};
@@ -3398,7 +3398,7 @@ HTMLLIElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLIElement.prototype.type="";
 /**
@@ -3407,7 +3407,7 @@ HTMLLIElement.prototype.type="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLLIElement.prototype.value=0;
 
@@ -3418,7 +3418,7 @@ HTMLLIElement.prototype.value=0;
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLDivElement(){};
@@ -3429,7 +3429,7 @@ HTMLDivElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLDivElement.prototype.align="";
 
@@ -3440,7 +3440,7 @@ HTMLDivElement.prototype.align="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLParagraphElement(){};
@@ -3451,7 +3451,7 @@ HTMLParagraphElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLParagraphElement.prototype.align="";
 
@@ -3462,7 +3462,7 @@ HTMLParagraphElement.prototype.align="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLHeadingElement(){};
@@ -3473,7 +3473,7 @@ HTMLHeadingElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLHeadingElement.prototype.align="";
 
@@ -3484,7 +3484,7 @@ HTMLHeadingElement.prototype.align="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLQuoteElement(){};
@@ -3495,7 +3495,7 @@ HTMLQuoteElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLQuoteElement.prototype.align="";
 
@@ -3506,7 +3506,7 @@ HTMLQuoteElement.prototype.align="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLPreElement(){};
@@ -3517,7 +3517,7 @@ HTMLPreElement.prototype = new HTMLElement();
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLPreElement.prototype.width=0;
 
@@ -3528,7 +3528,7 @@ HTMLPreElement.prototype.width=0;
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLBRElement(){};
@@ -3539,7 +3539,7 @@ HTMLBRElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBRElement.prototype.clear="";
 
@@ -3550,7 +3550,7 @@ HTMLBRElement.prototype.clear="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLBaseFontElement(){};
@@ -3561,7 +3561,7 @@ HTMLBaseFontElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBaseFontElement.prototype.color="";
 /**
@@ -3570,7 +3570,7 @@ HTMLBaseFontElement.prototype.color="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBaseFontElement.prototype.face="";
 /**
@@ -3579,7 +3579,7 @@ HTMLBaseFontElement.prototype.face="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLBaseFontElement.prototype.size=0;
 
@@ -3590,7 +3590,7 @@ HTMLBaseFontElement.prototype.size=0;
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLFontElement(){};
@@ -3601,7 +3601,7 @@ HTMLFontElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFontElement.prototype.color="";
 /**
@@ -3610,7 +3610,7 @@ HTMLFontElement.prototype.color="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFontElement.prototype.face="";
 /**
@@ -3619,7 +3619,7 @@ HTMLFontElement.prototype.face="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFontElement.prototype.size=0;
 
@@ -3630,7 +3630,7 @@ HTMLFontElement.prototype.size=0;
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLHRElement(){};
@@ -3641,7 +3641,7 @@ HTMLHRElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLHRElement.prototype.align="";
 /**
@@ -3650,7 +3650,7 @@ HTMLHRElement.prototype.align="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLHRElement.prototype.noShade=false;
 /**
@@ -3659,7 +3659,7 @@ HTMLHRElement.prototype.noShade=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLHRElement.prototype.size="";
 /**
@@ -3668,7 +3668,7 @@ HTMLHRElement.prototype.size="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLHRElement.prototype.width="";
 
@@ -3679,7 +3679,7 @@ HTMLHRElement.prototype.width="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLModElement(){};
@@ -3690,7 +3690,7 @@ HTMLModElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLModElement.prototype.cite="";
 /**
@@ -3699,7 +3699,7 @@ HTMLModElement.prototype.cite="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLModElement.prototype.dateTime="";
 
@@ -3710,7 +3710,7 @@ HTMLModElement.prototype.dateTime="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLAnchorElement(){};
@@ -3721,7 +3721,7 @@ HTMLAnchorElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.accessKey="";
 /**
@@ -3730,7 +3730,7 @@ HTMLAnchorElement.prototype.accessKey="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.charset="";
 /**
@@ -3739,7 +3739,7 @@ HTMLAnchorElement.prototype.charset="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.coords="";
 /**
@@ -3748,7 +3748,7 @@ HTMLAnchorElement.prototype.coords="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.href="";
 /**
@@ -3757,7 +3757,7 @@ HTMLAnchorElement.prototype.href="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.hreflang="";
 /**
@@ -3766,7 +3766,7 @@ HTMLAnchorElement.prototype.hreflang="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.name="";
 /**
@@ -3775,7 +3775,7 @@ HTMLAnchorElement.prototype.name="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.rel="";
 /**
@@ -3784,7 +3784,7 @@ HTMLAnchorElement.prototype.rel="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.rev="";
 /**
@@ -3793,7 +3793,7 @@ HTMLAnchorElement.prototype.rev="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.shape="";
 /**
@@ -3802,7 +3802,7 @@ HTMLAnchorElement.prototype.shape="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.tabIndex=0;
 /**
@@ -3811,7 +3811,7 @@ HTMLAnchorElement.prototype.tabIndex=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.target="";
 /**
@@ -3820,7 +3820,7 @@ HTMLAnchorElement.prototype.target="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.type="";
 /**
@@ -3828,7 +3828,7 @@ HTMLAnchorElement.prototype.type="";
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.blur = function(){};
 /**
@@ -3836,7 +3836,7 @@ HTMLAnchorElement.prototype.blur = function(){};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAnchorElement.prototype.focus = function(){};
 
@@ -3855,7 +3855,7 @@ Image.prototype = new HTMLImageElement();
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLImageElement(){};
@@ -3866,7 +3866,7 @@ HTMLImageElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.name="";
 /**
@@ -3875,7 +3875,7 @@ HTMLImageElement.prototype.name="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.align="";
 /**
@@ -3884,7 +3884,7 @@ HTMLImageElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.alt="";
 /**
@@ -3893,7 +3893,7 @@ HTMLImageElement.prototype.alt="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.border="";
 /**
@@ -3902,7 +3902,7 @@ HTMLImageElement.prototype.border="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.height=0;
 /**
@@ -3911,7 +3911,7 @@ HTMLImageElement.prototype.height=0;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.hspace=0;
 /**
@@ -3920,7 +3920,7 @@ HTMLImageElement.prototype.hspace=0;
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.isMap=false;
 /**
@@ -3929,7 +3929,7 @@ HTMLImageElement.prototype.isMap=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.longDesc="";
 /**
@@ -3938,7 +3938,7 @@ HTMLImageElement.prototype.longDesc="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.src="";
 /**
@@ -3947,7 +3947,7 @@ HTMLImageElement.prototype.src="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.useMap="";
 /**
@@ -3956,7 +3956,7 @@ HTMLImageElement.prototype.useMap="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.vspace=0;
 /**
@@ -3965,7 +3965,7 @@ HTMLImageElement.prototype.vspace=0;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLImageElement.prototype.width=0;
 
@@ -3976,7 +3976,7 @@ HTMLImageElement.prototype.width=0;
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLObjectElement(){};
@@ -3987,7 +3987,7 @@ HTMLObjectElement.prototype = new HTMLElement();
  * 
  * @type HTMLFormElement
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.form = new HTMLFormElement();
 /**
@@ -3996,7 +3996,7 @@ HTMLObjectElement.prototype.form = new HTMLFormElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.code="";
 /**
@@ -4005,7 +4005,7 @@ HTMLObjectElement.prototype.code="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.align="";
 /**
@@ -4014,7 +4014,7 @@ HTMLObjectElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.archive="";
 /**
@@ -4023,7 +4023,7 @@ HTMLObjectElement.prototype.archive="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.border="";
 /**
@@ -4032,7 +4032,7 @@ HTMLObjectElement.prototype.border="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.codeBase="";
 /**
@@ -4041,7 +4041,7 @@ HTMLObjectElement.prototype.codeBase="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.codeType="";
 /**
@@ -4050,7 +4050,7 @@ HTMLObjectElement.prototype.codeType="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.data="";
 /**
@@ -4059,7 +4059,7 @@ HTMLObjectElement.prototype.data="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.declare=false;
 /**
@@ -4068,7 +4068,7 @@ HTMLObjectElement.prototype.declare=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.height="";
 /**
@@ -4077,7 +4077,7 @@ HTMLObjectElement.prototype.height="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.hspace=0;
 /**
@@ -4086,7 +4086,7 @@ HTMLObjectElement.prototype.hspace=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.name="";
 /**
@@ -4095,7 +4095,7 @@ HTMLObjectElement.prototype.name="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.standby="";
 /**
@@ -4104,7 +4104,7 @@ HTMLObjectElement.prototype.standby="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.tabIndex=0;
 /**
@@ -4113,7 +4113,7 @@ HTMLObjectElement.prototype.tabIndex=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.type="";
 /**
@@ -4122,7 +4122,7 @@ HTMLObjectElement.prototype.type="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.useMap="";
 /**
@@ -4131,7 +4131,7 @@ HTMLObjectElement.prototype.useMap="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.vspace=0;
 /**
@@ -4140,7 +4140,7 @@ HTMLObjectElement.prototype.vspace=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.width="";
 /**
@@ -4149,7 +4149,7 @@ HTMLObjectElement.prototype.width="";
  * 
  * @type Document
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLObjectElement.prototype.contentDocument= new HTMLDocument();
 
@@ -4160,7 +4160,7 @@ HTMLObjectElement.prototype.contentDocument= new HTMLDocument();
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLParamElement(){};
@@ -4171,7 +4171,7 @@ HTMLParamElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLParamElement.prototype.name="";
 /**
@@ -4180,7 +4180,7 @@ HTMLParamElement.prototype.name="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLParamElement.prototype.type="";
 /**
@@ -4189,7 +4189,7 @@ HTMLParamElement.prototype.type="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLParamElement.prototype.value="";
 /**
@@ -4198,7 +4198,7 @@ HTMLParamElement.prototype.value="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLParamElement.prototype.valueType="";
 
@@ -4209,7 +4209,7 @@ HTMLParamElement.prototype.valueType="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLAppletElement(){};
@@ -4220,7 +4220,7 @@ HTMLAppletElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.align="";
 /**
@@ -4229,7 +4229,7 @@ HTMLAppletElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.alt="";
 /**
@@ -4238,7 +4238,7 @@ HTMLAppletElement.prototype.alt="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.archive="";
 /**
@@ -4247,7 +4247,7 @@ HTMLAppletElement.prototype.archive="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.code="";
 /**
@@ -4256,7 +4256,7 @@ HTMLAppletElement.prototype.code="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.codeBase="";
 /**
@@ -4265,7 +4265,7 @@ HTMLAppletElement.prototype.codeBase="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.hight="";
 /**
@@ -4274,7 +4274,7 @@ HTMLAppletElement.prototype.hight="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.hspace=0;
 /**
@@ -4283,7 +4283,7 @@ HTMLAppletElement.prototype.hspace=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.name="";
 /**
@@ -4292,7 +4292,7 @@ HTMLAppletElement.prototype.name="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.object="";
 /**
@@ -4301,7 +4301,7 @@ HTMLAppletElement.prototype.object="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.vspace=0;
 /**
@@ -4310,7 +4310,7 @@ HTMLAppletElement.prototype.vspace=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAppletElement.prototype.width="";
 
@@ -4321,7 +4321,7 @@ HTMLAppletElement.prototype.width="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLMapElement(){};
@@ -4332,7 +4332,7 @@ HTMLMapElement.prototype = new HTMLElement();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLMapElement.prototype.areas = new HTMLCollection();
 /**
@@ -4341,7 +4341,7 @@ HTMLMapElement.prototype.areas = new HTMLCollection();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLMapElement.prototype.name="";
 
@@ -4352,7 +4352,7 @@ HTMLMapElement.prototype.name="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLAreaElement(){};
@@ -4363,7 +4363,7 @@ HTMLAreaElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAreaElement.prototype.accessKey="";
 /**
@@ -4372,7 +4372,7 @@ HTMLAreaElement.prototype.accessKey="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAreaElement.prototype.alt="";
 /**
@@ -4381,7 +4381,7 @@ HTMLAreaElement.prototype.alt="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAreaElement.prototype.coords="";
 /**
@@ -4390,7 +4390,7 @@ HTMLAreaElement.prototype.coords="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAreaElement.prototype.href="";
 /**
@@ -4399,7 +4399,7 @@ HTMLAreaElement.prototype.href="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAreaElement.prototype.noHref=false;
 /**
@@ -4408,7 +4408,7 @@ HTMLAreaElement.prototype.noHref=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAreaElement.prototype.shape="";
 /**
@@ -4417,7 +4417,7 @@ HTMLAreaElement.prototype.shape="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAreaElement.prototype.tabIndex=0;
 /**
@@ -4426,7 +4426,7 @@ HTMLAreaElement.prototype.tabIndex=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLAreaElement.prototype.target="";
 
@@ -4437,7 +4437,7 @@ HTMLAreaElement.prototype.target="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLScriptElement(){};
@@ -4448,7 +4448,7 @@ HTMLScriptElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLScriptElement.prototype.text="";
 /**
@@ -4457,7 +4457,7 @@ HTMLScriptElement.prototype.text="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLScriptElement.prototype.htmlFor="";
 /**
@@ -4466,7 +4466,7 @@ HTMLScriptElement.prototype.htmlFor="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLScriptElement.prototype.event="";
 /**
@@ -4475,7 +4475,7 @@ HTMLScriptElement.prototype.event="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLScriptElement.prototype.charset="";
 /**
@@ -4484,7 +4484,7 @@ HTMLScriptElement.prototype.charset="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLScriptElement.prototype.defer="";
 /**
@@ -4493,7 +4493,7 @@ HTMLScriptElement.prototype.defer="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLScriptElement.prototype.src="";
 /**
@@ -4502,7 +4502,7 @@ HTMLScriptElement.prototype.src="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLScriptElement.prototype.type="";
 
@@ -4513,7 +4513,7 @@ HTMLScriptElement.prototype.type="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLTableElement(){};
@@ -4525,7 +4525,7 @@ HTMLTableElement.prototype = new HTMLElement();
  * @type HTMLTableCaptionElement
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.caption = new HTMLTableCaptionElement();
 /**
@@ -4535,7 +4535,7 @@ HTMLTableElement.prototype.caption = new HTMLTableCaptionElement();
  * @type HTMLTableSectionElement
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.tHead = new HTMLTableSelectionElement();
 /**
@@ -4545,7 +4545,7 @@ HTMLTableElement.prototype.tHead = new HTMLTableSelectionElement();
  * @type HTMLTableSectionElement
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.tFoot = new HTMLTableSelectionElement();
 /**
@@ -4554,7 +4554,7 @@ HTMLTableElement.prototype.tFoot = new HTMLTableSelectionElement();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.rows = new HTMLCollection();
 /**
@@ -4563,7 +4563,7 @@ HTMLTableElement.prototype.rows = new HTMLCollection();
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.tBodies = new HTMLCollection();
 /**
@@ -4572,7 +4572,7 @@ HTMLTableElement.prototype.tBodies = new HTMLCollection();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.align="";
 /**
@@ -4581,7 +4581,7 @@ HTMLTableElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.bgColor="";
 /**
@@ -4590,7 +4590,7 @@ HTMLTableElement.prototype.bgColor="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.border="";
 /**
@@ -4599,7 +4599,7 @@ HTMLTableElement.prototype.border="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.cellPadding="";
 /**
@@ -4608,7 +4608,7 @@ HTMLTableElement.prototype.cellPadding="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.cellSpacing="";
 /**
@@ -4617,7 +4617,7 @@ HTMLTableElement.prototype.cellSpacing="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.frame="";
 /**
@@ -4626,7 +4626,7 @@ HTMLTableElement.prototype.frame="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.rules="";
 /**
@@ -4635,7 +4635,7 @@ HTMLTableElement.prototype.rules="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.summary="";
 /**
@@ -4644,7 +4644,7 @@ HTMLTableElement.prototype.summary="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.width="";
 /**
@@ -4653,7 +4653,7 @@ HTMLTableElement.prototype.width="";
  * 
  * @returns {HTMLElement}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.createTHead = function(){return new HTMLElement();};
 /**
@@ -4661,7 +4661,7 @@ HTMLTableElement.prototype.createTHead = function(){return new HTMLElement();};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.deleteTHead = function(){};
 /**
@@ -4670,7 +4670,7 @@ HTMLTableElement.prototype.deleteTHead = function(){};
  * 
  * @returns {HTMLElement}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.createTFoot = function(){return new HTMLElement();};
 /**
@@ -4678,7 +4678,7 @@ HTMLTableElement.prototype.createTFoot = function(){return new HTMLElement();};
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.deleteTFoot = function(){};
 /**
@@ -4687,7 +4687,7 @@ HTMLTableElement.prototype.deleteTFoot = function(){};
  * 
  * @returns {HTMLElement}
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.createCaption = function(){return new HTMLElement();};
 /**
@@ -4695,7 +4695,7 @@ HTMLTableElement.prototype.createCaption = function(){return new HTMLElement();}
  * http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html.html
  * 
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.deleteCaption = function(){};
 /**
@@ -4706,7 +4706,7 @@ HTMLTableElement.prototype.deleteCaption = function(){};
  * @returns {HTMLElement}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.insertRow = function(index){return new HTMLElement();};
 /**
@@ -4716,7 +4716,7 @@ HTMLTableElement.prototype.insertRow = function(index){return new HTMLElement();
  * @param {Number} index
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableElement.prototype.deleteRow = function(index){};
 
@@ -4727,7 +4727,7 @@ HTMLTableElement.prototype.deleteRow = function(index){};
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLTableCaptionElement(){};
@@ -4738,7 +4738,7 @@ HTMLTableCaptionElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCaptionElement.prototype.align="";
 
@@ -4749,7 +4749,7 @@ HTMLTableCaptionElement.prototype.align="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLTableColElement(){};
@@ -4760,7 +4760,7 @@ HTMLTableColElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableColElement.prototype.align="";
 /**
@@ -4769,7 +4769,7 @@ HTMLTableColElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableColElement.prototype.ch="";
 /**
@@ -4778,7 +4778,7 @@ HTMLTableColElement.prototype.ch="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableColElement.prototype.chOff="";
 /**
@@ -4787,7 +4787,7 @@ HTMLTableColElement.prototype.chOff="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableColElement.prototype.span=0;
 /**
@@ -4796,7 +4796,7 @@ HTMLTableColElement.prototype.span=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableColElement.prototype.vAlign="";
 /**
@@ -4805,7 +4805,7 @@ HTMLTableColElement.prototype.vAlign="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableColElement.prototype.width="";
 
@@ -4816,7 +4816,7 @@ HTMLTableColElement.prototype.width="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLTableSelectionElement(){};
@@ -4827,7 +4827,7 @@ HTMLTableSelectionElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableSelectionElement.prototype.align="";
 /**
@@ -4836,7 +4836,7 @@ HTMLTableSelectionElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableSelectionElement.prototype.ch="";
 /**
@@ -4845,7 +4845,7 @@ HTMLTableSelectionElement.prototype.ch="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableSelectionElement.prototype.chOff="";
 /**
@@ -4854,7 +4854,7 @@ HTMLTableSelectionElement.prototype.chOff="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableSelectionElement.prototype.vAlign="";
 /**
@@ -4863,7 +4863,7 @@ HTMLTableSelectionElement.prototype.vAlign="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableSelectionElement.prototype.rows="";
 /**
@@ -4874,7 +4874,7 @@ HTMLTableSelectionElement.prototype.rows="";
  * @returns {HTMLElement}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableSelectionElement.prototype.insertRow = function(index){return new HTMLElement();};
 /**
@@ -4884,7 +4884,7 @@ HTMLTableSelectionElement.prototype.insertRow = function(index){return new HTMLE
  * @param {Number} index
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableSelectionElement.prototype.deleteRow = function(index){};
 
@@ -4895,7 +4895,7 @@ HTMLTableSelectionElement.prototype.deleteRow = function(index){};
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLTableRowElement(){};
@@ -4906,7 +4906,7 @@ HTMLTableRowElement.prototype = new HTMLElement();
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.rowIndex=0;
 /**
@@ -4915,7 +4915,7 @@ HTMLTableRowElement.prototype.rowIndex=0;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.sectionRowIndex=0;
 /**
@@ -4924,7 +4924,7 @@ HTMLTableRowElement.prototype.sectionRowIndex=0;
  * 
  * @type HTMLCollection
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.cells = new HTMLCollection();
 /**
@@ -4933,7 +4933,7 @@ HTMLTableRowElement.prototype.cells = new HTMLCollection();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.align="";
 /**
@@ -4942,7 +4942,7 @@ HTMLTableRowElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.bgColor="";
 /**
@@ -4951,7 +4951,7 @@ HTMLTableRowElement.prototype.bgColor="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.ch="";
 /**
@@ -4960,7 +4960,7 @@ HTMLTableRowElement.prototype.ch="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.chOff="";
 /**
@@ -4969,7 +4969,7 @@ HTMLTableRowElement.prototype.chOff="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.vAlign="";
 /**
@@ -4980,7 +4980,7 @@ HTMLTableRowElement.prototype.vAlign="";
  * @returns {HTMLElement}
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.insertCell = function(index){return new HTMLElement();};
 /**
@@ -4990,7 +4990,7 @@ HTMLTableRowElement.prototype.insertCell = function(index){return new HTMLElemen
  * @param {Number} index
  * @throws DOMException
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableRowElement.prototype.deleteCell = function(index){};
 
@@ -5001,7 +5001,7 @@ HTMLTableRowElement.prototype.deleteCell = function(index){};
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLTableCellElement(){};
@@ -5012,7 +5012,7 @@ HTMLTableCellElement.prototype = new HTMLElement();
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.cellIndex=0;
 /**
@@ -5021,7 +5021,7 @@ HTMLTableCellElement.prototype.cellIndex=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.abbr="";
 /**
@@ -5030,7 +5030,7 @@ HTMLTableCellElement.prototype.abbr="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.align="";
 /**
@@ -5039,7 +5039,7 @@ HTMLTableCellElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.axis="";
 /**
@@ -5048,7 +5048,7 @@ HTMLTableCellElement.prototype.axis="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.bgColor="";
 /**
@@ -5057,7 +5057,7 @@ HTMLTableCellElement.prototype.bgColor="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.ch="";
 /**
@@ -5066,7 +5066,7 @@ HTMLTableCellElement.prototype.ch="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.chOff="";
 /**
@@ -5075,7 +5075,7 @@ HTMLTableCellElement.prototype.chOff="";
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.colSpan=0;
 /**
@@ -5084,7 +5084,7 @@ HTMLTableCellElement.prototype.colSpan=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.headers="";
 /**
@@ -5093,7 +5093,7 @@ HTMLTableCellElement.prototype.headers="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.height="";
 /**
@@ -5102,7 +5102,7 @@ HTMLTableCellElement.prototype.height="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.noWrap=false;
 /**
@@ -5111,7 +5111,7 @@ HTMLTableCellElement.prototype.noWrap=false;
  * 
  * @type Number
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.rowSpan=0;
 /**
@@ -5120,7 +5120,7 @@ HTMLTableCellElement.prototype.rowSpan=0;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.scope="";
 /**
@@ -5129,7 +5129,7 @@ HTMLTableCellElement.prototype.scope="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.vAlign="";
 /**
@@ -5138,7 +5138,7 @@ HTMLTableCellElement.prototype.vAlign="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLTableCellElement.prototype.width="";
 
@@ -5149,7 +5149,7 @@ HTMLTableCellElement.prototype.width="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLFrameSetElement(){};
@@ -5160,7 +5160,7 @@ HTMLFrameSetElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameSetElement.prototype.cols="";
 /**
@@ -5169,7 +5169,7 @@ HTMLFrameSetElement.prototype.cols="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameSetElement.prototype.rows="";
 
@@ -5180,7 +5180,7 @@ HTMLFrameSetElement.prototype.rows="";
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLFrameElement(){};
@@ -5191,7 +5191,7 @@ HTMLFrameElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.frameBorder="";
 /**
@@ -5200,7 +5200,7 @@ HTMLFrameElement.prototype.frameBorder="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.longDesc="";
 /**
@@ -5209,7 +5209,7 @@ HTMLFrameElement.prototype.longDesc="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.marginHeight="";
 /**
@@ -5218,7 +5218,7 @@ HTMLFrameElement.prototype.marginHeight="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.marginWidth="";
 /**
@@ -5227,7 +5227,7 @@ HTMLFrameElement.prototype.marginWidth="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.name="";
 /**
@@ -5236,7 +5236,7 @@ HTMLFrameElement.prototype.name="";
  * 
  * @type Boolean
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.noResize=false;
 /**
@@ -5245,7 +5245,7 @@ HTMLFrameElement.prototype.noResize=false;
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.scrolling="";
 /**
@@ -5254,7 +5254,7 @@ HTMLFrameElement.prototype.scrolling="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.src="";
 /**
@@ -5263,7 +5263,7 @@ HTMLFrameElement.prototype.src="";
  * 
  * @type Document
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLFrameElement.prototype.contentDocument= new HTMLDocument();
 
@@ -5274,7 +5274,7 @@ HTMLFrameElement.prototype.contentDocument= new HTMLDocument();
  * @augments HTMLElement
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  * @see HTMLElement
  */
 function HTMLIFrameElement(){};
@@ -5285,7 +5285,7 @@ HTMLIFrameElement.prototype = new HTMLElement();
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.align="";
 /**
@@ -5294,7 +5294,7 @@ HTMLIFrameElement.prototype.align="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.frameBorder="";
 /**
@@ -5303,7 +5303,7 @@ HTMLIFrameElement.prototype.frameBorder="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.height="";
 /**
@@ -5312,7 +5312,7 @@ HTMLIFrameElement.prototype.height="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.longDesc="";
 /**
@@ -5321,7 +5321,7 @@ HTMLIFrameElement.prototype.longDesc="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.marginHeight="";
 /**
@@ -5330,7 +5330,7 @@ HTMLIFrameElement.prototype.marginHeight="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.marginWidth="";
 /**
@@ -5339,7 +5339,7 @@ HTMLIFrameElement.prototype.marginWidth="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.name="";
 /**
@@ -5348,7 +5348,7 @@ HTMLIFrameElement.prototype.name="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.scrolling="";
 /**
@@ -5357,7 +5357,7 @@ HTMLIFrameElement.prototype.scrolling="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.src="";
 /**
@@ -5366,7 +5366,7 @@ HTMLIFrameElement.prototype.src="";
  * 
  * @type String
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.width="";
 /**
@@ -5375,7 +5375,7 @@ HTMLIFrameElement.prototype.width="";
  * 
  * @type Document
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model HTML Specification.
+ * @since Level 2 Document Object model HTML Specification.
  */
 HTMLIFrameElement.prototype.contentDocument= new HTMLDocument();
 
@@ -5387,7 +5387,7 @@ HTMLIFrameElement.prototype.contentDocument= new HTMLDocument();
  * @augments Object
  * @constructor
  * @since Standard ECMA-262 3rd. Edition
- * @since Level 2 Document Object Model Style Specification.
+ * @since Level 2 Document Object model Style Specification.
  */
 function CSS2Properties(){};
 CSS2Properties.prototype = new Object();

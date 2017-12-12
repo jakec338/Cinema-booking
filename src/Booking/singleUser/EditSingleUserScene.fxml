@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.currentUsers.SingleUserSceneController">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.singleUser.EditSingleUserSceneController">
     <center>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <children>
@@ -21,14 +21,14 @@
                     </rowConstraints>
                     <children>
                         <Label text="Username" />
-                        <Label fx:id="usernameLabel" text="Label" GridPane.columnIndex="1" />
+                        <TextField fx:id="usernameField" GridPane.columnIndex="1" />
                         <Label text="Email" GridPane.rowIndex="1" />
-                        <Label fx:id="emailLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="Title" GridPane.rowIndex="2"/>
-                        <Label fx:id="passwordLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Password" GridPane.rowIndex="2"/>
+                        <TextField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
                     </children>
                 </GridPane>
-                <Button fx:id="deleteBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete" textAlignment="JUSTIFY" />
+                <Button fx:id="saveBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" text="Save" textAlignment="JUSTIFY" onAction="#handleEdit"/>
             </children>
         </AnchorPane>
     </center>

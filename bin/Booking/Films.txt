@@ -1,2 +1,0 @@
-Film 1;Director
-Film 2;Director 2

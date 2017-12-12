@@ -1,1 +1,2 @@
 Admin;admin@admin.com;password
+Admin2;admin2@cinema.com;password

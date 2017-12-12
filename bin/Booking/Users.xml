@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root>
+<User>
+    <Username>George</Username>
+    <Email>george@gmail.com</Email>
+    <Password>password</Password>
+  </User>
+<User>
+    <Username>Caleb</Username>
+    <Email>caleb@gmail.com</Email>
+    <Password>password</Password>
+  </User>
+<User>
+    <Username>Edward</Username>
+    <Email>edward@gmail.com</Email>
+    <Password>password</Password>
+  </User>
+</Root>

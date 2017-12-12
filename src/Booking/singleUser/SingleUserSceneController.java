@@ -1,21 +1,17 @@
-package Booking.currentUsers;
+package Booking.singleUser;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
 import Booking.Main;
-import Booking.filmList.FilmData;
 import Booking.user.UserData;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 
 public class SingleUserSceneController {
 

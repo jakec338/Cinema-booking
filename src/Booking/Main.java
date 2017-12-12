@@ -1,23 +1,23 @@
 package Booking;
 
-import java.awt.*;
 import java.io.IOException;
 
-import Booking.currentUsers.EditSingleUserSceneController;
-import Booking.currentUsers.SingleUserSceneController;
+import Booking.singleUser.EditSingleUserSceneController;
+import Booking.singleUser.SingleUserSceneController;
 import Booking.filmList.FilmData;
 import Booking.singleFilm.SingleFilmSceneController;
 import Booking.user.UserData;
 import Booking.user.UserHomeSceneController;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 
 public class Main extends Application{
 	
@@ -74,7 +74,7 @@ public class Main extends Application{
 
     public static void showCurrentAdminsScene() throws IOException{
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("currentUsers/CurrentAdminsScene.fxml"));
+        loader.setLocation(Main.class.getResource("currentAdmins/CurrentAdminsScene.fxml"));
         BorderPane currentAdminsScene = loader.load();
         mainLayout.setCenter(currentAdminsScene);
 
@@ -96,7 +96,7 @@ public class Main extends Application{
 
 	public static void showAddUserScene() throws IOException{
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("currentUsers/AddUserScene.fxml"));
+        loader.setLocation(Main.class.getResource("addUser/AddUserScene.fxml"));
         BorderPane registerScene = loader.load();
         mainLayout.setCenter(registerScene);
 
@@ -126,27 +126,7 @@ public class Main extends Application{
 		adminHomeScene.setCenter(filmListScene);
 	}
 
-//    public static void showUserHomeScene(TableView tableView) throws IOException{
-//
-//        // Loads film list scene for admin home landing page
-//        FXMLLoader filmListLoader = new FXMLLoader();
-//        filmListLoader.setLocation(Main.class.getResource("updateProfile/updateProfileScene.fxml"));
-//        BorderPane updateProfileScene = filmListLoader.load();
-//
-//        // Loads the admin home scaffolding
-//        FXMLLoader loader = new FXMLLoader();
-//        loader.setLocation(Main.class.getResource("user/UserHomeScene.fxml"));
-//        BorderPane adminHomeScene = loader.load();
-//        mainLayout.setCenter(adminHomeScene);
-//
-//        UserHomeSceneController controller = loader.getController();
-//        controller.initData((UserData) tableView.getSelectionModel().getSelectedItem());
-//
-//        // Sets the centre view to filmList
-//        adminHomeScene.setCenter(updateProfileScene);
-//    }
-
-    public static void showUserHomeScene(TableView tableView) throws IOException{
+    public static void showUserHomeScene() throws IOException, ParserConfigurationException, SAXException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("updateProfile/updateProfileScene.fxml"));
         BorderPane updateProfileScene = loader.load();
@@ -158,18 +138,15 @@ public class Main extends Application{
 
         adminHomeScene.setCenter(updateProfileScene);
 
-        /*
-        CURRENTLY DOESN'T CORRECTLY LOAD LABELS
-         */
-//        EditSingleUserSceneController controller = loader.getController();
-//        controller.initData((UserData) tableView.getSelectionModel().getSelectedItem());
-    }
+        EditSingleUserSceneController controller =loader.getController();
+        controller.Init();
+ }
 
-    public static void showEditSingleUserScene() throws IOException{
+    public static void showEditSingleUserScene() throws IOException, ParserConfigurationException, SAXException {
 
         // Loads film list scene for admin home landing page
         FXMLLoader editLoader = new FXMLLoader();
-        editLoader.setLocation(Main.class.getResource("currentUsers/EditSingleUserScene.fxml"));
+        editLoader.setLocation(Main.class.getResource("singleUser/EditSingleUserScene.fxml"));
         BorderPane editSingleUserScene = editLoader.load();
 
         // Loads the admin home scaffolding
@@ -178,8 +155,11 @@ public class Main extends Application{
         BorderPane adminHomeScene = loader.load();
         mainLayout.setCenter(adminHomeScene);
 
-        // Sets the centre view to filmList
+//         Sets the centre view to filmList
         adminHomeScene.setCenter(editSingleUserScene);
+
+        EditSingleUserSceneController controller = editLoader.getController();
+        controller.InitEdit();
     }
 	
 	public static void showFilmsListScene() throws IOException{
@@ -215,7 +195,7 @@ public class Main extends Application{
 		
 	}
 
-	public static void showSingleFilmScene(TableView tableView) throws IOException{
+	public static void showSingleFilmScene(TableView tableView) throws IOException, XPathExpressionException, ParserConfigurationException, SAXException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("singleFilm/SingleFilmScene.fxml"));     
 		BorderPane singleFilmScene = loader.load();
@@ -233,7 +213,7 @@ public class Main extends Application{
 
 	public static void showSingleUserScene(TableView tableView) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("currentUsers/SingleUserScene.fxml"));
+        loader.setLocation(Main.class.getResource("singleUser/SingleUserScene.fxml"));
         BorderPane singleUserScene = loader.load();
         mainLayout.setCenter(singleUserScene);
 
@@ -266,8 +246,7 @@ public class Main extends Application{
         SingleUserSceneController controller = loader.getController();
         controller.initData((UserData)tableView.getSelectionModel().getSelectedItem());
     }
-	
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

@@ -1,9 +1,6 @@
 package Booking.login;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,6 +8,15 @@ import Booking.Main;
 import Booking.user.UserData;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 public class LoginSceneController {
 
@@ -28,92 +34,93 @@ public class LoginSceneController {
 
 	private UserData selectedUser;
 
-	@FXML
-	public void LoginTest() throws IOException{
-		if(username.getText().equals("admin") && password.getText().equals("pass")){
-			Main.showAdminHomeScene();
-		} else if(username.getText().equals("user") && password.getText().equals("pass")) {
-			Main.showUserHomeScene(tableView);
-		} else {
-			loginLabel.setText("Login Failed");
+
+	public boolean ValidateAdminLogin() throws IOException, ParserConfigurationException, SAXException {
+
+		File fXmlFile = new File("/Users/McLaughlin/Code/Cinema-booking/src/Booking/Admins.xml");
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(fXmlFile);
+
+		//optional, but recommended
+		//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+		doc.getDocumentElement().normalize();
+
+		System.out.println("\n" + "Root element : " + doc.getDocumentElement().getNodeName());
+
+		NodeList nList = doc.getElementsByTagName("User");
+
+		System.out.println("----------------------------");
+
+		for (int temp = 0; temp < nList.getLength(); temp++) {
+
+			Node nNode = nList.item(temp);
+
+			System.out.println("\nCurrent Element : " + nNode.getNodeName());
+
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+				Element eElement = (Element) nNode;
+
+				System.out.println("Username : " + eElement.getElementsByTagName("Username").item(0).getTextContent());
+				System.out.println("Email : " + eElement.getElementsByTagName("Email").item(0).getTextContent());
+				System.out.println("Password : " + eElement.getElementsByTagName("Password").item(0).getTextContent());
+				String sUsername = eElement.getElementsByTagName("Username").item(0).getTextContent();
+				String sPassword = eElement.getElementsByTagName("Password").item(0).getTextContent();
+				if (sUsername.equals(username.getText()) && sPassword.equals(password.getText())) {
+				return true;
+			}
+			}
 		}
-	}
-
-	public boolean ValidateUserDetails() throws IOException {
-		ArrayList<String> userData = new ArrayList<String>();
-		BufferedReader in = new BufferedReader((new FileReader(new File("src/Booking/Users.txt"))));
-		String fileName = "src/Booking/Users.txt";
-		File file = new File(fileName);
-		Scanner inputStream = new Scanner(file);
-		while (inputStream.hasNext()) {
-			String data = inputStream.nextLine();
-			String[] tokens = data.split(";");
-			String selectedUsername = tokens[0];
-			String selectedPassword = tokens[2];
-			if (selectedUsername.equals(username.getText()) && selectedPassword.equals(password.getText())) {
-				return true;
-			}}
 		return false;
 	}
 
-	public boolean ValidateAdminDetails() throws IOException {
-		ArrayList<String> userData = new ArrayList<String>();
-		BufferedReader in = new BufferedReader((new FileReader(new File("src/Booking/Admins.txt"))));
-		String fileName = "src/Booking/Admins.txt";
-		File file = new File(fileName);
-		Scanner inputStream = new Scanner(file);
-		while (inputStream.hasNext()) {
-			String data = inputStream.nextLine();
-			String[] tokens = data.split(";");
-			String selectedUsername = tokens[0];
-			String selectedPassword = tokens[2];
-			if (selectedUsername.equals(username.getText()) && selectedPassword.equals(password.getText())) {
-				return true;
-			}}
+	public boolean ValidateUserLogin() throws IOException, ParserConfigurationException, SAXException {
+
+		File fXmlFile = new File("/Users/McLaughlin/Code/Cinema-booking/src/Booking/Users.xml");
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(fXmlFile);
+
+		//optional, but recommended
+		//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+		doc.getDocumentElement().normalize();
+
+		NodeList nList = doc.getElementsByTagName("User");
+
+		for (int temp = 0; temp < nList.getLength(); temp++) {
+
+			Node nNode = nList.item(temp);
+
+
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+				Element eElement = (Element) nNode;
+
+				String sUsername = eElement.getElementsByTagName("Username").item(0).getTextContent();
+				String sPassword = eElement.getElementsByTagName("Password").item(0).getTextContent();
+				if (sUsername.equals(username.getText()) && sPassword.equals(password.getText())) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 
-//	public boolean ValidateUserDetails() throws IOException{
-//		BufferedReader in = new BufferedReader(new FileReader(new File("users.txt")));
-//		int line=0;
-//		for (String x = in.readLine(); x!=null; x=in.readLine()){
-//			line++;
-//			String[] tokens = x.split(";");
-//			for(String token : tokens){
-//				String selectedUsername = tokens[0];
-//				String selectedPassword = tokens[2];
-//				if(selectedUsername.equals(username.getText()) && selectedPassword.equals(password.getText())){
-//					return true;
-//				}
-//			}
-//		}
-//
-//		return false;
-//	}
-
-	@FXML
-	public void Login() throws IOException{
-		if (ValidateUserDetails()){
-			Main.showUserHomeScene(tableView);
-		} else if(ValidateAdminDetails()){
+	@FXML public void Login() throws IOException, ParserConfigurationException, SAXException {
+		if (ValidateUserLogin()){
+            PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/CurrentSession.txt")));
+            writer.append(username.getText() + "\n");
+            writer.close();
+			Main.showUserHomeScene();
+		} else if(ValidateAdminLogin()){
+            PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/CurrentSession.txt")));
+            writer.append(username.getText() + "\n");
+            writer.close();
 			Main.showAdminHomeScene();
 		} else {
 			loginLabel.setText("Login Failed you failure");
 		}
 	}
-//
-//	public boolean ValidateUsername() throws IOException {
-//		if(SourceDetails()){ return true;}
-//		else {return false;}}
-//
-//	public boolean ValidatePassword(){
-//		if(password.getText().equals(selectedUser.getPassword())){ return true;}
-//		else {return false;}}
-//
-//	public boolean ValidateAdminLogin(){
-//		if(username.getText().equals("admin") && password.getText().equals("pass")){
-//			return true;
-//		} else {
-//			return false;
-//		}}
+
 }
