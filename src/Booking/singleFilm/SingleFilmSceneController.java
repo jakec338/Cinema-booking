@@ -49,6 +49,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
@@ -75,6 +76,7 @@ public class SingleFilmSceneController {
 	@FXML VBox vBox;
 	@FXML AnchorPane seatsAnchorPane;
 	
+	
 	private List<Button> buttons;
 	
 	
@@ -89,7 +91,7 @@ public class SingleFilmSceneController {
 		titleLabel.setText(selectedFilm.getTitle());
 		directorLabel.setText(selectedFilm.getDirector());
 		
-			NodeList nodes2 = getShowTimeNodes();
+			NodeList nodes2 = getNodes("//Title[text()='" + selectedFilm.getTitle() +"']/parent::Film/ShowTimes/ShowTime");
 			
 	        int numOfTimes = nodes2.getLength();
 	        System.out.println(numOfTimes);
@@ -101,30 +103,12 @@ public class SingleFilmSceneController {
 	        }
 	        vBox.getChildren().addAll(buttons);
 	        
-	        ///
 			timeBtns();
-	        ///
-	}
-	
-	public NodeList getShowTimeNodes() throws SAXException, IOException, ParserConfigurationException, XPathExpressionException{
-		DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
-        DocumentBuilder dBuilder = db.newDocumentBuilder();
-        Document doc = dBuilder.parse("src/Booking/films.xml");
-        doc.getDocumentElement().normalize();
-        
-        XPathFactory factory = XPathFactory.newInstance();
-        XPath xpath = factory.newXPath();
-        
-        // '//' in xpath means find an element anywhere in the object tree
-        XPathExpression expr2 = xpath.compile("//Title[text()='" + selectedFilm.getTitle() +"']/parent::Film/ShowTimes/ShowTime");
-        NodeList result2 = (NodeList)expr2.evaluate(doc, XPathConstants.NODESET);
-        NodeList nodes2 = (NodeList) result2;
-		return nodes2;
 	}
 	
 	// throwing into completely different methods not ideal, should only be one with the xpath string as an input 
 	// gets fucked up when it is used in Main class so will stick with each list of nodes having their own method for now
-	public NodeList getSeatNodes(String time) throws ParserConfigurationException, XPathExpressionException, SAXException, IOException{
+	public NodeList getNodes(String xpathString) throws ParserConfigurationException, XPathExpressionException, SAXException, IOException{
 		DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
         Document doc = dBuilder.parse("src/Booking/films.xml");
@@ -138,12 +122,14 @@ public class SingleFilmSceneController {
         // 2. go up to its parent film 
         // 3. go down to into the showtime that matches the buttons showtime 
         // 4. get all the seats associated with that showtime
-        XPathExpression expr2 = xpath.compile("//Title[text()='" + selectedFilm.getTitle()
-        										+"']/parent::Film/ShowTimes/ShowTime[@id='" + time +"']/Seats/Seat");
+        //5.
+        XPathExpression expr2 = xpath.compile(xpathString);
         NodeList result2 = (NodeList)expr2.evaluate(doc, XPathConstants.NODESET);
         NodeList nodes2 = (NodeList) result2;
 		return nodes2;
 	}
+	
+
 
 	public void timeBtns(){
 		for (int i = 0; i < buttons.size(); i++){
@@ -152,12 +138,14 @@ public class SingleFilmSceneController {
 			timeBtn.setOnAction(new EventHandler<ActionEvent>() {
 	            public void handle(ActionEvent event) {
 	            	try {
-						NodeList nodes = getShowTimeNodes();
-						String b = nodes.item(a).getAttributes().item(0).getTextContent();
+						NodeList nodes = getNodes("//Title[text()='" + selectedFilm.getTitle() +"']/parent::Film/ShowTimes/ShowTime");
+						String time = nodes.item(a).getAttributes().item(0).getTextContent();
 							//
-							NodeList seatNodes = getSeatNodes(b);
-							int numSeats = seatNodes.getLength();
+							NodeList seatNodes = getNodes("//Title[text()='" + selectedFilm.getTitle()
+							+"']/parent::Film/ShowTimes/ShowTime[@id='" + time +"']/Seats/Seat");
 							
+							int numSeats = seatNodes.getLength();
+							System.out.println(seatNodes.item(2).getTextContent() +  "jdfj");
 							int columns = 2, rows = 3 , horizontal = 60, vertical = 60;
 							
 					        Rectangle rect = null;
@@ -172,8 +160,8 @@ public class SingleFilmSceneController {
 					                rect = new Rectangle(horizontal*j, vertical*i, horizontal, vertical);
 					                seatLabel = new Label();
 					                
-					                seatLabel.setLayoutX(horizontal*(j+1));
-					                seatLabel.setLayoutY(vertical*(i+1));
+					                seatLabel.setLayoutX(horizontal*(j));
+					                seatLabel.setLayoutY(vertical*(i));
 					               
 					                //Create a new rectangle(PosY,PosX,width,height)
 					                rect.setFill(Color.AZURE);
@@ -187,78 +175,67 @@ public class SingleFilmSceneController {
 					                		seat = "A1";
 					                		break;
 					                	case 1:
-					                		seat = "B1";
+					                		seat = "A2";
+					                		break;
+					                	case 2:
+					                		seat = "A3";
 					                		break;
 					                	}
+					                	break;
 					                case 1: 
 					                	switch(j){
 					                	case 0:
-					                		seat = "A2";
+					                		seat = "B1";
 					                		break;
 					                	case 1:
 					                		seat = "B2";
 					                		break;
-					                	}
-					                case 2:
-					                	switch(j){
-					                	case 0:
-					                		seat = "A3";
-					                		break;
-					                	case 1:
+					                	case 2:
 					                		seat = "B3";
 					                		break;
 					                	}
+					                	break;
+					                case 2:
 					                }
 					                
+					                
+					                String occupant= getNodes("//Title[text()='" + selectedFilm.getTitle()
+									+"']/parent::Film/ShowTimes/ShowTime[@id='" + time +"']/Seats/Seat[@id='" + seat +"']").item(0).getTextContent();
+					                if (!occupant.equals("")){
+					                	rect.setFill(Color.RED);
+					                }
 					                seatLabel.setText(seat);
-
 					                seatsAnchorPane.getChildren().add(rect);
 					                seatsAnchorPane.getChildren().add(seatLabel);
 					                //Add Rectangle to board
 
 					            }
 					        }
-							
-							
-//							seats = new ArrayList<>();
-//							for (int i =0; i < numSeats; i++){
-//								Rectangle seat = new Rectangle();
-//								seats.add(seat);
-//							}
-//							seatsVbox.getChildren().clear();
-//							seatsVbox.getChildren().addAll(seats);
-//							for (int i =0; i < seatNodes.getLength(); i++)
-//								System.out.println(seatNodes.item(i).getAttributes().item(0).getTextContent());
-							
-//							USE XPATH TO GET ALL THE SEATS WHERE THE FILM IS SELECTED FILM AND THE SHOW TIME IS THE SELECTED ONE
-							
-
 					} catch (XPathExpressionException | SAXException | IOException | ParserConfigurationException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-	            	
-	                
 	            }
 	        });
 		}
 	}
 	
-
 	
-	public static Node searchByTitle(String title, Document doc){
-		NodeList node = doc.getElementsByTagName("Title");
-		for (int i = 0; i < node.getLength(); i++){
-			String content = node.item(i).getTextContent();
-			if (content.equalsIgnoreCase(title)){                    // title will refer to selectedFilm.getTitle
-				Node p = node.item(i).getParentNode();
-				System.out.println(node.item(0).getTextContent()+ "please?");
-				// correct node for sure
-				return p;     
-			}
-		}
-		return null;
-	}
+	
+//	public static Node searchByTitle(String title, Document doc){
+//		NodeList node = doc.getElementsByTagName("Title");
+//		for (int i = 0; i < node.getLength(); i++){
+//			String content = node.item(i).getTextContent();
+//			if (content.equalsIgnoreCase(title)){                    // title will refer to selectedFilm.getTitle
+//				Node p = node.item(i).getParentNode();
+//				System.out.println(node.item(0).getTextContent()+ "please?");
+//				// correct node for sure
+//				return p;     
+//			}
+//		}
+//		return null;
+//	}
+	
 	
 	@FXML
 	public void deleteNode() throws ParserConfigurationException, FileNotFoundException, SAXException, IOException, TransformerException{
@@ -279,7 +256,6 @@ public class SingleFilmSceneController {
 		        a.removeChild(b.getParentNode());
 		    }
 		}
-	System.out.println("checkers");
   	  TransformerFactory tf = TransformerFactory.newInstance();
   	  Transformer tran = tf.newTransformer();
   	  tran.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -295,6 +271,36 @@ public class SingleFilmSceneController {
   	 main.showFilmsListScene();
 
 	}
+	
+	//ALLOW FOR INITIAL NO SHOWTIME
+	
+	@FXML
+	public void addShowTimeBtn() throws ParserConfigurationException, XPathExpressionException, SAXException, IOException{
+		
+		
+		
+		
+		
+//		DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
+//        DocumentBuilder dBuilder = db.newDocumentBuilder();
+//        Document doc = dBuilder.parse("src/Booking/films.xml");
+//        doc.getDocumentElement().normalize();
+//        
+//        XPathFactory factory = XPathFactory.newInstance();
+//        XPath xpath = factory.newXPath();
+//        
+//        // '//' in xpath means find an element anywhere in the object tree
+//        XPathExpression expr2 = xpath.compile("//Title[text()='" + selectedFilm.getTitle() +"']/parent::Film");
+//        NodeList result2 = (NodeList)expr2.evaluate(doc, XPathConstants.NODESET);
+//        NodeList nodes2 = (NodeList) result2;
+//        
+//        
+//        
+//		nodes2.item(0).appendChild(newChild)
+	}
+	
+	
+	
 	
 }
 
