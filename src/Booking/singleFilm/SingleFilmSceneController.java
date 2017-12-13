@@ -55,6 +55,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
@@ -74,6 +76,8 @@ public class SingleFilmSceneController {
 	Label directorLabel;
 	@FXML
 	Label descriptionLabel;
+	@FXML
+	ImageView filmImgView;
 	@FXML
 	Button deleteBtn;
 	@FXML
@@ -99,12 +103,6 @@ public class SingleFilmSceneController {
 
 	private List<Button> buttons;
 
-	@FXML
-	Rectangle seatA1;
-	@FXML
-	Rectangle seatA2;
-
-	String defaultDate = new String("");
 
 	public void initData(FilmData filmData)
 			throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
@@ -112,7 +110,10 @@ public class SingleFilmSceneController {
 		titleLabel.setText(selectedFilm.getTitle());
 		directorLabel.setText(selectedFilm.getDirector());
 		descriptionLabel.setText(selectedFilm.getDescription());
-		System.out.println(selectedFilm.getDescription() + "jgjhvjhhv");
+		
+		// ED: IMAGE FILE NOT LOADING INTO IMAGEVIEW FOR SOME REASON 
+		final Image image2 = new Image("file:img/5.png");
+		filmImgView.setImage(image2);
 		
 		datePicker();
 		dateComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
@@ -120,8 +121,6 @@ public class SingleFilmSceneController {
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldDate, String newDate) {
 				NodeList nodes2;
-				defaultDate = newDate;
-				System.out.println(defaultDate + " kjsbkjfb");
 				try {
 					nodes2 = getNodes("//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
 							+ newDate + "']/ShowTimes/ShowTime");
@@ -223,6 +222,7 @@ public class SingleFilmSceneController {
 
 						Rectangle rect = null;
 						Label seatLabel = null;
+						
 						for (int i = 0; i < columns; ++i) {// Iterate through
 															// columns
 							for (int j = 0; j < rows; ++j) {// Iterate through
@@ -232,7 +232,7 @@ public class SingleFilmSceneController {
 
 								rect = new Rectangle(horizontal * j, vertical * i, horizontal, vertical);
 								seatLabel = new Label();
-
+				
 								seatLabel.setLayoutX(horizontal * (j));
 								seatLabel.setLayoutY(vertical * (i));
 
@@ -282,8 +282,8 @@ public class SingleFilmSceneController {
 								} else {
 									rect.setFill(Color.ALICEBLUE);
 								}
+								
 								seatLabel.setText(seat);
-
 								seatsAnchorPane.getChildren().add(rect);
 								seatsAnchorPane.getChildren().add(seatLabel);
 								// Add Rectangle to board

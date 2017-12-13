@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -34,6 +35,7 @@
                            </children>
                         </GridPane>
                         <Button fx:id="deleteBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" textAlignment="JUSTIFY" />
+                        <ImageView fx:id="filmImgView" fitHeight="150.0" fitWidth="172.0" layoutX="228.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -45,7 +47,6 @@
                            <children>
                               <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0" />
                            </children></FlowPane>
-                        <Rectangle fx:id="seatA2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="77.0" layoutX="427.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" width="83.0" />
                         <FlowPane layoutX="273.0" layoutY="14.0" prefHeight="0.0" prefWidth="92.0">
                            <children>
                               <VBox fx:id="seatsVbox" prefHeight="14.0" prefWidth="92.0" />

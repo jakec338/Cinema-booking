@@ -171,6 +171,21 @@
     <Title>NewTitle</Title>
     <Director>NewDirector</Director>
     <Description>ooooo ksg slkng</Description>
-    <Dates/>
+    <Dates>
+      <Date id="13-12-2017">
+        <ShowTimes>
+          <ShowTime id="16:00">
+            <Seats>
+              <Seat id="A1"/>
+              <Seat id="A2"/>
+              <Seat id="A3"/>
+              <Seat id="B1"/>
+              <Seat id="B2"/>
+              <Seat id="B3"/>
+            </Seats>
+          </ShowTime>
+        </ShowTimes>
+      </Date>
+    </Dates>
   </Film>
 </Root>
