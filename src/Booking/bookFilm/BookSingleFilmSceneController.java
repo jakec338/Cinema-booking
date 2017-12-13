@@ -1,5 +1,6 @@
 package Booking.bookFilm;
 
+import java.awt.print.Book;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -92,6 +93,7 @@ public class BookSingleFilmSceneController {
     Button addShowingBtn;
 
     private List<Button> buttons;
+    private List<Button> seatButtons;
 
     @FXML
     Rectangle seatA1;
@@ -225,6 +227,7 @@ public class BookSingleFilmSceneController {
                                 rect.setStroke(Color.BLUE);
                                 // Give rectangles an outline so I can see
                                 // rectangles
+
                                 String seat = null;
                                 switch (i) {
                                     case 0:
@@ -253,7 +256,29 @@ public class BookSingleFilmSceneController {
                                                 break;
                                         }
                                         break;
-                                    case 2:
+                                }
+
+
+                                seatButtons = new ArrayList<>();
+                                NodeList seats = getNodes(
+                                        "//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
+                                                + selectedDate + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat");
+                                for (int k=0; k<rows; k++){
+                                    for (int l=0; l<columns; l++){
+                                        Button seatButton = new Button(seats.item(i).getAttributes().item(0).getTextContent());
+                                        seatButton.setText(seat);
+                                        seatButtons.add(seatButton);
+                                    }
+                                }
+
+                                for (int s=0; s<seatButtons.size(); s++){
+                                    seatButtons.get(s).setMinWidth(60);
+                                    if(s<3){
+                                        seatButtons.get(s).setLayoutX(s*60);
+                                    } else {
+                                        seatButtons.get(s).setLayoutX((s-3)*60);
+                                        seatButtons.get(s).setLayoutY(60);
+                                    }
                                 }
 
                                 String occupant = getNodes("//Title[text()='" + selectedFilm.getTitle()
@@ -269,6 +294,7 @@ public class BookSingleFilmSceneController {
 
                                 seatsAnchorPane.getChildren().add(rect);
                                 seatsAnchorPane.getChildren().add(seatLabel);
+                                seatsAnchorPane.getChildren().addAll(seatButtons);
                                 // Add Rectangle to board
 
 
