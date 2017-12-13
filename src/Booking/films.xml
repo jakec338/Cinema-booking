@@ -3,6 +3,7 @@
 	<Film>
 		<Title>Thor</Title>
 		<Director>Taiko</Director>
+		<Description>ooooo ksg slkng</Description>
 		<Dates>
 			<Date id="15-12-2017">
 				<ShowTimes>
@@ -98,12 +99,27 @@
 					</ShowTime>
 				</ShowTimes>
 			</Date>
-		</Dates>
+		<Date id="02-1-2018">
+        <ShowTimes>
+          <ShowTime id="12:00">
+            <Seats>
+              <Seat id="A1"/>
+              <Seat id="A2"/>
+              <Seat id="A3"/>
+              <Seat id="B1"/>
+              <Seat id="B2"/>
+              <Seat id="B3"/>
+            </Seats>
+          </ShowTime>
+        </ShowTimes>
+      </Date>
+    </Dates>
 	</Film>
 
 	<Film>
 		<Title>new</Title>
 		<Director>newpkd</Director>
+		<Description>ooooo ksg slkng</Description>
 		<Dates>
 			<Date id="15-12-2017">
 				<ShowTimes>
@@ -151,4 +167,10 @@
 	</Film>
 
 
+<Film>
+    <Title>NewTitle</Title>
+    <Director>NewDirector</Director>
+    <Description>ooooo ksg slkng</Description>
+    <Dates/>
+  </Film>
 </Root>

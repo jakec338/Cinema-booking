@@ -7,15 +7,17 @@ public class FilmData {
     public SimpleIntegerProperty serialNo = new SimpleIntegerProperty();
     public SimpleStringProperty title = new SimpleStringProperty("");
     public SimpleStringProperty director = new SimpleStringProperty("");
+    public SimpleStringProperty description = new SimpleStringProperty("");
 
     public FilmData(){
-        this(1,"","");
+        this(1,"","","");
     }
 
-    public FilmData(int serial, String tit,String dir){
+    public FilmData(int serial, String tit,String dir, String des){
         setSerialNo(serial);
         setDirector(dir);
         setTitle(tit);
+        setDescription(des);
     }
 
     public Integer getSerialNo(){
@@ -40,6 +42,14 @@ public class FilmData {
 
     public void setDirector(String d){
         director.set(d);
+    }
+    
+    public String getDescription(){
+        return description.get();
+    }
+
+    public void setDescription(String d){
+        description.set(d);
     }
 
 }

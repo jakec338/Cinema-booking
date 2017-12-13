@@ -44,6 +44,7 @@ public class FilmListSceneController implements Initializable {
 	@FXML private TableView<FilmData> tableView;
     @FXML private TableColumn<FilmData, String> title;
     @FXML private TableColumn<FilmData, String> director;
+    @FXML private TableColumn<FilmData, String> description;
 
     
     @FXML
@@ -61,7 +62,6 @@ public class FilmListSceneController implements Initializable {
         XPathExpression expr = xpath.compile("//Root/Film/ShowTimes/ShowTime/Seats/Seat");
         NodeList result = (NodeList)expr.evaluate(doc, XPathConstants.NODESET);
         NodeList nodes = (NodeList) result;
-        System.out.println(nodes.getLength());
         
         
         for (int i = 0; i < nodes.getLength(); i++) {
@@ -101,6 +101,15 @@ public class FilmListSceneController implements Initializable {
                           .getElementsByTagName("Director")
                           .item(0)
                           .getTextContent());
+                 
+                 ds.setDescription(element
+                         .getElementsByTagName("Description")
+                         .item(0)
+                         .getTextContent());
+                System.out.println(element
+                         .getElementsByTagName("Description")
+                         .item(0)
+                         .getTextContent());
 
                  ds.setSerialNo(j);
                  ++j;
@@ -115,7 +124,8 @@ public class FilmListSceneController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         title.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Title"));              // ("[Whatever]")THIS MUST REFLECT THE 'get' methods in the data class
-        director.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Director"));        // Fucking stupid, not declared anywhere
+        director.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Director"));  
+        description.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Description"));																									// Fucking stupid, not declared anywhere
         try {
         	tableView.getItems().setAll(parseXml());
 		} catch (IOException e) {

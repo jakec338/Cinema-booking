@@ -42,6 +42,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class AddFilmSceneController {
@@ -49,6 +50,7 @@ public class AddFilmSceneController {
 	  Main main;
 	  String title;
 	  String director;
+	  String description;
 	  String line;
 	  public List<String> filmDetails = new ArrayList<String>();
 	
@@ -60,11 +62,13 @@ public class AddFilmSceneController {
 	  private Label directorLabel;
 	  @FXML
 	  private TextField directorTextField;  
+	  @FXML 
+	  private TextArea descriptionTextField;
 	  @FXML
 	  private Button submitFilmBtn;
 
 
-      private void writeToXML(String titleInput, String directorInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
+      private void writeToXML(String titleInput, String directorInput, String descriptionInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
     	  
     	  DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
     	  DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -81,6 +85,10 @@ public class AddFilmSceneController {
     	  Element director = xmlDoc.createElement("Director");
     	  director.appendChild(xmlDoc.createTextNode(directorInput));
     	  film.appendChild(director);
+    	  
+    	  Element description = xmlDoc.createElement("Description");
+    	  description.appendChild(xmlDoc.createTextNode(descriptionInput));
+    	  film.appendChild(description);
     	  
     	  //  Should put in for loop really if you have time
 //    	  Element seatA1 = xmlDoc.createElement("Seat");
@@ -142,10 +150,12 @@ public class AddFilmSceneController {
 	    	
 		  title = titleTextField.getText();
 		  director = directorTextField.getText();
+		  description = descriptionTextField.getText();
 		  filmDetails.add(title);
 		  filmDetails.add(director);
+		  filmDetails.add(description);
 		  
-		  writeToXML(title, director);
+		  writeToXML(title, director, description);
 		  
 		  PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
 	      writer.append(title + ";" + director + "\n");

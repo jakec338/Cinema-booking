@@ -29,6 +29,8 @@
                               <Label fx:id="titleLabel" text="Label" GridPane.columnIndex="1" />
                               <Label text="Director" GridPane.rowIndex="1" />
                               <Label fx:id="directorLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Description" GridPane.rowIndex="2" />
+                              <Label fx:id="descriptionLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Button fx:id="deleteBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" textAlignment="JUSTIFY" />

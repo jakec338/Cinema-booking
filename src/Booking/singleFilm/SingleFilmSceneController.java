@@ -73,6 +73,8 @@ public class SingleFilmSceneController {
 	@FXML
 	Label directorLabel;
 	@FXML
+	Label descriptionLabel;
+	@FXML
 	Button deleteBtn;
 	@FXML
 	Button editBtn;
@@ -109,6 +111,9 @@ public class SingleFilmSceneController {
 		selectedFilm = filmData;
 		titleLabel.setText(selectedFilm.getTitle());
 		directorLabel.setText(selectedFilm.getDirector());
+		descriptionLabel.setText(selectedFilm.getDescription());
+		System.out.println(selectedFilm.getDescription() + "jgjhvjhhv");
+		
 		datePicker();
 		dateComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
