@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Root>
-	<Film id="k">
+<?xml version="1.0" encoding="UTF-8"?><Root>
+	<Film>
 		<Title>Thor</Title>
 		<Director>Taiko</Director>
 		<Dates>
@@ -28,79 +27,79 @@
 					</ShowTime>
 				</ShowTimes>
 			</Date>
-		<Date id="13-12-2017">
-        <ShowTimes>
-          <ShowTime id="12:00">
-            <Seats>
-              <Seat id="A1"/>
-              <Seat id="A2"/>
-              <Seat id="A3"/>
-              <Seat id="B1"/>
-              <Seat id="B2"/>
-              <Seat id="B3"/>
-            </Seats>
-          </ShowTime>
-        </ShowTimes>
-      </Date>
-    <Date id="21-12-2017">
-        <ShowTimes>
-          <ShowTime id="12:00">
-            <Seats>
-              <Seat id="A1"/>
-              <Seat id="A2"/>
-              <Seat id="A3"/>
-              <Seat id="B1"/>
-              <Seat id="B2"/>
-              <Seat id="B3"/>
-            </Seats>
-          </ShowTime>
-        </ShowTimes>
-      </Date>
-    <Date id="20-12-2017">
-        <ShowTimes>
-          <ShowTime id="12:00">
-            <Seats>
-              <Seat id="A1"/>
-              <Seat id="A2"/>
-              <Seat id="A3"/>
-              <Seat id="B1"/>
-              <Seat id="B2"/>
-              <Seat id="B3"/>
-            </Seats>
-          </ShowTime>
-        </ShowTimes>
-      </Date>
-    <Date id="07-12-2017">
-        <ShowTimes>
-          <ShowTime id="12:00">
-            <Seats>
-              <Seat id="A1"/>
-              <Seat id="A2"/>
-              <Seat id="A3"/>
-              <Seat id="B1"/>
-              <Seat id="B2"/>
-              <Seat id="B3"/>
-            </Seats>
-          </ShowTime>
-        </ShowTimes>
-      </Date>
-    <Date id="07-12-2017">
-        <ShowTimes>
-          <ShowTime id="1:00">
-            <Seats>
-              <Seat id="A1"/>
-              <Seat id="A2"/>
-              <Seat id="A3"/>
-              <Seat id="B1"/>
-              <Seat id="B2"/>
-              <Seat id="B3"/>
-            </Seats>
-          </ShowTime>
-        </ShowTimes>
-      </Date>
-    </Dates>
+			<Date id="13-12-2017">
+				<ShowTimes>
+					<ShowTime id="12:00">
+						<Seats>
+							<Seat id="A1"/>
+							<Seat id="A2"/>
+							<Seat id="A3"/>
+							<Seat id="B1"/>
+							<Seat id="B2"/>
+							<Seat id="B3"/>
+						</Seats>
+					</ShowTime>
+				</ShowTimes>
+			</Date>
+			<Date id="21-12-2017">
+				<ShowTimes>
+					<ShowTime id="12:00">
+						<Seats>
+							<Seat id="A1"/>
+							<Seat id="A2"/>
+							<Seat id="A3"/>
+							<Seat id="B1"/>
+							<Seat id="B2"/>
+							<Seat id="B3"/>
+						</Seats>
+					</ShowTime>
+				</ShowTimes>
+			</Date>
+			<Date id="20-12-2017">
+				<ShowTimes>
+					<ShowTime id="12:00">
+						<Seats>
+							<Seat id="A1"/>
+							<Seat id="A2"/>
+							<Seat id="A3"/>
+							<Seat id="B1"/>
+							<Seat id="B2"/>
+							<Seat id="B3"/>
+						</Seats>
+					</ShowTime>
+				</ShowTimes>
+			</Date>
+			<Date id="07-12-2017">
+				<ShowTimes>
+					<ShowTime id="12:00">
+						<Seats>
+							<Seat id="A1"/>
+							<Seat id="A2"/>
+							<Seat id="A3"/>
+							<Seat id="B1"/>
+							<Seat id="B2"/>
+							<Seat id="B3"/>
+						</Seats>
+					</ShowTime>
+				</ShowTimes>
+			</Date>
+			<Date id="07-12-2017">
+				<ShowTimes>
+					<ShowTime id="1:00">
+						<Seats>
+							<Seat id="A1"/>
+							<Seat id="A2"/>
+							<Seat id="A3"/>
+							<Seat id="B1"/>
+							<Seat id="B2"/>
+							<Seat id="B3"/>
+						</Seats>
+					</ShowTime>
+				</ShowTimes>
+			</Date>
+		</Dates>
 	</Film>
-	<Film id="t">
+	<Film>
 		<Title>Film</Title>
 		<Director>Dirs</Director>
 		<ShowTimes>
@@ -116,5 +115,27 @@
 			</ShowTime>
 		</ShowTimes>
 	</Film>
+
+	<Film>
+		<Title>new</Title>
+		<Director>newpkd</Director>
+		<Dates>
+			<Date id="15-12-2017">
+				<ShowTimes>
+					<ShowTime id="16:00">
+						<Seats>
+							<Seat id="A1"/>
+							<Seat id="A2"/>
+							<Seat id="A3"/>
+							<Seat id="B1"/>
+							<Seat id="B2"/>
+							<Seat id="B3"/>
+						</Seats>
+					</ShowTime>
+				</ShowTimes>
+			</Date>
+		</Dates>
+	</Film>
+
 
 </Root>

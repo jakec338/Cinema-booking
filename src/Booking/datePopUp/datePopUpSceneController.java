@@ -144,8 +144,6 @@ public class datePopUpSceneController {
 
 	@FXML
 	public void closeStage() {
-		// get a handle to the sta
-		// do what you have to do
 		stage.close();
 
 	}

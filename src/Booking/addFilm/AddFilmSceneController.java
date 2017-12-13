@@ -83,35 +83,40 @@ public class AddFilmSceneController {
     	  film.appendChild(director);
     	  
     	  //  Should put in for loop really if you have time
-    	  Element seatA1 = xmlDoc.createElement("Seat");
-    	  seatA1.setAttribute("id", "A1");
-    	  Element seatA2 = xmlDoc.createElement("Seat");
-    	  seatA2.setAttribute("id", "A2");
-    	  Element seatA3 = xmlDoc.createElement("Seat");
-    	  seatA3.setAttribute("id", "A3");
-    	  Element seatB1 = xmlDoc.createElement("Seat");
-    	  seatB1.setAttribute("id", "B1");
-    	  Element seatB2 = xmlDoc.createElement("Seat");
-    	  seatB2.setAttribute("id", "B2");
-    	  Element seatB3 = xmlDoc.createElement("Seat");
-    	  seatB3.setAttribute("id", "B3");
+//    	  Element seatA1 = xmlDoc.createElement("Seat");
+//    	  seatA1.setAttribute("id", "A1");
+//    	  Element seatA2 = xmlDoc.createElement("Seat");
+//    	  seatA2.setAttribute("id", "A2");
+//    	  Element seatA3 = xmlDoc.createElement("Seat");
+//    	  seatA3.setAttribute("id", "A3");
+//    	  Element seatB1 = xmlDoc.createElement("Seat");
+//    	  seatB1.setAttribute("id", "B1");
+//    	  Element seatB2 = xmlDoc.createElement("Seat");
+//    	  seatB2.setAttribute("id", "B2");
+//    	  Element seatB3 = xmlDoc.createElement("Seat");
+//    	  seatB3.setAttribute("id", "B3");
+//    	  
+//    	  Element seats = xmlDoc.createElement("Seats");
+//    	  seats.appendChild(seatA1);
+//    	  seats.appendChild(seatA2);
+//    	  seats.appendChild(seatA3);
+//    	  seats.appendChild(seatB1);
+//    	  seats.appendChild(seatB2);
+//    	  seats.appendChild(seatB3);
+//    	  
+// 
+//    	  Element showTime = xmlDoc.createElement("ShowTime");
+//    	  showTime.appendChild(seats);
+//    	  
+//    	  Element showTimes = xmlDoc.createElement("ShowTimes");
+//    	  showTimes.appendChild(showTime);
+//    	  
+//    	  Element date = xmlDoc.createElement("Date");
+//    	  date.appendChild(showTimes);
     	  
-    	  Element seats = xmlDoc.createElement("Seats");
-    	  seats.appendChild(seatA1);
-    	  seats.appendChild(seatA2);
-    	  seats.appendChild(seatA3);
-    	  seats.appendChild(seatB1);
-    	  seats.appendChild(seatB2);
-    	  seats.appendChild(seatB3);
+    	  Element dates = xmlDoc.createElement("Dates");
     	  
- 
-    	  Element showTime = xmlDoc.createElement("ShowTime");
-    	  showTime.appendChild(seats);
-    	  
-    	  Element showTimes = xmlDoc.createElement("ShowTimes");
-    	  showTimes.appendChild(showTime);
-    	  
-    	  film.appendChild(showTimes);
+    	  film.appendChild(dates);
     	  
     	  //
     	  

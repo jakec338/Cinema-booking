@@ -102,6 +102,8 @@ public class SingleFilmSceneController {
 	@FXML
 	Rectangle seatA2;
 
+	String defaultDate = new String("");
+
 	public void initData(FilmData filmData)
 			throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
 		selectedFilm = filmData;
@@ -113,7 +115,8 @@ public class SingleFilmSceneController {
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldDate, String newDate) {
 				NodeList nodes2;
-
+				defaultDate = newDate;
+				System.out.println(defaultDate + " kjsbkjfb");
 				try {
 					nodes2 = getNodes("//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
 							+ newDate + "']/ShowTimes/ShowTime");
@@ -176,9 +179,14 @@ public class SingleFilmSceneController {
 		ObservableList<String> options = FXCollections.observableArrayList();
 		NodeList dateNodes = getNodes("//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date");
 		int numDates = dateNodes.getLength();
-		for (int i = 0; i < numDates; i++) {
-			String date = dateNodes.item(i).getAttributes().item(0).getTextContent();
-			options.add(date);
+		System.out.println(numDates + "number of dates");
+		if (numDates != 0) {
+			for (int i = 0; i < numDates; i++) {
+				String date = dateNodes.item(i).getAttributes().item(0).getTextContent();
+				options.add(date);
+			}
+		} else {
+			return;
 		}
 		dateComboBox.getItems().addAll(options);
 	}
@@ -195,16 +203,15 @@ public class SingleFilmSceneController {
 			timeBtn.setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent event) {
 					try {
-						
+
 						NodeList showTimeNodes = getNodes("//Title[text()='" + selectedFilm.getTitle()
-								+ "']/parent::Film/Dates/Date[@id='" + selectedDate
-								+ "']/ShowTimes/ShowTime");
+								+ "']/parent::Film/Dates/Date[@id='" + selectedDate + "']/ShowTimes/ShowTime");
 						String time = showTimeNodes.item(a).getAttributes().item(0).getTextContent();
 						//
 
-						NodeList seatNodes = getNodes("//Title[text()='" + selectedFilm.getTitle()
-								+ "']/parent::Film/Dates/Date[@id='" + selectedDate
-								+ "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat");
+						NodeList seatNodes = getNodes(
+								"//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
+										+ selectedDate + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat");
 
 						int numSeats = seatNodes.getLength();
 						int columns = 2, rows = 3, horizontal = 60, vertical = 60;
@@ -263,15 +270,15 @@ public class SingleFilmSceneController {
 
 								String occupant = getNodes("//Title[text()='" + selectedFilm.getTitle()
 										+ "']/parent::Film/Dates/Date[@id='" + selectedDate
-								+ "']/ShowTimes/ShowTime[@id='" + time
-										+ "']/Seats/Seat[@id='" + seat + "']").item(0).getTextContent();
+										+ "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat[@id='" + seat + "']")
+												.item(0).getTextContent();
 								if (!occupant.equals("")) {
-									rect.setFill(Color.RED);
-								}else {
-									rect.setFill(Color.AZURE);
+									rect.setFill(Color.LIGHTGREY);
+								} else {
+									rect.setFill(Color.ALICEBLUE);
 								}
 								seatLabel.setText(seat);
-								
+
 								seatsAnchorPane.getChildren().add(rect);
 								seatsAnchorPane.getChildren().add(seatLabel);
 								// Add Rectangle to board
