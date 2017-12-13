@@ -193,7 +193,7 @@ public class SingleFilmSceneController {
 
 	@FXML
 	public void addShowing() throws IOException {
-		main.showAddDateTimePop(selectedFilm.getTitle());
+		main.showAddShowingScene(selectedFilm.getTitle(), selectedFilm);
 	}
 
 	public void timeBtns(String selectedDate) {

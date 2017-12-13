@@ -127,21 +127,41 @@ public class Main extends Application{
 		adminHomeScene.setCenter(singleFilmScene);
 	}
 	
-	public static void showAddDateTimePop(String selectedFilmTitle) throws IOException{
+	public static void showSingleFilmScene(FilmData selectedFilm) throws IOException, XPathExpressionException, ParserConfigurationException, SAXException{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("singleFilm/SingleFilmScene.fxml"));     
+		BorderPane singleFilmScene = loader.load();
+		
+		FXMLLoader adminLoader = new FXMLLoader();
+		adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+		BorderPane adminHomeScene = adminLoader.load();
+		mainLayout.setCenter(adminHomeScene);
+		
+		SingleFilmSceneController controller = loader.getController();
+		controller.initData(selectedFilm);
+		
+		adminHomeScene.setCenter(singleFilmScene);
+	}
+	
+	
+	public static void showAddShowingScene(String selectedFilmTitle, FilmData selectedFilm) throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("datePopUp/datePopUpScene.fxml"));     
-		AnchorPane datePopUpScene = loader.load();
-		Stage dateStage = new Stage();
-		Scene scene = new Scene(datePopUpScene);
+		AnchorPane addPopUpScene = loader.load();
 		datePopUpSceneController controller = loader.getController();
-		controller.initData(selectedFilmTitle, dateStage);
-		dateStage.setScene(scene);
-		dateStage.initModality(Modality.APPLICATION_MODAL);
-		dateStage.show();
+		controller.initData(selectedFilmTitle, selectedFilm);
+		// SHOULD NOT BE LEFT LIKE THIS. FIND WAY TO PUT adminHomeScene
+		// IN A SEPERATE METHOD
 		
-		
-		
+		FXMLLoader adminLoader = new FXMLLoader();
+		adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+		BorderPane adminHomeScene = adminLoader.load();
+		mainLayout.setCenter(adminHomeScene);
+	
+		adminHomeScene.setCenter(addPopUpScene);
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		launch(args);

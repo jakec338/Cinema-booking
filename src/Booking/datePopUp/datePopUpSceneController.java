@@ -30,6 +30,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import Booking.Main;
+import Booking.filmList.FilmData;
 import Booking.singleFilm.SingleFilmSceneController;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -50,14 +51,16 @@ public class datePopUpSceneController {
 	@FXML
 	Button cancelBtn;
 
-	Stage stage;
+	Main main;
+	FilmData selectedFilm;
 	String selectedDate;
 	String selectedTime;
 	String selectedFilmTitle;
 
-	public void initData(String selectedFilmTitle, Stage stage) {
+	public void initData(String selectedFilmTitle, FilmData selectedFilm) {
 		this.selectedFilmTitle = selectedFilmTitle;
-		this.stage = stage;
+		this.selectedFilm = selectedFilm;
+		
 	}
 
 	@FXML
@@ -138,14 +141,10 @@ public class datePopUpSceneController {
 		StreamResult stream = new StreamResult(file);
 		tran.transform(source, stream);
 		
-		stage.close();
+		main.showSingleFilmScene(selectedFilm);
 
 	}
 
-	@FXML
-	public void closeStage() {
-		stage.close();
 
-	}
 
 }
