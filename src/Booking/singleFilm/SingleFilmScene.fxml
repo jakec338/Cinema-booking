@@ -39,7 +39,7 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <FlowPane fx:id="flowPane" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="56.0">
+                                <FlowPane fx:id="flowPane" layoutX="15.0" layoutY="84.0" prefHeight="200.0" prefWidth="56.0">
                                     <children>
                                         <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0" />
                                     </children></FlowPane>
@@ -51,6 +51,8 @@
                                 </FlowPane>
                                 <AnchorPane fx:id="seatsAnchorPane" layoutX="236.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
                                 <StackPane fx:id="seatsStackPane" layoutX="427.0" layoutY="76.0" prefHeight="150.0" prefWidth="161.0" />
+                                <ComboBox fx:id="dateComboBox" layoutX="14.0" layoutY="38.0" prefWidth="150.0" promptText="Select Date" />
+                                <Button fx:id="addShowingBtn" layoutX="15.0" layoutY="8.0" mnemonicParsing="false" onAction="#addShowing" text="Add Showing" />
                             </children></AnchorPane>
                     </content>
                 </Tab>

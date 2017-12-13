@@ -44,10 +44,10 @@ public class CurrentAdminsSceneController implements Initializable {
         doc.getDocumentElement().normalize();
         ObservableList<UserData> data = FXCollections.observableArrayList();
         NodeList nList = doc.getElementsByTagName("User");
-        UserData ds = new UserData();
 
         int j = 1;
         for(int i = 0; i < nList.getLength(); i++){
+            UserData ds = new UserData();
             Node nNode = nList.item(i);
             System.out.println("\nCurrent Element :"
                     + nNode.getNodeName());

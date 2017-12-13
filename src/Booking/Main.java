@@ -2,6 +2,8 @@ package Booking;
 
 import java.io.IOException;
 
+import Booking.bookFilm.BookSingleFilmSceneController;
+import Booking.datePopUp.DatePopUpSceneController;
 import Booking.singleUser.EditSingleUserSceneController;
 import Booking.singleUser.SingleUserSceneController;
 import Booking.filmList.FilmData;
@@ -12,7 +14,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.xml.sax.SAXException;
 
@@ -22,6 +26,7 @@ import javax.xml.xpath.XPathExpressionException;
 public class Main extends Application{
 	
 	private Stage primaryStage;
+	private Stage dateStage;
 	private static BorderPane mainLayout;
 
 
@@ -177,7 +182,7 @@ public class Main extends Application{
 	
 		adminHomeScene.setCenter(filmListScene);
 	}
-	
+
 	public static void showAddFilmScene() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("addFilm/AddFilmScene.fxml"));     
@@ -210,6 +215,22 @@ public class Main extends Application{
 		
 		adminHomeScene.setCenter(singleFilmScene);
 	}
+
+    public static void showSingleFilmScene(FilmData selectedFilm) throws IOException, XPathExpressionException, ParserConfigurationException, SAXException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("singleFilm/SingleFilmScene.fxml"));
+        BorderPane singleFilmScene = loader.load();
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+        BorderPane adminHomeScene = adminLoader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        SingleFilmSceneController controller = loader.getController();
+        controller.initData(selectedFilm);
+
+        adminHomeScene.setCenter(singleFilmScene);
+    }
 
 	public static void showSingleUserScene(TableView tableView) throws IOException {
         FXMLLoader loader = new FXMLLoader();
@@ -247,7 +268,56 @@ public class Main extends Application{
         controller.initData((UserData)tableView.getSelectionModel().getSelectedItem());
     }
 
-	public static void main(String[] args) {
+    public static void showBookingScene() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("bookFilm/BookAllFilmsScene.fxml"));
+        BorderPane bookFilmScene = loader.load();
+
+        // SHOULD NOT BE LEFT LIKE THIS. FIND WAY TO PUT adminHomeScene
+        // IN A SEPERATE METHOD
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("user/UserHomeScene.fxml"));
+        BorderPane userHomeScene = adminLoader.load();
+        mainLayout.setCenter(userHomeScene);
+
+        userHomeScene.setCenter(bookFilmScene);
+    }
+
+    public static void showBookSingleFilmScene(TableView tableView) throws IOException, XPathExpressionException, SAXException, ParserConfigurationException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("bookFilm/BookSingleFilmScene.fxml"));
+        BorderPane bookSingleFilmScene = loader.load();
+
+        FXMLLoader userLoader = new FXMLLoader();
+        userLoader.setLocation(Main.class.getResource("user/UserHomeScene.fxml"));
+        BorderPane userHomeScene = userLoader.load();
+        mainLayout.setCenter(userHomeScene);
+
+        BookSingleFilmSceneController controller = loader.getController();
+        controller.initData((FilmData) tableView.getSelectionModel().getSelectedItem());
+
+        userHomeScene.setCenter(bookSingleFilmScene);
+    }
+
+    public static void showAddShowingScene(String selectedFilmTitle, FilmData selectedFilm) throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("datePopUp/datePopUpScene.fxml"));
+        AnchorPane addPopUpScene = loader.load();
+        DatePopUpSceneController controller = loader.getController();
+        controller.initData(selectedFilmTitle, selectedFilm);
+        // SHOULD NOT BE LEFT LIKE THIS. FIND WAY TO PUT adminHomeScene
+        // IN A SEPERATE METHOD
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("admin/AdminHomeScene.fxml"));
+        BorderPane adminHomeScene = adminLoader.load();
+        mainLayout.setCenter(adminHomeScene);
+
+        adminHomeScene.setCenter(addPopUpScene);
+    }
+
+    public static void main(String[] args) {
 		launch(args);
 	}
 

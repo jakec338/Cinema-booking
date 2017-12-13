@@ -144,9 +144,9 @@ public class EditSingleUserSceneController {
         doc.getDocumentElement().normalize();
 
         //update Element value
-        updateUsername(doc);
         updateEmail(doc);
         updatePassword(doc);
+        updateUsername(doc);
 
         //write the updated document to file or console
         doc.getDocumentElement().normalize();

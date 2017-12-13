@@ -8,3 +8,8 @@ Sean;sean@gmail.com;password
 Harriet;harriet@gmail.com;password
 George;george@gmail.com;password
 Edward;edward@gmail.com;password
+Star Wars: The Last Jedi;Rian Johnson
+Logan;James Mangold
+It;Andrés Muschietti
+Guardians of the Galaxy Vol.2;James Gunn
+Thor:Ragnarok;Taka Taititi

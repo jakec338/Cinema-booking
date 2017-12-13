@@ -82,6 +82,44 @@ public class AddFilmSceneController {
 		director.appendChild(xmlDoc.createTextNode(directorInput));
 		film.appendChild(director);
 
+		//  Should put in for loop really if you have time
+//    	  Element seatA1 = xmlDoc.createElement("Seat");
+//    	  seatA1.setAttribute("id", "A1");
+//    	  Element seatA2 = xmlDoc.createElement("Seat");
+//    	  seatA2.setAttribute("id", "A2");
+//    	  Element seatA3 = xmlDoc.createElement("Seat");
+//    	  seatA3.setAttribute("id", "A3");
+//    	  Element seatB1 = xmlDoc.createElement("Seat");
+//    	  seatB1.setAttribute("id", "B1");
+//    	  Element seatB2 = xmlDoc.createElement("Seat");
+//    	  seatB2.setAttribute("id", "B2");
+//    	  Element seatB3 = xmlDoc.createElement("Seat");
+//    	  seatB3.setAttribute("id", "B3");
+//
+//    	  Element seats = xmlDoc.createElement("Seats");
+//    	  seats.appendChild(seatA1);
+//    	  seats.appendChild(seatA2);
+//    	  seats.appendChild(seatA3);
+//    	  seats.appendChild(seatB1);
+//    	  seats.appendChild(seatB2);
+//    	  seats.appendChild(seatB3);
+//
+//
+//    	  Element showTime = xmlDoc.createElement("ShowTime");
+//    	  showTime.appendChild(seats);
+//
+//    	  Element showTimes = xmlDoc.createElement("ShowTimes");
+//    	  showTimes.appendChild(showTime);
+//
+//    	  Element date = xmlDoc.createElement("Date");
+//    	  date.appendChild(showTimes);
+
+		Element dates = xmlDoc.createElement("Dates");
+
+		film.appendChild(dates);
+
+		//
+
 		root.appendChild(film);
 
 
@@ -94,9 +132,10 @@ public class AddFilmSceneController {
 		File file = new File("src/Booking/films.xml");
 		StreamResult stream = new StreamResult(file);
 		tran.transform(source, stream);
-		System.out.println("?????");
+
 
 	}
+
 
 	@FXML
 	public void handleSubmit() throws IOException, ParserConfigurationException, TransformerException, SAXException{
@@ -114,6 +153,7 @@ public class AddFilmSceneController {
 
 
 
-		main.showFilmsListScene();
+		Main.showFilmsListScene();
 	}
+
 }

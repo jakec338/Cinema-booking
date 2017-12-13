@@ -31,7 +31,7 @@ public class UserHomeSceneController {
 
     @FXML
     public void toBookingScene() throws IOException{
-
+        Main.showBookingScene();
     }
 
     @FXML

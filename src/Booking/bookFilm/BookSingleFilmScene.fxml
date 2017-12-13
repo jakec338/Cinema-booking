@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.singleFilm.SingleFilmSceneController">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.bookFilm.BookSingleFilmSceneController">
     <center>
         <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
             <tabs>
@@ -31,7 +31,6 @@
                                         <Label fx:id="directorLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                     </children>
                                 </GridPane>
-                                <Button fx:id="deleteBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" textAlignment="JUSTIFY" />
                             </children></AnchorPane>
                     </content>
                 </Tab>
@@ -42,7 +41,8 @@
                                 <FlowPane fx:id="flowPane" layoutX="15.0" layoutY="84.0" prefHeight="200.0" prefWidth="56.0">
                                     <children>
                                         <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0" />
-                                    </children></FlowPane>
+                                    </children>
+                                </FlowPane>
                                 <Rectangle fx:id="seatA2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="77.0" layoutX="427.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" width="83.0" />
                                 <FlowPane layoutX="273.0" layoutY="14.0" prefHeight="0.0" prefWidth="92.0">
                                     <children>
@@ -52,8 +52,8 @@
                                 <AnchorPane fx:id="seatsAnchorPane" layoutX="236.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
                                 <StackPane fx:id="seatsStackPane" layoutX="427.0" layoutY="76.0" prefHeight="150.0" prefWidth="161.0" />
                                 <ComboBox fx:id="dateComboBox" layoutX="14.0" layoutY="38.0" prefWidth="150.0" promptText="Select Date" />
-                                <Button fx:id="addShowingBtn" layoutX="15.0" layoutY="8.0" mnemonicParsing="false" onAction="#addShowing" text="Add Showing" />
-                            </children></AnchorPane>
+                            </children>
+                        </AnchorPane>
                     </content>
                 </Tab>
             </tabs>
