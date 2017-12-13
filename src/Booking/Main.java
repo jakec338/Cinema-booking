@@ -7,6 +7,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
+import Booking.datePopUp.datePopUpSceneController;
 import Booking.filmList.FilmData;
 import Booking.singleFilm.SingleFilmSceneController;
 import javafx.application.Application;
@@ -15,11 +16,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Main extends Application{
 	
 	private Stage primaryStage;
+	private Stage dateStage;
 	private static BorderPane mainLayout;
 
 
@@ -124,6 +127,21 @@ public class Main extends Application{
 		adminHomeScene.setCenter(singleFilmScene);
 	}
 	
+	public static void showAddDateTimePop(String selectedFilmTitle) throws IOException{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("datePopUp/datePopUpScene.fxml"));     
+		AnchorPane datePopUpScene = loader.load();
+		Stage dateStage = new Stage();
+		Scene scene = new Scene(datePopUpScene);
+		datePopUpSceneController controller = loader.getController();
+		controller.initData(selectedFilmTitle, dateStage);
+		dateStage.setScene(scene);
+		dateStage.initModality(Modality.APPLICATION_MODAL);
+		dateStage.show();
+		
+		
+		
+	}
 	
 	public static void main(String[] args) {
 		launch(args);

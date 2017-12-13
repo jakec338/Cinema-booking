@@ -127,7 +127,7 @@ public class AddFilmSceneController {
     	  File file = new File("src/Booking/films.xml");
     	  StreamResult stream = new StreamResult(file);
     	  tran.transform(source, stream);
-    	  System.out.println("?????");
+ 
 
       }
 

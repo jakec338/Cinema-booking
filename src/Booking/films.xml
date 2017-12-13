@@ -1,69 +1,120 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Root>
-<Film id="k">
-    <Title>Thor</Title>
-    <Director>Taiko</Director> 
-    <ShowTimes>
-    	<ShowTime id="12:30">
-    		<Seats>
-    			<Seat id="A1">CustJuan</Seat>
-    			<Seat id="A2">Jean</Seat>
-    			<Seat id="A3"/>
-    			<Seat id="B1"/>
-    			<Seat id="B2"/>
-    			<Seat id="B3"/>
-    		</Seats>
-    	</ShowTime>
-    	<ShowTime id="16:00">
-    		<Seats>
-    			<Seat id="A1"/>
-    			<Seat id="A2">Jean</Seat>
-    			<Seat id="A3"/>
-    			<Seat id="B1"/>
-    			<Seat id="B2"/>
-    			<Seat id="B3"/>
-    		</Seats>
-    	</ShowTime>
-    </ShowTimes>  
-</Film>
-<Film id="t">
-    <Title>Film</Title>
-    <Director>Dirs</Director>
-     <ShowTimes>
-    	<ShowTime id="12:30">
-    		<Seats>
-    			<Seat id="A1">CustJuan</Seat>
-    			<Seat id="A2">Jean</Seat>
-    			<Seat id="A3"/>
-    			<Seat id="B1"/>
-    			<Seat id="B2"/>
-    			<Seat id="B3"/>
-    		</Seats>
-    	</ShowTime>
-    </ShowTimes>  
-</Film>
+	<Film id="k">
+		<Title>Thor</Title>
+		<Director>Taiko</Director>
+		<Dates>
+			<Date id="15-12-2017">
+				<ShowTimes>
+					<ShowTime id="12:30">
+						<Seats>
+							<Seat id="A1">CustJuan</Seat>
+							<Seat id="A2">Jean</Seat>
+							<Seat id="A3"/>
+							<Seat id="B1"/>
+							<Seat id="B2"/>
+							<Seat id="B3"/>
+						</Seats>
+					</ShowTime>
+					<ShowTime id="16:00">
+						<Seats>
+							<Seat id="A1"/>
+							<Seat id="A2">Jean</Seat>
+							<Seat id="A3"/>
+							<Seat id="B1"/>
+							<Seat id="B2"/>
+							<Seat id="B3"/>
+						</Seats>
+					</ShowTime>
+				</ShowTimes>
+			</Date>
+		<Date id="13-12-2017">
+        <ShowTimes>
+          <ShowTime id="12:00">
+            <Seats>
+              <Seat id="A1"/>
+              <Seat id="A2"/>
+              <Seat id="A3"/>
+              <Seat id="B1"/>
+              <Seat id="B2"/>
+              <Seat id="B3"/>
+            </Seats>
+          </ShowTime>
+        </ShowTimes>
+      </Date>
+    <Date id="21-12-2017">
+        <ShowTimes>
+          <ShowTime id="12:00">
+            <Seats>
+              <Seat id="A1"/>
+              <Seat id="A2"/>
+              <Seat id="A3"/>
+              <Seat id="B1"/>
+              <Seat id="B2"/>
+              <Seat id="B3"/>
+            </Seats>
+          </ShowTime>
+        </ShowTimes>
+      </Date>
+    <Date id="20-12-2017">
+        <ShowTimes>
+          <ShowTime id="12:00">
+            <Seats>
+              <Seat id="A1"/>
+              <Seat id="A2"/>
+              <Seat id="A3"/>
+              <Seat id="B1"/>
+              <Seat id="B2"/>
+              <Seat id="B3"/>
+            </Seats>
+          </ShowTime>
+        </ShowTimes>
+      </Date>
+    <Date id="07-12-2017">
+        <ShowTimes>
+          <ShowTime id="12:00">
+            <Seats>
+              <Seat id="A1"/>
+              <Seat id="A2"/>
+              <Seat id="A3"/>
+              <Seat id="B1"/>
+              <Seat id="B2"/>
+              <Seat id="B3"/>
+            </Seats>
+          </ShowTime>
+        </ShowTimes>
+      </Date>
+    <Date id="07-12-2017">
+        <ShowTimes>
+          <ShowTime id="1:00">
+            <Seats>
+              <Seat id="A1"/>
+              <Seat id="A2"/>
+              <Seat id="A3"/>
+              <Seat id="B1"/>
+              <Seat id="B2"/>
+              <Seat id="B3"/>
+            </Seats>
+          </ShowTime>
+        </ShowTimes>
+      </Date>
+    </Dates>
+	</Film>
+	<Film id="t">
+		<Title>Film</Title>
+		<Director>Dirs</Director>
+		<ShowTimes>
+			<ShowTime id="12:30">
+				<Seats>
+					<Seat id="A1">CustJuan</Seat>
+					<Seat id="A2">Jean</Seat>
+					<Seat id="A3"/>
+					<Seat id="B1"/>
+					<Seat id="B2"/>
+					<Seat id="B3"/>
+				</Seats>
+			</ShowTime>
+		</ShowTimes>
+	</Film>
 
-
-
-
-
-
-
-
-<Film>
-    <Title>check</Title>
-    <Director>jsnd</Director>
-    <ShowTimes>
-      <ShowTime id="12:30">
-        <Seats>
-          <Seat id="A1"/>
-          <Seat id="A2"/>
-          <Seat id="A3"/>
-          <Seat id="B1"/>
-          <Seat id="B2"/>
-          <Seat id="B3"/>
-        </Seats>
-      </ShowTime>
-    </ShowTimes>
-  </Film>
 </Root>
