@@ -61,8 +61,8 @@
 				<ShowTimes>
 					<ShowTime id="12:00">
 						<Seats>
-							<Seat id="A1"/>
-							<Seat id="A2"/>
+							<Seat id="A1">USERRR</Seat>
+							<Seat id="A2">USERRR</Seat>
 							<Seat id="A3"/>
 							<Seat id="B1"/>
 							<Seat id="B2"/>

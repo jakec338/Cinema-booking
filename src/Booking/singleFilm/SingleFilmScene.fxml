@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
@@ -31,11 +32,12 @@
                               <Label text="Director" GridPane.rowIndex="1" />
                               <Label fx:id="directorLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label text="Description" GridPane.rowIndex="2" />
-                              <Label fx:id="descriptionLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextFlow fx:id="descriptionTextFlow" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Button fx:id="deleteBtn" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" textAlignment="JUSTIFY" />
-                        <ImageView fx:id="filmImgView" fitHeight="150.0" fitWidth="172.0" layoutX="228.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+                        <AnchorPane fx:id="imgAnchor" layoutX="242.0" layoutY="55.0" prefHeight="202.0" prefWidth="159.0">
+                        </AnchorPane>
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -52,7 +54,10 @@
                               <VBox fx:id="seatsVbox" prefHeight="14.0" prefWidth="92.0" />
                            </children>
                         </FlowPane>
-                        <AnchorPane fx:id="seatsAnchorPane" layoutX="236.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
+                        <AnchorPane fx:id="seatsAnchorPane" layoutX="236.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="filmImgView" fitHeight="205.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true" />
+                           </children></AnchorPane>
                         <StackPane fx:id="seatsStackPane" layoutX="427.0" layoutY="76.0" prefHeight="150.0" prefWidth="161.0" />
                         <ComboBox fx:id="dateComboBox" layoutX="14.0" layoutY="38.0" prefWidth="150.0" promptText="Select Date" />
                         <Button fx:id="addShowingBtn" layoutX="15.0" layoutY="8.0" mnemonicParsing="false" onAction="#addShowing" text="Add Showing" />

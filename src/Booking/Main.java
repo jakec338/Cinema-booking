@@ -7,7 +7,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
-import Booking.datePopUp.datePopUpSceneController;
+import Booking.addShowing.AddShowingSceneController;
 import Booking.filmList.FilmData;
 import Booking.singleFilm.SingleFilmSceneController;
 import javafx.application.Application;
@@ -146,9 +146,9 @@ public class Main extends Application{
 	
 	public static void showAddShowingScene(String selectedFilmTitle, FilmData selectedFilm) throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("datePopUp/datePopUpScene.fxml"));     
+		loader.setLocation(Main.class.getResource("addShowing/AddShowingScene.fxml"));     
 		AnchorPane addPopUpScene = loader.load();
-		datePopUpSceneController controller = loader.getController();
+		AddShowingSceneController controller = loader.getController();
 		controller.initData(selectedFilmTitle, selectedFilm);
 		// SHOULD NOT BE LEFT LIKE THIS. FIND WAY TO PUT adminHomeScene
 		// IN A SEPERATE METHOD

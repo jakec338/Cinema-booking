@@ -1,4 +1,4 @@
-package Booking.datePopUp;
+package Booking.addShowing;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,7 +40,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class datePopUpSceneController {
+public class AddShowingSceneController {
 
 	@FXML
 	DatePicker datePicker;

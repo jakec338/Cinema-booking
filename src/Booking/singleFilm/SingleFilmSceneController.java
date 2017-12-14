@@ -64,6 +64,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 public class SingleFilmSceneController {
 
@@ -75,7 +77,8 @@ public class SingleFilmSceneController {
 	@FXML
 	Label directorLabel;
 	@FXML
-	Label descriptionLabel;
+	TextFlow descriptionTextFlow;
+//	Label descriptionLabel;
 	@FXML
 	ImageView filmImgView;
 	@FXML
@@ -95,6 +98,8 @@ public class SingleFilmSceneController {
 	VBox vBox;
 	@FXML
 	AnchorPane seatsAnchorPane;
+	@FXML
+	AnchorPane imgAnchor;
 
 	@FXML
 	ComboBox<String> dateComboBox;
@@ -102,18 +107,30 @@ public class SingleFilmSceneController {
 	Button addShowingBtn;
 
 	private List<Button> buttons;
-
+	private List<Button> seatButtons;
+	private List<String> dateList;
+	private List<String> timeList;
+	private List<String> seatList;
 
 	public void initData(FilmData filmData)
 			throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
 		selectedFilm = filmData;
 		titleLabel.setText(selectedFilm.getTitle());
 		directorLabel.setText(selectedFilm.getDirector());
-		descriptionLabel.setText(selectedFilm.getDescription());
+		Text desText = new Text(selectedFilm.getDescription());
+		descriptionTextFlow.getChildren().add(desText);
 		
 		// ED: IMAGE FILE NOT LOADING INTO IMAGEVIEW FOR SOME REASON 
-		final Image image2 = new Image("file:img/5.png");
-		filmImgView.setImage(image2);
+//		Image image2 = new Image("file:Users/Jake/Documents/Eclipse2/CinemaBooking/src/Booking/2NSKI2r.png");
+//		Image image = new Image(getClass().getResourceAsStream("file:src/Booking/img/5.jpg"));
+
+		
+		Image img = new Image("http://mikecann.co.uk/wp-content/uploads/2009/12/javafx_logo_color_1.jpg");
+		ImageView iV = new ImageView();
+		iV.setImage(img);
+		
+		imgAnchor.getChildren().add(iV);
+		
 		
 		datePicker();
 		dateComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
@@ -200,105 +217,289 @@ public class SingleFilmSceneController {
 		main.showAddShowingScene(selectedFilm.getTitle(), selectedFilm);
 	}
 
+//	public void timeBtns(String selectedDate) {
+//		for (int i = 0; i < buttons.size(); i++) {
+//			final Button timeBtn = buttons.get(i);
+//			final int a = i;
+//			timeBtn.setOnAction(new EventHandler<ActionEvent>() {
+//				public void handle(ActionEvent event) {
+//					try {
+//
+//						NodeList showTimeNodes = getNodes("//Title[text()='" + selectedFilm.getTitle()
+//								+ "']/parent::Film/Dates/Date[@id='" + selectedDate + "']/ShowTimes/ShowTime");
+//						String time = showTimeNodes.item(a).getAttributes().item(0).getTextContent();
+//						//
+//
+//						NodeList seatNodes = getNodes(
+//								"//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
+//										+ selectedDate + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat");
+//
+//						int numSeats = seatNodes.getLength();
+//						int columns = 2, rows = 3, horizontal = 60, vertical = 60;
+//
+//						Rectangle rect = null;
+//						Label seatLabel = null;
+//						
+//						for (int i = 0; i < columns; ++i) {// Iterate through
+//															// columns
+//							for (int j = 0; j < rows; ++j) {// Iterate through
+//															// rows
+//								// Color choice = chooseColor(rectColors);
+//								// Method that chooses a color
+//
+//								rect = new Rectangle(horizontal * j, vertical * i, horizontal, vertical);
+//								seatLabel = new Label();
+//				
+//								seatLabel.setLayoutX(horizontal * (j));
+//								seatLabel.setLayoutY(vertical * (i));
+//
+//								// Create a new
+//								// rectangle(PosY,PosX,width,height)
+//								rect.setFill(Color.AZURE);
+//								rect.setStroke(Color.BLUE);
+//								// Give rectangles an outline so I can see
+//								// rectangles
+//								String seat = null;
+//								switch (i) {
+//								case 0:
+//									switch (j) {
+//									case 0:
+//										seat = "A1";
+//										break;
+//									case 1:
+//										seat = "A2";
+//										break;
+//									case 2:
+//										seat = "A3";
+//										break;
+//									}
+//									break;
+//								case 1:
+//									switch (j) {
+//									case 0:
+//										seat = "B1";
+//										break;
+//									case 1:
+//										seat = "B2";
+//										break;
+//									case 2:
+//										seat = "B3";
+//										break;
+//									}
+//									break;
+//								case 2:
+//								}
+//								
+//								String occupant = getNodes("//Title[text()='" + selectedFilm.getTitle()
+//										+ "']/parent::Film/Dates/Date[@id='" + selectedDate
+//										+ "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat[@id='" + seat + "']")
+//												.item(0).getTextContent();
+//								if (!occupant.equals("")) {
+//									rect.setFill(Color.LIGHTGREY);
+//								} else {
+//									rect.setFill(Color.ALICEBLUE);
+//								}
+//								
+//								seatLabel.setText(seat);
+//								seatsAnchorPane.getChildren().add(rect);
+//								seatsAnchorPane.getChildren().add(seatLabel);
+//								// Add Rectangle to board
+//
+//							}
+//						}
+//					} catch (XPathExpressionException | SAXException | IOException | ParserConfigurationException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+//			});
+//		}
+//	}
+
+	
+	
+	
 	public void timeBtns(String selectedDate) {
-		for (int i = 0; i < buttons.size(); i++) {
-			final Button timeBtn = buttons.get(i);
-			final int a = i;
-			timeBtn.setOnAction(new EventHandler<ActionEvent>() {
+        for (int i = 0; i < buttons.size(); i++) {
+            final Button timeBtn = buttons.get(i);
+            final int a = i;
+            timeBtn.setOnAction(new EventHandler<ActionEvent>() {
+                public void handle(ActionEvent event) {
+                    try {
+
+                        NodeList showTimeNodes = getNodes("//Title[text()='" + selectedFilm.getTitle()
+                                + "']/parent::Film/Dates/Date[@id='" + selectedDate + "']/ShowTimes/ShowTime");
+                        String time = showTimeNodes.item(a).getAttributes().item(0).getTextContent();
+
+                        NodeList seatNodes = getNodes(
+                                "//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
+                                        + selectedDate + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat");
+
+                        int numSeats = seatNodes.getLength();
+                        int columns = 2, rows = 3, horizontal = 60, vertical = 60;
+
+                        Rectangle rect = null;
+                        Label seatLabel = null;
+                        seatButtons = new ArrayList<>();
+                        dateList = new ArrayList<>();
+                        timeList = new ArrayList<>();
+                        seatList = new ArrayList<>();
+                        int x = 0;
+                        for (int i = 0; i < columns; ++i) {// Iterate through
+                            // columns
+                            for (int j = 0; j < rows; ++j) {// Iterate through
+                                // rows
+                                // Color choice = chooseColor(rectColors);
+                                // Method that chooses a color
+
+                                rect = new Rectangle(horizontal * j, vertical * i, horizontal, vertical);
+                                seatLabel = new Label();
+
+                                seatLabel.setLayoutX(horizontal * (j));
+                                seatLabel.setLayoutY(vertical * (i));
+
+                                // Create a new
+                                // rectangle(PosY,PosX,width,height)
+                                rect.setFill(Color.AZURE);
+                                rect.setStroke(Color.BLUE);
+                                // Give rectangles an outline so I can see
+                                // rectangles
+
+                                String seat = null;
+                                switch (i) {
+                                    case 0:
+                                        switch (j) {
+                                            case 0:
+                                                seat = "A1";
+                                                break;
+                                            case 1:
+                                                seat = "A2";
+                                                break;
+                                            case 2:
+                                                seat = "A3";
+                                                break;
+                                        }
+                                        break;
+                                    case 1:
+                                        switch (j) {
+                                            case 0:
+                                                seat = "B1";
+                                                break;
+                                            case 1:
+                                                seat = "B2";
+                                                break;
+                                            case 2:
+                                                seat = "B3";
+                                                break;
+                                        }
+                                        break;
+                                }
+
+
+                                        Button seatButton = new Button(seatNodes.item(x).getAttributes().item(0).getTextContent());
+                                        seatButton.setText(seat);
+                                        seatButtons.add(seatButton);
+
+                                seatButtons.get(x).setLayoutX(horizontal * (j));
+                                seatButtons.get(x).setLayoutY(vertical * (i));
+                                
+                             
+
+                                String occupant = getNodes("//Title[text()='" + selectedFilm.getTitle()
+                                        + "']/parent::Film/Dates/Date[@id='" + selectedDate
+                                        + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat[@id='" + seat + "']")
+                                        .item(0).getTextContent();
+                                
+                       
+                                
+                                if (!occupant.equals("")) {
+                                    rect.setFill(Color.LIGHTGREY);
+                                } else {
+                                    rect.setFill(Color.ALICEBLUE);
+                                }
+                                seatLabel.setText(seat);
+
+                                
+                                dateList.add(selectedDate);
+                                timeList.add(time);
+                                seatList.add(seat);
+                                seatsAnchorPane.getChildren().add(rect);
+                                seatsAnchorPane.getChildren().add(seatLabel);
+                                seatsAnchorPane.getChildren().addAll(seatButtons.get(x));
+                                // Add Rectangle to board
+
+                                x++;
+                            }
+                        }
+                        addUserToShowing(); // ADD AFTER FOR LOOP
+                    } catch (XPathExpressionException | SAXException | IOException | ParserConfigurationException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+    }
+	
+	public void addUserToShowing(){
+		int x = seatButtons.size();
+
+		for (int i =0; i < x; i++){
+			final int ii =i;
+			String date = dateList.get(ii);
+			String time = timeList.get(ii);
+			String seat = seatList.get(ii);
+			
+			
+			seatButtons.get(i).setOnAction(new EventHandler <ActionEvent>(){
+				
+				@Override
 				public void handle(ActionEvent event) {
 					try {
-
-						NodeList showTimeNodes = getNodes("//Title[text()='" + selectedFilm.getTitle()
-								+ "']/parent::Film/Dates/Date[@id='" + selectedDate + "']/ShowTimes/ShowTime");
-						String time = showTimeNodes.item(a).getAttributes().item(0).getTextContent();
-						//
-
-						NodeList seatNodes = getNodes(
-								"//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
-										+ selectedDate + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat");
-
-						int numSeats = seatNodes.getLength();
-						int columns = 2, rows = 3, horizontal = 60, vertical = 60;
-
-						Rectangle rect = null;
-						Label seatLabel = null;
+						NodeList seatNode = getNodes("//Title[text()='" + selectedFilm.getTitle()
+						+ "']/parent::Film/Dates/Date[@id='" + date
+						+ "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat[@id='" + seat + "']");
 						
-						for (int i = 0; i < columns; ++i) {// Iterate through
-															// columns
-							for (int j = 0; j < rows; ++j) {// Iterate through
-															// rows
-								// Color choice = chooseColor(rectColors);
-								// Method that chooses a color
-
-								rect = new Rectangle(horizontal * j, vertical * i, horizontal, vertical);
-								seatLabel = new Label();
-				
-								seatLabel.setLayoutX(horizontal * (j));
-								seatLabel.setLayoutY(vertical * (i));
-
-								// Create a new
-								// rectangle(PosY,PosX,width,height)
-								rect.setFill(Color.AZURE);
-								rect.setStroke(Color.BLUE);
-								// Give rectangles an outline so I can see
-								// rectangles
-								String seat = null;
-								switch (i) {
-								case 0:
-									switch (j) {
-									case 0:
-										seat = "A1";
-										break;
-									case 1:
-										seat = "A2";
-										break;
-									case 2:
-										seat = "A3";
-										break;
-									}
-									break;
-								case 1:
-									switch (j) {
-									case 0:
-										seat = "B1";
-										break;
-									case 1:
-										seat = "B2";
-										break;
-									case 2:
-										seat = "B3";
-										break;
-									}
-									break;
-								case 2:
-								}
-
-								String occupant = getNodes("//Title[text()='" + selectedFilm.getTitle()
-										+ "']/parent::Film/Dates/Date[@id='" + selectedDate
-										+ "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat[@id='" + seat + "']")
-												.item(0).getTextContent();
-								if (!occupant.equals("")) {
-									rect.setFill(Color.LIGHTGREY);
-								} else {
-									rect.setFill(Color.ALICEBLUE);
-								}
-								
-								seatLabel.setText(seat);
-								seatsAnchorPane.getChildren().add(rect);
-								seatsAnchorPane.getChildren().add(seatLabel);
-								// Add Rectangle to board
-
-							}
-						}
-					} catch (XPathExpressionException | SAXException | IOException | ParserConfigurationException e) {
+						seatNode.item(0).setTextContent("USERRR");
+						
+						
+						
+						TransformerFactory tf = TransformerFactory.newInstance();
+				    	  Transformer tran = tf.newTransformer();
+				    	  tran.setOutputProperty(OutputKeys.INDENT, "yes");
+				    	  tran.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+				    	  DOMSource source = new DOMSource(seatNode.item(0).getOwnerDocument());
+				    	  
+				    	  File file = new File("src/Booking/films.xml");
+				    	  StreamResult stream = new StreamResult(file);
+				    	  tran.transform(source, stream);
+					} catch (XPathExpressionException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (ParserConfigurationException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (SAXException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (TransformerConfigurationException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (TransformerException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					
 				}
+				
 			});
 		}
+		
 	}
-
+	
 	@FXML
 	public void deleteNode() throws ParserConfigurationException, FileNotFoundException, SAXException, IOException,
 			TransformerException {
