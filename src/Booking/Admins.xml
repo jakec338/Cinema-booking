@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Root>
-<User>
-    <Username>Admin</Username>
-    <Email>admin@gmail.com</Email>
-    <Password>password</Password>
-    </User>
     <User>
-        <Username>Admin2</Username>
-        <Email>admin@gmail.com</Email>
+        <Username>Harriet</Username>
+        <FirstName>Harriet</FirstName>
+        <Surname>Alway</Surname>
+        <Email>harriet@gmail.com</Email>
         <Password>password</Password>
     </User>
-    <User>
-    <Username>Admin3</Username>
-    <Email>admin@gmail.com</Email>
+<User>
+    <Username>Edward</Username>
+    <FirstName>Edward</FirstName>
+    <Surname>McLaughlin</Surname>
+    <Email>emclaughlin099@gmail.com</Email>
     <Password>password</Password>
-</User>
+  </User>
 </Root>

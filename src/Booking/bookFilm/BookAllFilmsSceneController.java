@@ -45,6 +45,7 @@ public class BookAllFilmsSceneController implements Initializable {
     @FXML private TableView<FilmData> tableView;
     @FXML private TableColumn<FilmData, String> title;
     @FXML private TableColumn<FilmData, String> director;
+    @FXML private TableColumn<FilmData, String> description;
 
 
     @FXML
@@ -102,6 +103,24 @@ public class BookAllFilmsSceneController implements Initializable {
                         .getElementsByTagName("Director")
                         .item(0)
                         .getTextContent());
+                ds.setDescription(element
+                        .getElementsByTagName("Description")
+                        .item(0)
+                        .getTextContent());
+
+                System.out.println(element
+                        .getElementsByTagName("Description")
+                        .item(0)
+                        .getTextContent());
+
+                ds.setImageURL(element
+                        .getElementsByTagName("imageURL")
+                        .item(0)
+                        .getTextContent());
+                System.out.println(element
+                        .getElementsByTagName("imageURL")
+                        .item(0)
+                        .getTextContent());
 
                 ds.setSerialNo(j);
                 ++j;
@@ -117,6 +136,7 @@ public class BookAllFilmsSceneController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         title.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Title"));              // ("[Whatever]")THIS MUST REFLECT THE 'get' methods in the data class
         director.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Director"));        // Fucking stupid, not declared anywhere
+        description.setCellValueFactory(new PropertyValueFactory<FilmData,String>("Description"));
         try {
             tableView.getItems().setAll(parseXml());
         } catch (IOException e) {

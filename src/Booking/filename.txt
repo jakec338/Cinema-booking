@@ -13,3 +13,16 @@ Logan;James Mangold
 It;Andrés Muschietti
 Guardians of the Galaxy Vol.2;James Gunn
 Thor:Ragnarok;Taka Taititi
+user;user;user;user@user.com;password
+emclaughlin099;Edward;McLaughlin;emclaughlin099@gmail.com;password
+emclaughlin099;Edward;McLaughlin;emclaughlin099@gmail.com;password
+Edward;Edward;McLaughlin;emclaughlin@gmail.com;password
+George;george;simpsonb;email@email.com;password
+Harriet;Harriet;Alway;harriet@gmail.com;password
+Admin1;Edward;McLaughlin;emclaughlin099@gmail.com;password
+George;George;Edison;george@gmail.com;password
+Edward;Edward;McLaughlin;emclaughlin099@gmail.com;password
+Thor: Ragnarok;Taika Waititi
+Star Wars: The Last Jedi;Rian Johnson
+Star Wars: The Last Jedi;Rian Johnson
+Lord of the Rings: The Two Towers;Peter Jackson

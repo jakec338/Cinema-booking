@@ -36,7 +36,7 @@ public class UserHomeSceneController {
 
     @FXML
     public void toBookingHistoryScene() throws IOException{
-
+        Main.showBookingHistoryScene();
     }
 
     @FXML

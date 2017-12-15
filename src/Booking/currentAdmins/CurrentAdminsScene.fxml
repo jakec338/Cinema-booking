@@ -5,15 +5,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.currentAdmins.CurrentAdminsSceneController">
+<BorderPane stylesheets="/Booking/Styling.css" styleClass="background" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.currentAdmins.CurrentAdminsSceneController">
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
                 <TableView fx:id="tableView" layoutX="22.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" onMouseClicked="#toSingleUserScene" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                        <TableColumn fx:id="username" prefWidth="109.0" text="Username" />
-                        <TableColumn fx:id="email" prefWidth="126.0" text="Email" />
-                        <TableColumn fx:id="password" prefWidth="126.0" text="Password" />
+                        <TableColumn fx:id="username" prefWidth="109.0" text="Username" minWidth="200"/>
+                        <TableColumn fx:id="firstName" prefWidth="109.0" text="First Name" minWidth="200"/>
+                        <TableColumn fx:id="surname" prefWidth="109.0" text="Surname" minWidth="200"/>
+                        <TableColumn fx:id="email" prefWidth="126.0" text="Email" minWidth="200"/>
+                        <TableColumn fx:id="password" prefWidth="126.0" text="Password" minWidth="200"/>
                     </columns>
                 </TableView>
             </children>

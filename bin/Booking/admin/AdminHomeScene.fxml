@@ -6,23 +6,22 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.admin.AdminHomeController">
+<BorderPane stylesheets="/Booking/Styling.css" styleClass="background" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.admin.AdminHomeSceneController">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
    <left>
-      <VBox prefHeight="400.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="filmListBtn" mnemonicParsing="false" onAction="#toFilmsListScene" prefHeight="27.0" prefWidth="164.0" text="Films" />
-            <Button fx:id="addFilmBtn" mnemonicParsing="false" onAction="#toAddFilmScene" prefHeight="27.0" prefWidth="166.0" text="Add Film" />
-            <Button fx:id="currentUsersBtn" mnemonicParsing="false" onAction="#toCurrentUsersScene" prefHeight="27.0" prefWidth="166" text="Manage Users"/>
-            <Button fx:id="currentAdminsBtn" mnemonicParsing="false" onAction="#toCurrentAdminsScene" prefHeight="27.0" prefWidth="166" text="Manage Admins"/>
-            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#toHomeScene" prefHeight="27.0" prefWidth="172.0" text="Logout" />
+            <Button fx:id="filmListBtn" mnemonicParsing="false" onAction="#toFilmsListScene" prefHeight="27.0" prefWidth="200.0" text="Films" />
+            <Button fx:id="addFilmBtn" mnemonicParsing="false" onAction="#toAddFilmScene" prefHeight="27.0" prefWidth="200.0" text="Add Film" />
+            <Button fx:id="currentUsersBtn" mnemonicParsing="false" onAction="#toCurrentUsersScene" prefHeight="27.0" prefWidth="200" text="Manage Users"/>
+            <Button fx:id="currentAdminsBtn" mnemonicParsing="false" onAction="#toCurrentAdminsScene" prefHeight="27.0" prefWidth="200" text="Manage Admins"/>
          </children>
       </VBox>
    </left>
    <top>
-      <Label prefHeight="31.0" prefWidth="187.0" text="Administrator Home" BorderPane.alignment="CENTER">
+      <Label prefHeight="31.0" prefWidth="250.0" text="Administrator Home" BorderPane.alignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>

@@ -2,17 +2,9 @@
 <Root>
 <User>
     <Username>George</Username>
+    <FirstName>George</FirstName>
+    <Surname>Simpson</Surname>
     <Email>george@gmail.com</Email>
-    <Password>password</Password>
-  </User>
-<User>
-    <Username>Caleb</Username>
-    <Email>caleb@gmail.com</Email>
-    <Password>password</Password>
-  </User>
-<User>
-    <Username>Edward</Username>
-    <Email>edward@gmail.com</Email>
     <Password>password</Password>
   </User>
 </Root>

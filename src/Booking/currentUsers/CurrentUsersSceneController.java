@@ -34,29 +34,10 @@ public class CurrentUsersSceneController implements Initializable {
 
     @FXML private TableView<UserData> tableView;
     @FXML private TableColumn<UserData, String> username;
+    @FXML private TableColumn<UserData, String> firstName;
+    @FXML private TableColumn<UserData, String> surname;
     @FXML private TableColumn<UserData, String> email;
     @FXML private TableColumn<UserData, String> password;
-
-    //    public ObservableList<UserData> getUsers() throws IOException{
-//
-//        ObservableList<UserData> users = FXCollections.observableArrayList();
-//
-//        String fileName = "src/Booking/Users.txt";
-//        File file = new File(fileName);
-//        List<String> lines =  Files.readAllLines(Paths.get("src/Booking/Users.txt"), Charset.defaultCharset());
-//        int numberOfLines = lines.size();   // never used
-//        Scanner inputStream = new Scanner(file);
-//
-//        while (inputStream.hasNext()){
-//            String data = inputStream.nextLine(); //
-//            String singleValues[] = data.split(";");
-//
-//            users.add(new UserData(singleValues[0], singleValues[1], singleValues[2]));
-//            // Gets individual values from the CSV file, separated by ; [0] = Username, [1] = Email, [2] = Password.
-//        }inputStream.close();
-//
-//        return users;
-//    }
 
     public ObservableList<UserData> parseXml() throws ParserConfigurationException, SAXException, IOException{
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
@@ -82,6 +63,24 @@ public class CurrentUsersSceneController implements Initializable {
                         .getTextContent());
                 System.out.println(element
                         .getElementsByTagName("Username")
+                        .item(0)
+                        .getTextContent());
+
+                ds.setFirstName(element
+                        .getElementsByTagName("FirstName")
+                        .item(0)
+                        .getTextContent());
+                System.out.println(element
+                        .getElementsByTagName("FirstName")
+                        .item(0)
+                        .getTextContent());
+
+                ds.setSurname(element
+                        .getElementsByTagName("Surname")
+                        .item(0)
+                        .getTextContent());
+                System.out.println(element
+                        .getElementsByTagName("Surname")
                         .item(0)
                         .getTextContent());
 
@@ -113,12 +112,11 @@ public class CurrentUsersSceneController implements Initializable {
     return data;
     }
 
-
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         username.setCellValueFactory(new PropertyValueFactory<UserData, String>("username"));
+        firstName.setCellValueFactory(new PropertyValueFactory<UserData, String >("firstName"));
+        surname.setCellValueFactory(new PropertyValueFactory<UserData, String >("surname"));
         email.setCellValueFactory(new PropertyValueFactory<UserData, String>("email"));
         password.setCellValueFactory(new PropertyValueFactory<UserData, String>("password"));
         try {
@@ -134,7 +132,6 @@ public class CurrentUsersSceneController implements Initializable {
             e.printStackTrace();
         }
     }
-
 
     @FXML
     public void toAddUserScene() throws IOException{

@@ -7,22 +7,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.user.UserHomeSceneController">
+<BorderPane stylesheets="/Booking/Styling.css" styleClass="background" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.user.UserHomeSceneController">
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
     </center>
     <left>
-        <VBox prefHeight="400.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <VBox prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="updateProfileBtn" mnemonicParsing="false" onAction="#toUpdateProfileScene" prefHeight="27.0" prefWidth="164.0" text="View/Edit Profile" />
-                <Button fx:id="newBookingBtn" mnemonicParsing="false" onAction="#toBookingScene" prefHeight="27.0" prefWidth="166" text="Make a Booking" />
-                <Button fx:id="bookingHistoryBtn" mnemonicParsing="false" onAction="#toBookingHistoryScene" prefHeight="27.0" prefWidth="166.0" text="Past Bookings" />
-                <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#toHomeScene" prefHeight="27.0" prefWidth="172.0" text="Logout" />
+                <Button fx:id="updateProfileBtn" mnemonicParsing="false" onAction="#toUpdateProfileScene" prefHeight="27.0" prefWidth="200.0" text="View/Edit Profile" />
+                <Button fx:id="newBookingBtn" mnemonicParsing="false" onAction="#toBookingScene" prefHeight="27.0" prefWidth="200" text="Make a Booking" />
+                <Button fx:id="bookingHistoryBtn" mnemonicParsing="false" onAction="#toBookingHistoryScene" prefHeight="27.0" prefWidth="200.0" text="Past Bookings" />
             </children>
         </VBox>
     </left>
     <top>
-        <Label prefHeight="31.0" prefWidth="95.0" text="User Home" BorderPane.alignment="CENTER">
+        <Label prefHeight="31.0" prefWidth="150.0" text="User Home" BorderPane.alignment="CENTER">
             <font>
                 <Font size="18.0" />
             </font>

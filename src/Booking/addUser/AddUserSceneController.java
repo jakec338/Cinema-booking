@@ -32,33 +32,29 @@ public class AddUserSceneController {
 
     Main main;
     String username;
+    String firstName;
+    String surname;
     String email;
     String password;
     String line;
     List<String> userDetails = new ArrayList<String>();
 
-    @FXML
-    private Label usernameLabel;
-    @FXML
-    private TextField usernameTextField;
-    @FXML
-    private Label emailLabel;
-    @FXML
-    private TextField emailTextField;
-    @FXML
-    private Label passwordLabel;
-    @FXML
-    private PasswordField passwordField;
-    @FXML
-    private Label confirmPasswordLabel;
-    @FXML
-    private PasswordField confirmPasswordField;
-    @FXML
-    private Button submitDetailsBtn;
-    @FXML
-    private CheckBox staffConfirm;
+    @FXML private Label usernameLabel;
+    @FXML private TextField usernameTextField;
+    @FXML private Label firstNameLabel;
+    @FXML private TextField firstNameTextField;
+    @FXML private Label surnameLabel;
+    @FXML private TextField surnameTextField;
+    @FXML private Label emailLabel;
+    @FXML private TextField emailTextField;
+    @FXML private Label passwordLabel;
+    @FXML private PasswordField passwordField;
+    @FXML private Label confirmPasswordLabel;
+    @FXML private PasswordField confirmPasswordField;
+    @FXML private Button submitDetailsBtn;
+    @FXML private CheckBox staffConfirm;
 
-    private void writeToUserXML(String usernameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
+    private void writeToUserXML(String usernameInput, String firstNameInput, String surnameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -71,6 +67,14 @@ public class AddUserSceneController {
         Element username = xmlDoc.createElement("Username");
         username.appendChild(xmlDoc.createTextNode(usernameInput));
         user.appendChild(username);
+
+        Element firstName = xmlDoc.createElement("FirstName");
+        firstName.appendChild(xmlDoc.createTextNode(firstNameInput));
+        user.appendChild(firstName);
+
+        Element surname = xmlDoc.createElement("Surname");
+        surname.appendChild(xmlDoc.createTextNode(surnameInput));
+        user.appendChild(surname);
 
         Element email = xmlDoc.createElement("Email");
         email.appendChild(xmlDoc.createTextNode(emailInput));
@@ -92,12 +96,9 @@ public class AddUserSceneController {
         File file = new File("src/Booking/Users.xml");
         StreamResult stream = new StreamResult(file);
         tran.transform(source, stream);
-        System.out.println("?????");
-
-        Main.showCurrentUsersScene();
     }
 
-    private void writeToAdminXML(String usernameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
+    private void writeToAdminXML(String usernameInput, String firstNameInput, String surnameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -110,6 +111,14 @@ public class AddUserSceneController {
         Element username = xmlDoc.createElement("Username");
         username.appendChild(xmlDoc.createTextNode(usernameInput));
         user.appendChild(username);
+
+        Element firstName = xmlDoc.createElement("FirstName");
+        firstName.appendChild(xmlDoc.createTextNode(firstNameInput));
+        user.appendChild(firstName);
+
+        Element surname = xmlDoc.createElement("Surname");
+        surname.appendChild(xmlDoc.createTextNode(surnameInput));
+        user.appendChild(surname);
 
         Element email = xmlDoc.createElement("Email");
         email.appendChild(xmlDoc.createTextNode(emailInput));
@@ -131,26 +140,37 @@ public class AddUserSceneController {
         File file = new File("src/Booking/Admins.xml");
         StreamResult stream = new StreamResult(file);
         tran.transform(source, stream);
-        System.out.println("?????");
-
-        Main.showCurrentAdminsScene();
     }
 
     @FXML
     public void handleSubmit() throws IOException, ParserConfigurationException, TransformerException, SAXException{
 
         username = usernameTextField.getText();
+        firstName = firstNameTextField.getText();
+        surname = surnameTextField.getText();
         email = emailTextField.getText();
         password = passwordField.getText();
         userDetails.add(username);
+        userDetails.add(firstName);
+        userDetails.add(surname);
         userDetails.add(email);
         userDetails.add(password);
 
-        Window owner = submitDetailsBtn.getScene().getWindow();
+        { Window owner = submitDetailsBtn.getScene().getWindow();
             //Checks username is entered
             if(usernameTextField.getText().isEmpty()) {
                 AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
-                        "Please choose a Username");
+                        "Please enter a Username");
+                return;
+            }
+            if(firstNameTextField.getText().isEmpty()) {
+                AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                        "Please enter your First Name");
+                return;
+            }
+            if(surnameTextField.getText().isEmpty()) {
+                AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                        "Please enter your Surname");
                 return;
             }
             //Checks email is entered
@@ -192,21 +212,19 @@ public class AddUserSceneController {
 
 
             AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "User Added!",
-                    "Welcome " + usernameTextField.getText());
+                    "Welcome " + firstNameTextField.getText());}
 
-        if(staffConfirm.isSelected()) {
-            writeToAdminXML(username, email, password);
-
-            PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
-            writer.append(username + ";" + email + ";" + password + "\n");
-            writer.close();
-        } else{
-            writeToUserXML(username, email, password);
-
-            PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
-            writer.append(username + ";" + email + ";" + password + "\n");
-            writer.close();
+        if(staffConfirm.isSelected()){
+            writeToAdminXML(username, firstName, surname, email, password);
+        }else{
+            writeToUserXML(username, firstName, surname, email, password);
         }
+
+        PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
+        writer.append(username + ";" + firstName + ";" + surname + ";" + email + ";" + password + "\n");
+        writer.close();
+
+        Main.showCurrentUsersScene();
     }
 
     private boolean validateEmail() {

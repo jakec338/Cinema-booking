@@ -7,14 +7,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.login.LoginSceneController">
+<?import javafx.scene.layout.GridPane?>
+<BorderPane stylesheets="/Booking/Styling.css" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.login.LoginSceneController">
    <center>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="800.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="loginBtn" layoutX="275.0" layoutY="242.0" mnemonicParsing="false" onAction="#Login" text="Login" />
-            <Label fx:id="loginLabel" layoutX="261.0" layoutY="95.0" text="Enter Details" />
-            <PasswordField fx:id="password" layoutX="222.0" layoutY="187.0" promptText="Password" />
-            <TextField fx:id="username" layoutX="222.0" layoutY="144.0" promptText="Username" />
+            <GridPane vgap="20" prefWidth="200" layoutX="500" layoutY="200">
+            <Button fx:id="loginBtn" GridPane.rowIndex="3" mnemonicParsing="false" onAction="#Login" text="Login" />
+            <Label fx:id="loginLabel" GridPane.rowIndex="0" text="Enter Details" textAlignment="CENTER" />
+            <PasswordField fx:id="password" GridPane.rowIndex="2" promptText="Password" />
+            <TextField fx:id="username" GridPane.rowIndex="1" promptText="Username" />
+            </GridPane>
          </children>
       </AnchorPane>
    </center>

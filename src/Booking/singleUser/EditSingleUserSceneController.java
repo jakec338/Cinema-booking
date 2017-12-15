@@ -39,6 +39,14 @@ public class EditSingleUserSceneController {
     @FXML
     private TextField passwordField;
     @FXML
+    private TextField firstNameField;
+    @FXML
+    private TextField surnameField;
+    @FXML
+    Label firstNameLabel;
+    @FXML
+    Label surnameLabel;
+    @FXML
     Label usernameLabel;
     @FXML
     Label emailLabel;
@@ -68,8 +76,12 @@ public class EditSingleUserSceneController {
                 Element eElement = (Element) nNode;
 
                 String sUsername = eElement.getElementsByTagName("Username").item(0).getTextContent();
+                String sFirstName = eElement.getElementsByTagName("FirstName").item(0).getTextContent();
+                String sSurname = eElement.getElementsByTagName("Surname").item(0).getTextContent();
                 String sEmail = eElement.getElementsByTagName("Email").item(0).getTextContent();
                 String sPassword = eElement.getElementsByTagName("Password").item(0).getTextContent();
+
+
 
                 BufferedReader in = new BufferedReader((new FileReader(new File("src/Booking/CurrentSession.txt"))));
                 String fileName = "src/Booking/CurrentSession.txt";
@@ -80,8 +92,11 @@ public class EditSingleUserSceneController {
 
                 if (sUsername.equals(data)) {
                     usernameLabel.setText(sUsername);
+                    firstNameLabel.setText(sFirstName);
+                    surnameLabel.setText(sSurname);
                     emailLabel.setText(sEmail);
                     passwordLabel.setText(sPassword);
+
                 }
             }
         }
@@ -107,6 +122,8 @@ public class EditSingleUserSceneController {
                 Element eElement = (Element) nNode;
 
                 String sUsername = eElement.getElementsByTagName("Username").item(0).getTextContent();
+                String sFirstName = eElement.getElementsByTagName("FirstName").item(0).getTextContent();
+                String sSurname = eElement.getElementsByTagName("Surname").item(0).getTextContent();
                 String sEmail = eElement.getElementsByTagName("Email").item(0).getTextContent();
                 String sPassword = eElement.getElementsByTagName("Password").item(0).getTextContent();
 
@@ -119,9 +136,13 @@ public class EditSingleUserSceneController {
 
                 if (sUsername.equals(data)) {
                     usernameField.setPromptText(sUsername);
+                    firstNameField.setPromptText(sFirstName);
+                    surnameField.setPromptText(sSurname);
                     emailField.setPromptText(sEmail);
                     passwordField.setPromptText(sPassword);
                     usernameField.setText(sUsername);
+                    firstNameField.setText(sFirstName);
+                    surnameField.setText(sSurname);
                     emailField.setText(sEmail);
                     passwordField.setText(sPassword);
                 }
@@ -145,6 +166,8 @@ public class EditSingleUserSceneController {
 
         //update Element value
         updateEmail(doc);
+        updateFirstName(doc);
+        updateSurname(doc);
         updatePassword(doc);
         updateUsername(doc);
 
@@ -178,6 +201,42 @@ public class EditSingleUserSceneController {
             if(emp.getElementsByTagName("Username").item(0).getTextContent().equals(data)){
                 Node name = emp.getElementsByTagName("Username").item(0).getFirstChild();
                 name.setNodeValue(usernameField.getText());
+            }
+        }
+    }
+
+    private void updateFirstName(Document doc) throws ParserConfigurationException, SAXException, IOException {
+        NodeList users = doc.getElementsByTagName("User");
+        Element emp = null;
+        BufferedReader in = new BufferedReader((new FileReader(new File("src/Booking/CurrentSession.txt"))));
+        String fileName = "src/Booking/CurrentSession.txt";
+        File file = new File(fileName);
+        List<String> lines = Files.readAllLines(Paths.get("src/Booking/CurrentSession.txt"), Charset.defaultCharset());
+        Scanner inputStream = new Scanner(file);
+        String data = inputStream.nextLine();
+        for (int i = 0; i < users.getLength(); i++) {
+            emp = (Element) users.item(i);
+            if(emp.getElementsByTagName("Username").item(0).getTextContent().equals(data)){
+                Node name = emp.getElementsByTagName("FirstName").item(0).getFirstChild();
+                name.setNodeValue(firstNameField.getText());
+            }
+        }
+    }
+
+    private void updateSurname(Document doc) throws ParserConfigurationException, SAXException, IOException {
+        NodeList users = doc.getElementsByTagName("User");
+        Element emp = null;
+        BufferedReader in = new BufferedReader((new FileReader(new File("src/Booking/CurrentSession.txt"))));
+        String fileName = "src/Booking/CurrentSession.txt";
+        File file = new File(fileName);
+        List<String> lines = Files.readAllLines(Paths.get("src/Booking/CurrentSession.txt"), Charset.defaultCharset());
+        Scanner inputStream = new Scanner(file);
+        String data = inputStream.nextLine();
+        for (int i = 0; i < users.getLength(); i++) {
+            emp = (Element) users.item(i);
+            if(emp.getElementsByTagName("Username").item(0).getTextContent().equals(data)){
+                Node name = emp.getElementsByTagName("Surname").item(0).getFirstChild();
+                name.setNodeValue(surnameField.getText());
             }
         }
     }
@@ -218,39 +277,4 @@ public class EditSingleUserSceneController {
             }
         }
     }
-
-//    public boolean checkSession() throws IOException, ParserConfigurationException, SAXException {
-//        File fXmlFile = new File("/Users/McLaughlin/Code/Cinema-booking/src/Booking/Users.xml");
-//        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-//        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-//        Document doc = dBuilder.parse(fXmlFile);
-//
-//        doc.getDocumentElement().normalize();
-//
-//        NodeList nList = doc.getElementsByTagName("User");
-//
-//        for (int temp = 0; temp < nList.getLength(); temp++) {
-//
-//            Node nNode = nList.item(temp);
-//
-//            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-//
-//                Element eElement = (Element) nNode;
-//
-//                String sUsername = eElement.getElementsByTagName("Username").item(0).getTextContent();
-//
-//                BufferedReader in = new BufferedReader((new FileReader(new File("src/Booking/CurrentSession.txt"))));
-//                String fileName = "src/Booking/CurrentSession.txt";
-//                File file = new File(fileName);
-//                List<String> lines = Files.readAllLines(Paths.get("src/Booking/CurrentSession.txt"), Charset.defaultCharset());
-//                Scanner inputStream = new Scanner(file);
-//                String data = inputStream.nextLine();
-//                if (sUsername.equals(data)){
-//                    return true;
-//                }
-//            }
-//        }
-//
-//        return false;
-//    }
 }

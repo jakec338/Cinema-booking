@@ -1,5 +1,6 @@
 package Booking.addFilm;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -11,6 +12,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.imageio.ImageIO;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
@@ -27,6 +29,10 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -42,6 +48,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class AddFilmSceneController {
@@ -49,6 +56,8 @@ public class AddFilmSceneController {
 	Main main;
 	String title;
 	String director;
+	String description;
+	String imageURL;
 	String line;
 	public List<String> filmDetails = new ArrayList<String>();
 
@@ -61,10 +70,16 @@ public class AddFilmSceneController {
 	@FXML
 	private TextField directorTextField;
 	@FXML
+	private TextArea descriptionTextField;
+	@FXML
 	private Button submitFilmBtn;
+	@FXML
+	private ImageView imageBox;
+	@FXML
+	private TextField imageField;
 
 
-	private void writeToXML(String titleInput, String directorInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
+	private void writeToXML(String titleInput, String directorInput, String descriptionInput, String imageURLInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
 
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -81,6 +96,14 @@ public class AddFilmSceneController {
 		Element director = xmlDoc.createElement("Director");
 		director.appendChild(xmlDoc.createTextNode(directorInput));
 		film.appendChild(director);
+
+		Element description = xmlDoc.createElement("Description");
+		description.appendChild(xmlDoc.createTextNode(descriptionInput));
+		film.appendChild(description);
+
+		Element imageURL = xmlDoc.createElement("imageURL");
+		imageURL.appendChild(xmlDoc.createTextNode(imageURLInput));
+		film.appendChild(imageURL);
 
 		//  Should put in for loop really if you have time
 //    	  Element seatA1 = xmlDoc.createElement("Seat");
@@ -136,16 +159,19 @@ public class AddFilmSceneController {
 
 	}
 
-
 	@FXML
 	public void handleSubmit() throws IOException, ParserConfigurationException, TransformerException, SAXException{
 
 		title = titleTextField.getText();
 		director = directorTextField.getText();
+		description = descriptionTextField.getText();
+		imageURL = imageField.getText();
 		filmDetails.add(title);
 		filmDetails.add(director);
+		filmDetails.add(description);
+		filmDetails.add(imageURL);
 
-		writeToXML(title, director);
+		writeToXML(title, director, description, imageURL);
 
 		PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
 		writer.append(title + ";" + director + "\n");
@@ -153,7 +179,6 @@ public class AddFilmSceneController {
 
 
 
-		Main.showFilmsListScene();
+		main.showFilmsListScene();
 	}
-
 }

@@ -30,9 +30,10 @@ import javax.xml.xpath.*;
 
 public class CurrentAdminsSceneController implements Initializable {
 
-    Main main;
     @FXML private TableView<UserData> tableView;
     @FXML private TableColumn<UserData, String> username;
+    @FXML private TableColumn<UserData, String> firstName;
+    @FXML private TableColumn<UserData, String> surname;
     @FXML private TableColumn<UserData, String> email;
     @FXML private TableColumn<UserData, String> password;
 
@@ -44,6 +45,7 @@ public class CurrentAdminsSceneController implements Initializable {
         doc.getDocumentElement().normalize();
         ObservableList<UserData> data = FXCollections.observableArrayList();
         NodeList nList = doc.getElementsByTagName("User");
+
 
         int j = 1;
         for(int i = 0; i < nList.getLength(); i++){
@@ -60,6 +62,24 @@ public class CurrentAdminsSceneController implements Initializable {
                         .getTextContent());
                 System.out.println(element
                         .getElementsByTagName("Username")
+                        .item(0)
+                        .getTextContent());
+
+                ds.setFirstName(element
+                        .getElementsByTagName("FirstName")
+                        .item(0)
+                        .getTextContent());
+                System.out.println(element
+                        .getElementsByTagName("FirstName")
+                        .item(0)
+                        .getTextContent());
+
+                ds.setSurname(element
+                        .getElementsByTagName("Surname")
+                        .item(0)
+                        .getTextContent());
+                System.out.println(element
+                        .getElementsByTagName("Surname")
                         .item(0)
                         .getTextContent());
 
@@ -97,6 +117,8 @@ public class CurrentAdminsSceneController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         username.setCellValueFactory(new PropertyValueFactory<UserData, String>("username"));
+        firstName.setCellValueFactory(new PropertyValueFactory<UserData, String >("firstName"));
+        surname.setCellValueFactory(new PropertyValueFactory<UserData, String >("surname"));
         email.setCellValueFactory(new PropertyValueFactory<UserData, String>("email"));
         password.setCellValueFactory(new PropertyValueFactory<UserData, String>("password"));
         try {

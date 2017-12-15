@@ -1,14 +1,11 @@
 package Booking.bookFilm;
 
-import java.awt.print.Book;
 import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicReference;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -26,19 +23,18 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import Booking.pastBookings.BookingData;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.traversal.DocumentTraversal;
-import org.w3c.dom.traversal.NodeFilter;
-import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
 
 import Booking.Main;
 import Booking.filmList.FilmData;
-import Booking.filmList.FilmListSceneController;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -46,59 +42,44 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class BookSingleFilmSceneController {
 
-    Main main;
     private FilmData selectedFilm;
 
+    @FXML Label titleLabel;
+    @FXML Label directorLabel;
     @FXML
-    Label titleLabel;
+    TextFlow descriptionTextFlow;
     @FXML
-    Label directorLabel;
-    @FXML
-    Button deleteBtn;
-    @FXML
-    Button editBtn;
-    @FXML
-    Button getTimes;
+    ImageView filmImgView;
+    @FXML Button deleteBtn;
 
-    @FXML
-    GridPane ShowingsGridPane;
-    @FXML
-    FlowPane flowPane;
-    @FXML
-    VBox seatsVbox;
-    @FXML
-    VBox vBox;
-    @FXML
-    AnchorPane seatsAnchorPane;
 
-    @FXML
-    ComboBox<String> dateComboBox;
-    @FXML
-    Button addShowingBtn;
+    @FXML FlowPane flowPane;
+    @FXML VBox seatsVbox;
+    @FXML VBox vBox;
+    @FXML AnchorPane seatsAnchorPane;
+    @FXML AnchorPane imgAnchor;
+    @FXML ImageView iV;
+
+    @FXML ComboBox<String> dateComboBox;
+    @FXML Button addShowingBtn;
+
+
 
     private List<Button> buttons;
     private List<Button> seatButtons;
-
-    @FXML
-    Rectangle seatA1;
-    @FXML
-    Rectangle seatA2;
+    private List<String> dateList;
+    private List<String> timeList;
+    private List<String> seatList;
+    private Label label;
 
     String defaultDate = new String("");
 
@@ -106,6 +87,18 @@ public class BookSingleFilmSceneController {
         selectedFilm = filmData;
         titleLabel.setText(selectedFilm.getTitle());
         directorLabel.setText(selectedFilm.getDirector());
+        Text desText = new Text(selectedFilm.getDescription());
+        AtomicReference<String> imageURL = new AtomicReference<>(selectedFilm.getImageURL());
+        descriptionTextFlow.getChildren().add(desText);
+
+        System.out.println(imageURL.get());
+        Image img = new Image(imageURL.get());
+        ImageView iV = new ImageView();
+        iV.setImage(img);
+        iV.setFitWidth(img.getWidth()/3);
+        iV.setFitHeight(img.getHeight()/3);
+
+        imgAnchor.getChildren().add(iV);
         datePicker();
         dateComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
@@ -187,7 +180,7 @@ public class BookSingleFilmSceneController {
         dateComboBox.getItems().addAll(options);
     }
 
-    public void timeBtns(String selectedDate) {
+    public void timeBtns(String selectedDate) throws IOException {
         for (int i = 0; i < buttons.size(); i++) {
             final Button timeBtn = buttons.get(i);
             final int a = i;
@@ -208,6 +201,11 @@ public class BookSingleFilmSceneController {
 
                         Rectangle rect = null;
                         Label seatLabel = null;
+                        seatButtons = new ArrayList<>();
+                        dateList = new ArrayList<>();
+                        timeList = new ArrayList<>();
+                        seatList = new ArrayList<>();
+                        int x = 0;
                         for (int i = 0; i < columns; ++i) {// Iterate through
                             // columns
                             for (int j = 0; j < rows; ++j) {// Iterate through
@@ -259,32 +257,20 @@ public class BookSingleFilmSceneController {
                                 }
 
 
-                                seatButtons = new ArrayList<>();
-                                NodeList seats = getNodes(
-                                        "//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
-                                                + selectedDate + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat");
-                                for (int k=0; k<rows; k++){
-                                    for (int l=0; l<columns; l++){
-                                        Button seatButton = new Button(seats.item(i).getAttributes().item(0).getTextContent());
-                                        seatButton.setText(seat);
-                                        seatButtons.add(seatButton);
-                                    }
-                                }
+                                Button seatButton = new Button(seatNodes.item(x).getAttributes().item(0).getTextContent());
+                                seatButton.setText(seat);
+                                seatButtons.add(seatButton);
 
-                                for (int s=0; s<seatButtons.size(); s++){
-                                    seatButtons.get(s).setMinWidth(60);
-                                    if(s<3){
-                                        seatButtons.get(s).setLayoutX(s*60);
-                                    } else {
-                                        seatButtons.get(s).setLayoutX((s-3)*60);
-                                        seatButtons.get(s).setLayoutY(60);
-                                    }
-                                }
+                                seatButtons.get(x).setLayoutX(horizontal * (j));
+                                seatButtons.get(x).setLayoutY(vertical * (i));
+
 
                                 String occupant = getNodes("//Title[text()='" + selectedFilm.getTitle()
                                         + "']/parent::Film/Dates/Date[@id='" + selectedDate
                                         + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat[@id='" + seat + "']")
                                         .item(0).getTextContent();
+
+
                                 if (!occupant.equals("")) {
                                     rect.setFill(Color.LIGHTGREY);
                                 } else {
@@ -292,14 +278,20 @@ public class BookSingleFilmSceneController {
                                 }
                                 seatLabel.setText(seat);
 
+
+                                dateList.add(selectedDate);
+                                timeList.add(time);
+                                seatList.add(seat);
                                 seatsAnchorPane.getChildren().add(rect);
                                 seatsAnchorPane.getChildren().add(seatLabel);
-                                seatsAnchorPane.getChildren().addAll(seatButtons);
+                                seatsAnchorPane.getChildren().addAll(seatButtons.get(x));
                                 // Add Rectangle to board
 
-
+                                x++;
                             }
                         }
+//                        showConfirmation();
+                        addUserToShowing(); // ADD AFTER FOR LOOP
                     } catch (XPathExpressionException | SAXException | IOException | ParserConfigurationException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
@@ -309,45 +301,94 @@ public class BookSingleFilmSceneController {
         }
     }
 
-//    public void makeBooking() throws IOException, SAXException, TransformerException, ParserConfigurationException {
-//        String filePath = "/Users/McLaughlin/Code/Cinema-booking/src/Booking/Users.xml";
-//        File xmlFile = new File(filePath);
-//        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-//        DocumentBuilder dBuilder;
-//        dBuilder = dbFactory.newDocumentBuilder();
-//        Document doc = dBuilder.parse(xmlFile);
-//        doc.getDocumentElement().normalize();
-//        getNodes("//Title[text()='" + selectedFilm.getTitle()
-//                + "']/parent::Film/Dates/Date[@id='" + selectedDate
-//                + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat[@id='" + seat + "']")
-//                .item(0).getTextContent();
-//
-//        //update Element value
-//        book(doc);
-//
-//
-//        //write the updated document to file or console
-//        doc.getDocumentElement().normalize();
-//        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-//        Transformer transformer = transformerFactory.newTransformer();
-//        DOMSource source = new DOMSource(doc);
-//        StreamResult result = new StreamResult(new File("/Users/McLaughlin/Code/Cinema-booking/src/Booking/Users.xml"));
-//        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-//        transformer.transform(source, result);
-//        System.out.println("Booking made");
-//        Main.showUserHomeScene();
-//    }
+    public void addUserToShowing() throws IOException {
+        int x = seatButtons.size();
 
-    private void book(Document doc) throws ParserConfigurationException, SAXException, IOException {
-        NodeList films = doc.getElementsByTagName("Film");
-        Element emp = null;
-        //loop for each film
-        BufferedReader in = new BufferedReader((new FileReader(new File("src/Booking/films.txt"))));
-        String fileName = "src/Booking/films.txt";
-        File file = new File(fileName);
-        for (int i = 0; i < films.getLength(); i++) {
-            NodeList dates = doc.getElementsByTagName("Dates");
+        for (int i = 0; i < x; i++) {
+            final int ii = i;
+            String date = dateList.get(ii);
+            String time = timeList.get(ii);
+            String seat = seatList.get(ii);
 
-            }
+
+            seatButtons.get(i).setOnAction(new EventHandler<ActionEvent>() {
+
+                @Override
+                public void handle(ActionEvent event) {
+
+                    try {
+                        showConfirmation(date, time, seat);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        NodeList seatNode = getNodes("//Title[text()='" + selectedFilm.getTitle()
+                                + "']/parent::Film/Dates/Date[@id='" + date
+                                + "']/ShowTimes/ShowTime[@id='" + time + "']/Seats/Seat[@id='" + seat + "']");
+
+                        String fileName = "src/Booking/CurrentSession.txt";
+                        File currentSession = new File(fileName);
+                        Scanner inputStream = new Scanner(currentSession);
+                        String user = inputStream.nextLine();
+                        seatNode.item(0).setTextContent(user);
+
+
+
+                        TransformerFactory tf = TransformerFactory.newInstance();
+                        Transformer tran = tf.newTransformer();
+                        tran.setOutputProperty(OutputKeys.INDENT, "yes");
+                        tran.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+                        DOMSource source = new DOMSource(seatNode.item(0).getOwnerDocument());
+
+                        File file = new File("src/Booking/films.xml");
+                        StreamResult stream = new StreamResult(file);
+                        tran.transform(source, stream);
+                    } catch (XPathExpressionException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    } catch (ParserConfigurationException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    } catch (SAXException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    } catch (TransformerConfigurationException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    } catch (TransformerException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                }
+
+            });
         }
     }
+
+    private void showConfirmation(String date, String time, String seat) throws IOException {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Booking Confirmation");
+        alert.setHeaderText("Are these details correct?");
+        alert.setContentText("Film : " + selectedFilm.getTitle() + "\n" + "Date : " + date + "\n" + "Time : " + time + "\n" + "Seat : " + seat);
+
+        // option != null.
+        Optional<ButtonType> option = alert.showAndWait();
+
+        if (option.get() == null) {
+            this.label.setText("No selection!");
+        } else if (option.get() == ButtonType.OK) {
+            addUserToShowing();
+            Main.showBookingScene();
+        } else if (option.get() == ButtonType.CANCEL) {
+            this.label.setText("Cancelled!");
+        } else {
+            this.label.setText("-");
+        }
+    }
+}

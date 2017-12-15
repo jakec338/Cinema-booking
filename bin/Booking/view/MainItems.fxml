@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.view.MainItemsController">
+<BorderPane prefHeight="800.0" prefWidth="1200.0" styleClass="background" stylesheets="/Booking/Styling.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.view.MainItemsController">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="310.0" layoutY="168.0" mnemonicParsing="false" onAction="#toLoginScene" prefHeight="65.0" prefWidth="102.0" text="Customer" />
-            <Button layoutX="181.0" layoutY="168.0" mnemonicParsing="false" onAction="#toLoginScene" prefHeight="65.0" prefWidth="102.0" text="Administrator" />
-            <Button layoutX="262.0" layoutY="263.0" mnemonicParsing="false" onAction="#toRegisterScene" text="Register" />
+            <Button layoutX="614.0" layoutY="200.0" mnemonicParsing="false" onAction="#toLoginScene" prefHeight="65.0" prefWidth="160.0" text="Customer" />
+            <Button layoutX="427.0" layoutY="200.0" mnemonicParsing="false" onAction="#toLoginScene" prefHeight="65.0" prefWidth="160.0" text="Administrator" />
+            <Button layoutX="452.0" layoutY="305.0" mnemonicParsing="false" onAction="#toRegisterScene" prefHeight="22.0" prefWidth="297.0" text="Register" />
          </children>
       </AnchorPane>
    </center>

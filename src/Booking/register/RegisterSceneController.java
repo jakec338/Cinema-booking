@@ -32,6 +32,8 @@ public class RegisterSceneController {
 
     Main main;
     String username;
+    String firstName;
+    String surname;
     String email;
     String password;
     String line;
@@ -41,6 +43,14 @@ public class RegisterSceneController {
     private Label usernameLabel;
     @FXML
     private TextField usernameTextField;
+    @FXML
+    private Label firstNameLabel;
+    @FXML
+    private TextField firstNameTextField;
+    @FXML
+    private Label surnameLabel;
+    @FXML
+    private TextField surnameTextField;
     @FXML
     private Label emailLabel;
     @FXML
@@ -58,7 +68,7 @@ public class RegisterSceneController {
     @FXML
     private CheckBox staffConfirm;
 
-    private void writeToUserXML(String usernameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
+    private void writeToUserXML(String usernameInput, String firstNameInput, String surnameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -71,6 +81,14 @@ public class RegisterSceneController {
         Element username = xmlDoc.createElement("Username");
         username.appendChild(xmlDoc.createTextNode(usernameInput));
         user.appendChild(username);
+
+        Element firstName = xmlDoc.createElement("FirstName");
+        firstName.appendChild(xmlDoc.createTextNode(firstNameInput));
+        user.appendChild(firstName);
+
+        Element surname = xmlDoc.createElement("Surname");
+        surname.appendChild(xmlDoc.createTextNode(surnameInput));
+        user.appendChild(surname);
 
         Element email = xmlDoc.createElement("Email");
         email.appendChild(xmlDoc.createTextNode(emailInput));
@@ -98,9 +116,13 @@ public class RegisterSceneController {
     public void handleSubmit() throws IOException, ParserConfigurationException, TransformerException, SAXException{
 
         username = usernameTextField.getText();
+        firstName = firstNameTextField.getText();
+        surname = surnameTextField.getText();
         email = emailTextField.getText();
         password = passwordField.getText();
         userDetails.add(username);
+        userDetails.add(firstName);
+        userDetails.add(surname);
         userDetails.add(email);
         userDetails.add(password);
 
@@ -108,7 +130,17 @@ public class RegisterSceneController {
             //Checks username is entered
             if(usernameTextField.getText().isEmpty()) {
                 AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
-                        "Please choose a Username");
+                        "Please enter a Username");
+                return;
+            }
+            if(firstNameTextField.getText().isEmpty()) {
+                AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                        "Please enter your First Name");
+                return;
+            }
+            if(surnameTextField.getText().isEmpty()) {
+                AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                        "Please enter your Surname");
                 return;
             }
             //Checks email is entered
@@ -150,13 +182,13 @@ public class RegisterSceneController {
 
 
             AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "User Added!",
-                    "Welcome " + usernameTextField.getText());}
+                    "Welcome " + firstNameTextField.getText());}
 
 
-            writeToUserXML(username, email, password);
+            writeToUserXML(username, firstName, surname, email, password);
 
             PrintWriter writer = new PrintWriter(new FileOutputStream(new File("src/Booking/filename.txt"),true));
-            writer.append(username + ";" + email + ";" + password + "\n");
+            writer.append(username + ";" + firstName + ";" + surname + ";" + email + ";" + password + "\n");
             writer.close();
 
 

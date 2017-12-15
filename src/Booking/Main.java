@@ -2,21 +2,19 @@ package Booking;
 
 import java.io.IOException;
 
+import Booking.addShowing.AddShowingSceneController;
 import Booking.bookFilm.BookSingleFilmSceneController;
-import Booking.datePopUp.DatePopUpSceneController;
 import Booking.singleUser.EditSingleUserSceneController;
 import Booking.singleUser.SingleUserSceneController;
 import Booking.filmList.FilmData;
 import Booking.singleFilm.SingleFilmSceneController;
 import Booking.user.UserData;
-import Booking.user.UserHomeSceneController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.xml.sax.SAXException;
 
@@ -26,9 +24,7 @@ import javax.xml.xpath.XPathExpressionException;
 public class Main extends Application{
 	
 	private Stage primaryStage;
-	private Stage dateStage;
 	private static BorderPane mainLayout;
-
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -252,7 +248,7 @@ public class Main extends Application{
 
     public static void showSingleAdminScene(TableView tableView) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("currentUsers/SingleAdminScene.fxml"));
+        loader.setLocation(Main.class.getResource("singleUser/SingleAdminScene.fxml"));
         BorderPane singleAdminScene = loader.load();
         mainLayout.setCenter(singleAdminScene);
 
@@ -284,6 +280,22 @@ public class Main extends Application{
         userHomeScene.setCenter(bookFilmScene);
     }
 
+    public static void showBookingHistoryScene() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("pastBookings/PastBookingsScene.fxml"));
+        BorderPane bookFilmScene = loader.load();
+
+        // SHOULD NOT BE LEFT LIKE THIS. FIND WAY TO PUT adminHomeScene
+        // IN A SEPERATE METHOD
+
+        FXMLLoader adminLoader = new FXMLLoader();
+        adminLoader.setLocation(Main.class.getResource("user/UserHomeScene.fxml"));
+        BorderPane userHomeScene = adminLoader.load();
+        mainLayout.setCenter(userHomeScene);
+
+        userHomeScene.setCenter(bookFilmScene);
+    }
+
     public static void showBookSingleFilmScene(TableView tableView) throws IOException, XPathExpressionException, SAXException, ParserConfigurationException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("bookFilm/BookSingleFilmScene.fxml"));
@@ -302,9 +314,9 @@ public class Main extends Application{
 
     public static void showAddShowingScene(String selectedFilmTitle, FilmData selectedFilm) throws IOException{
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("datePopUp/datePopUpScene.fxml"));
+        loader.setLocation(Main.class.getResource("addShowing/AddShowingScene.fxml"));
         AnchorPane addPopUpScene = loader.load();
-        DatePopUpSceneController controller = loader.getController();
+        AddShowingSceneController controller = loader.getController();
         controller.initData(selectedFilmTitle, selectedFilm);
         // SHOULD NOT BE LEFT LIKE THIS. FIND WAY TO PUT adminHomeScene
         // IN A SEPERATE METHOD
