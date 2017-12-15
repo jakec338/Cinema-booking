@@ -21,20 +21,32 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
+/**
+ * Main Class to run application
+ */
 public class Main extends Application{
 	
 	private Stage primaryStage;
 	private static BorderPane mainLayout;
 
+    /**
+     * Starts the GUI at the Home Scene
+     * @param primaryStage launches a starting stage
+     * @throws IOException if the scene cannot be loaded
+     */
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) throws IOException {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Cinema Booking");
 		showMainView();
 		showMainItems();
 		
 	}
-	
+
+    /**
+     * Loads the top bar of the GUI
+     * @throws IOException if the scene cannot be loaded
+     */
 	private void showMainView() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("view/MainView.fxml"));
@@ -43,14 +55,22 @@ public class Main extends Application{
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
-	
+
+    /**
+     * Loads the home page of the GUI
+     * @throws IOException if the scene cannot be loaded
+     */
 	public static void showMainItems() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("view/MainItems.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
-	
+
+    /**
+     * Loads the loginScene
+     * @throws IOException if the scene cannot be loaded
+     */
 	public static void showLoginScene() throws IOException{         // Static is important. Dunno why. 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("login/LoginScene.fxml"));
@@ -58,6 +78,10 @@ public class Main extends Application{
 		mainLayout.setCenter(loginScene);
 	}
 
+    /**
+     * Loads the CurrentUsersScene
+     * @throws IOException if the scene cannot be loaded
+     */
 	public static void showCurrentUsersScene() throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("currentUsers/CurrentUsersScene.fxml"));
@@ -73,6 +97,10 @@ public class Main extends Application{
         adminHomeScene.setCenter(currentUsersScene);
     }
 
+    /**
+     * Loads the CurrentAdminsScene
+     * @throws IOException if the scene cannot be loaded
+     */
     public static void showCurrentAdminsScene() throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("currentAdmins/CurrentAdminsScene.fxml"));
@@ -88,6 +116,10 @@ public class Main extends Application{
         adminHomeScene.setCenter(currentAdminsScene);
     }
 
+    /**
+     * Loads the Registration Scene
+     * @throws IOException if the scene cannot be loaded
+     */
     public static void showRegisterScene() throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("register/RegisterScene.fxml"));
@@ -95,6 +127,10 @@ public class Main extends Application{
         mainLayout.setCenter(loginScene);
     }
 
+    /**
+     * Loads the AddUserScene
+     * @throws IOException if the scene cannot be loaded
+     */
 	public static void showAddUserScene() throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("addUser/AddUserScene.fxml"));
@@ -110,6 +146,10 @@ public class Main extends Application{
         adminHomeScene.setCenter(registerScene);
     }
 
+    /**
+     * Loads the AdminHomeScene
+     * @throws IOException if the scene cannot be loaded
+     */
 	public static void showAdminHomeScene() throws IOException{
 		
 		// Loads film list scene for admin home landing page
@@ -127,6 +167,12 @@ public class Main extends Application{
 		adminHomeScene.setCenter(filmListScene);
 	}
 
+    /**
+     * Loads the User Home Scene
+     * @throws IOException if the scene cannot be loaded
+     * @throws ParserConfigurationException if a configuration error occurs
+     * @throws SAXException if a basic parsing error occurs
+     */
     public static void showUserHomeScene() throws IOException, ParserConfigurationException, SAXException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("updateProfile/updateProfileScene.fxml"));
@@ -143,6 +189,12 @@ public class Main extends Application{
         controller.Init();
  }
 
+    /**
+     *Loads the EditSingleUserScene
+     * @throws IOException if the scene cannot be loaded
+     * @throws ParserConfigurationException if a configuration error occurs
+     * @throws SAXException if a basic parsing error occurs
+     */
     public static void showEditSingleUserScene() throws IOException, ParserConfigurationException, SAXException {
 
         // Loads film list scene for admin home landing page
@@ -162,7 +214,11 @@ public class Main extends Application{
         EditSingleUserSceneController controller = editLoader.getController();
         controller.InitEdit();
     }
-	
+
+    /**
+     *Loads the FilmListScene
+     * @throws IOException if the scene cannot be loaded
+     */
 	public static void showFilmsListScene() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("filmList/FilmListScene.fxml"));     
@@ -179,6 +235,10 @@ public class Main extends Application{
 		adminHomeScene.setCenter(filmListScene);
 	}
 
+    /**
+     *Loads the AddFilmScene
+     * @throws IOException if the scene cannot be loaded
+     */
 	public static void showAddFilmScene() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("addFilm/AddFilmScene.fxml"));     
@@ -196,6 +256,14 @@ public class Main extends Application{
 		
 	}
 
+    /**
+     *Loads the Single Film Scene
+     * @param tableView defines the single film to be loaded
+     * @throws IOException if the scene cannot be loaded
+     * @throws XPathExpressionException if the xPath encounters an error
+     * @throws ParserConfigurationException if a configuration error occurs
+     * @throws SAXException if a basic parsing error occurs
+     */
 	public static void showSingleFilmScene(TableView tableView) throws IOException, XPathExpressionException, ParserConfigurationException, SAXException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("singleFilm/SingleFilmScene.fxml"));     
@@ -212,6 +280,14 @@ public class Main extends Application{
 		adminHomeScene.setCenter(singleFilmScene);
 	}
 
+    /**
+     * Loads the Single Film Scene
+     * @param selectedFilm defines the specific film to be loaded
+     * @throws IOException if the scene cannot be loaded
+     * @throws XPathExpressionException if the xPath encounters an error
+     * @throws ParserConfigurationException if a configuration error occurs
+     * @throws SAXException if a basic parsing error occurs
+     */
     public static void showSingleFilmScene(FilmData selectedFilm) throws IOException, XPathExpressionException, ParserConfigurationException, SAXException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("singleFilm/SingleFilmScene.fxml"));
@@ -228,6 +304,11 @@ public class Main extends Application{
         adminHomeScene.setCenter(singleFilmScene);
     }
 
+    /**
+     *Loads the Single User Scene
+     * @param tableView defines the specific user to be loaded
+     * @throws IOException if the scene cannot be loaded
+     */
 	public static void showSingleUserScene(TableView tableView) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("singleUser/SingleUserScene.fxml"));
@@ -246,6 +327,11 @@ public class Main extends Application{
         controller.initData((UserData)tableView.getSelectionModel().getSelectedItem());
     }
 
+    /**
+     * Loads the Single Admin Scene
+     * @param tableView defines the specific Admin to be loaded
+     * @throws IOException if the scene cannot be loaded
+     */
     public static void showSingleAdminScene(TableView tableView) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("singleUser/SingleAdminScene.fxml"));
@@ -264,6 +350,10 @@ public class Main extends Application{
         controller.initData((UserData)tableView.getSelectionModel().getSelectedItem());
     }
 
+    /**
+     *Loads the Booking Scene
+     * @throws IOException if the scene cannot be loaded
+     */
     public static void showBookingScene() throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("bookFilm/BookAllFilmsScene.fxml"));
@@ -280,6 +370,10 @@ public class Main extends Application{
         userHomeScene.setCenter(bookFilmScene);
     }
 
+    /**
+     * Loads the Booking History Scene
+     * @throws IOException if the scene cannot be loaded
+     */
     public static void showBookingHistoryScene() throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("pastBookings/PastBookingsScene.fxml"));
@@ -296,6 +390,14 @@ public class Main extends Application{
         userHomeScene.setCenter(bookFilmScene);
     }
 
+    /**
+     *Loads the Book Single Film Scene
+     * @param tableView defines the specific film to be loaded
+     * @throws IOException if the scene cannot be loaded
+     * @throws XPathExpressionException if the xPath encounters an error
+     * @throws SAXException if a configuration error occurs
+     * @throws ParserConfigurationException if a basic parsing error occurs
+     */
     public static void showBookSingleFilmScene(TableView tableView) throws IOException, XPathExpressionException, SAXException, ParserConfigurationException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("bookFilm/BookSingleFilmScene.fxml"));
@@ -312,6 +414,12 @@ public class Main extends Application{
         userHomeScene.setCenter(bookSingleFilmScene);
     }
 
+    /**
+     *Loads the Add Showing Scene
+     * @param selectedFilmTitle
+     * @param selectedFilm
+     * @throws IOException if the scene cannot be loaded
+     */
     public static void showAddShowingScene(String selectedFilmTitle, FilmData selectedFilm) throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("addShowing/AddShowingScene.fxml"));
@@ -329,6 +437,9 @@ public class Main extends Application{
         adminHomeScene.setCenter(addPopUpScene);
     }
 
+    /**
+     * Main args
+     */
     public static void main(String[] args) {
 		launch(args);
 	}

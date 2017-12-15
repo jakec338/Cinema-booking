@@ -2,11 +2,8 @@
 
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.BorderPane?>
 
 <BorderPane stylesheets="/Booking/Styling.css" styleClass="background" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.singleFilm.SingleFilmSceneController">
     <center>

@@ -17,7 +17,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -28,122 +27,32 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+/**
+ * This class adds User or Admin Details (Username, First Name, Surname, Email and Password) to the User side XML database.
+ * This class controls a page that is accessible only from the admin side of the application.
+ */
 public class AddUserSceneController {
 
-    Main main;
-    String username;
-    String firstName;
-    String surname;
-    String email;
-    String password;
-    String line;
-    List<String> userDetails = new ArrayList<String>();
+    private String username;
+    private String firstName;
+    private String surname;
+    private String email;
+    private String password;
+    private List<String> userDetails = new ArrayList<String>();
 
-    @FXML private Label usernameLabel;
     @FXML private TextField usernameTextField;
-    @FXML private Label firstNameLabel;
     @FXML private TextField firstNameTextField;
-    @FXML private Label surnameLabel;
     @FXML private TextField surnameTextField;
-    @FXML private Label emailLabel;
     @FXML private TextField emailTextField;
-    @FXML private Label passwordLabel;
     @FXML private PasswordField passwordField;
-    @FXML private Label confirmPasswordLabel;
     @FXML private PasswordField confirmPasswordField;
     @FXML private Button submitDetailsBtn;
     @FXML private CheckBox staffConfirm;
 
-    private void writeToUserXML(String usernameInput, String firstNameInput, String surnameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
-
-        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-
-        Document xmlDoc = docBuilder.parse("src/Booking/Users.xml");
-        Node root=xmlDoc.getFirstChild();
-
-        Element user = xmlDoc.createElement("User");
-
-        Element username = xmlDoc.createElement("Username");
-        username.appendChild(xmlDoc.createTextNode(usernameInput));
-        user.appendChild(username);
-
-        Element firstName = xmlDoc.createElement("FirstName");
-        firstName.appendChild(xmlDoc.createTextNode(firstNameInput));
-        user.appendChild(firstName);
-
-        Element surname = xmlDoc.createElement("Surname");
-        surname.appendChild(xmlDoc.createTextNode(surnameInput));
-        user.appendChild(surname);
-
-        Element email = xmlDoc.createElement("Email");
-        email.appendChild(xmlDoc.createTextNode(emailInput));
-        user.appendChild(email);
-
-        Element password = xmlDoc.createElement("Password");
-        password.appendChild(xmlDoc.createTextNode(passwordInput));
-        user.appendChild(password);
-
-        root.appendChild(user);
-
-
-        TransformerFactory tf = TransformerFactory.newInstance();
-        Transformer tran = tf.newTransformer();
-        tran.setOutputProperty(OutputKeys.INDENT, "yes");
-        tran.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-        DOMSource source = new DOMSource(xmlDoc);
-
-        File file = new File("src/Booking/Users.xml");
-        StreamResult stream = new StreamResult(file);
-        tran.transform(source, stream);
-    }
-
-    private void writeToAdminXML(String usernameInput, String firstNameInput, String surnameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
-
-        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-
-        Document xmlDoc = docBuilder.parse("src/Booking/Admins.xml");
-        Node root=xmlDoc.getFirstChild();
-
-        Element user = xmlDoc.createElement("User");
-
-        Element username = xmlDoc.createElement("Username");
-        username.appendChild(xmlDoc.createTextNode(usernameInput));
-        user.appendChild(username);
-
-        Element firstName = xmlDoc.createElement("FirstName");
-        firstName.appendChild(xmlDoc.createTextNode(firstNameInput));
-        user.appendChild(firstName);
-
-        Element surname = xmlDoc.createElement("Surname");
-        surname.appendChild(xmlDoc.createTextNode(surnameInput));
-        user.appendChild(surname);
-
-        Element email = xmlDoc.createElement("Email");
-        email.appendChild(xmlDoc.createTextNode(emailInput));
-        user.appendChild(email);
-
-        Element password = xmlDoc.createElement("Password");
-        password.appendChild(xmlDoc.createTextNode(passwordInput));
-        user.appendChild(password);
-
-        root.appendChild(user);
-
-
-        TransformerFactory tf = TransformerFactory.newInstance();
-        Transformer tran = tf.newTransformer();
-        tran.setOutputProperty(OutputKeys.INDENT, "yes");
-        tran.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-        DOMSource source = new DOMSource(xmlDoc);
-
-        File file = new File("src/Booking/Admins.xml");
-        StreamResult stream = new StreamResult(file);
-        tran.transform(source, stream);
-    }
-
-    @FXML
-    public void handleSubmit() throws IOException, ParserConfigurationException, TransformerException, SAXException{
+    /**
+     * This method handles the submission, depending on the staff Checkbox this writes to either the User or the Admin XML database
+     */
+    @FXML public void handleSubmit() throws IOException, ParserConfigurationException, TransformerException, SAXException{
 
         username = usernameTextField.getText();
         firstName = firstNameTextField.getText();
@@ -163,11 +72,13 @@ public class AddUserSceneController {
                         "Please enter a Username");
                 return;
             }
+            //Checks firstName is entered
             if(firstNameTextField.getText().isEmpty()) {
                 AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                         "Please enter your First Name");
                 return;
             }
+            //Checks surname is entered
             if(surnameTextField.getText().isEmpty()) {
                 AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                         "Please enter your Surname");
@@ -227,6 +138,103 @@ public class AddUserSceneController {
         Main.showCurrentUsersScene();
     }
 
+    /**
+     * This method writes User Details (Username, First Name, Surname, Email and Password) to the User side XML database
+     */
+    private void writeToUserXML(String usernameInput, String firstNameInput, String surnameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
+
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+
+        Document xmlDoc = docBuilder.parse("src/Booking/Users.xml");
+        Node root=xmlDoc.getFirstChild();
+
+        Element user = xmlDoc.createElement("User");
+
+        Element username = xmlDoc.createElement("Username");
+        username.appendChild(xmlDoc.createTextNode(usernameInput));
+        user.appendChild(username);
+
+        Element firstName = xmlDoc.createElement("FirstName");
+        firstName.appendChild(xmlDoc.createTextNode(firstNameInput));
+        user.appendChild(firstName);
+
+        Element surname = xmlDoc.createElement("Surname");
+        surname.appendChild(xmlDoc.createTextNode(surnameInput));
+        user.appendChild(surname);
+
+        Element email = xmlDoc.createElement("Email");
+        email.appendChild(xmlDoc.createTextNode(emailInput));
+        user.appendChild(email);
+
+        Element password = xmlDoc.createElement("Password");
+        password.appendChild(xmlDoc.createTextNode(passwordInput));
+        user.appendChild(password);
+
+        root.appendChild(user);
+
+
+        TransformerFactory tf = TransformerFactory.newInstance();
+        Transformer tran = tf.newTransformer();
+        tran.setOutputProperty(OutputKeys.INDENT, "yes");
+        tran.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+        DOMSource source = new DOMSource(xmlDoc);
+
+        File file = new File("src/Booking/Users.xml");
+        StreamResult stream = new StreamResult(file);
+        tran.transform(source, stream);
+    }
+
+    /**
+     * This method writes User Details (Username, First Name, Surname, Email and Password) to the Admin side XML database
+     */
+    private void writeToAdminXML(String usernameInput, String firstNameInput, String surnameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
+
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+
+        Document xmlDoc = docBuilder.parse("src/Booking/Admins.xml");
+        Node root=xmlDoc.getFirstChild();
+
+        Element user = xmlDoc.createElement("User");
+
+        Element username = xmlDoc.createElement("Username");
+        username.appendChild(xmlDoc.createTextNode(usernameInput));
+        user.appendChild(username);
+
+        Element firstName = xmlDoc.createElement("FirstName");
+        firstName.appendChild(xmlDoc.createTextNode(firstNameInput));
+        user.appendChild(firstName);
+
+        Element surname = xmlDoc.createElement("Surname");
+        surname.appendChild(xmlDoc.createTextNode(surnameInput));
+        user.appendChild(surname);
+
+        Element email = xmlDoc.createElement("Email");
+        email.appendChild(xmlDoc.createTextNode(emailInput));
+        user.appendChild(email);
+
+        Element password = xmlDoc.createElement("Password");
+        password.appendChild(xmlDoc.createTextNode(passwordInput));
+        user.appendChild(password);
+
+        root.appendChild(user);
+
+
+        TransformerFactory tf = TransformerFactory.newInstance();
+        Transformer tran = tf.newTransformer();
+        tran.setOutputProperty(OutputKeys.INDENT, "yes");
+        tran.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+        DOMSource source = new DOMSource(xmlDoc);
+
+        File file = new File("src/Booking/Admins.xml");
+        StreamResult stream = new StreamResult(file);
+        tran.transform(source, stream);
+    }
+
+    /**
+     * This method validates the format of the entered email address
+     */
     private boolean validateEmail() {
         Pattern p = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+");
         Matcher m = p.matcher(emailTextField.getText());

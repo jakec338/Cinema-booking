@@ -1,20 +1,10 @@
 package Booking.currentUsers;
 
-
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.Scanner;
-
 import Booking.Main;
-import Booking.filmList.FilmData;
 import Booking.user.UserData;
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -24,12 +14,13 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.*;
 
+/**
+ * Controller for CurrentUsersScene.
+ */
 public class CurrentUsersSceneController implements Initializable {
 
     @FXML private TableView<UserData> tableView;
@@ -39,6 +30,9 @@ public class CurrentUsersSceneController implements Initializable {
     @FXML private TableColumn<UserData, String> email;
     @FXML private TableColumn<UserData, String> password;
 
+    /**
+     * This method reads the XML database to extract the information needed for the table view.
+     */
     public ObservableList<UserData> parseXml() throws ParserConfigurationException, SAXException, IOException{
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
@@ -112,6 +106,9 @@ public class CurrentUsersSceneController implements Initializable {
     return data;
     }
 
+    /**
+     * This method initialises the data for the table view of all Current Users.
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         username.setCellValueFactory(new PropertyValueFactory<UserData, String>("username"));
@@ -133,14 +130,18 @@ public class CurrentUsersSceneController implements Initializable {
         }
     }
 
-    @FXML
-    public void toAddUserScene() throws IOException{
+    /**
+     * This method directs to the AddUserScene.
+     */
+    @FXML public void toAddUserScene() throws IOException{
         // if cell is not empty  TO ADD
         Main.showAddUserScene();
     }
 
-    @FXML
-    public void toSingleUserScene() throws IOException {
+    /**
+     * This method directs to the SingleUserScene
+     */
+    @FXML public void toSingleUserScene() throws IOException {
         Main.showSingleUserScene(tableView);
     }
 }

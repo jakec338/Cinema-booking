@@ -1,7 +1,6 @@
 package Booking.pastBookings;
 
 import Booking.filmList.FilmData;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,7 +10,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.*;
 import javax.xml.xpath.*;
 import java.io.File;
@@ -21,25 +19,21 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class PastBookingsSceneController implements Initializable{
-    @FXML
-    private TableView<BookingData> tableView;
-    @FXML
-    private TableColumn<BookingData, String> title;
-    @FXML
-    private TableColumn<BookingData, String> showDate;
-    @FXML
-    private TableColumn<BookingData, String> showTime;
-    @FXML
-    private TableColumn<BookingData, String> seat;
+
+    @FXML private TableView<FilmData> tableView;
+    @FXML private TableColumn<FilmData, String> title;
+    @FXML private TableColumn<FilmData, String> showDate;
+    @FXML private TableColumn<FilmData, String> showTime;
+    @FXML private TableColumn<FilmData, String> seat;
 
 
     @FXML
-    public ObservableList<BookingData> parseXml() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
+    public ObservableList<FilmData> parseXml() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
         Document doc = dBuilder.parse("src/Booking/films.xml");
         doc.getDocumentElement().normalize();
-        ObservableList<BookingData> data = FXCollections.observableArrayList();
+        ObservableList<FilmData> data = FXCollections.observableArrayList();
         NodeList nList = doc.getElementsByTagName("Film");
 
         /// XPATH shit
@@ -61,7 +55,7 @@ public class PastBookingsSceneController implements Initializable{
 
         int j = 1;
         for(int i = 0; i < nList.getLength(); i++){
-            BookingData ds = new BookingData();
+            FilmData ds = new FilmData();
             Node nNode = nList.item(i);
             System.out.println("\nCurrent Element : "
                     + nNode.getNodeName());
@@ -77,15 +71,8 @@ public class PastBookingsSceneController implements Initializable{
                             .getElementsByTagName("Title")
                             .item(0)
                             .getTextContent());
-                    ds.setShowDate(element.getChildNodes().item(0).getTextContent());
-                    System.out.println(element.getChildNodes().item(0).getTextContent());
-
-
                 }
-
                 ds.setSerialNo(j);
-
-
                 ++j;
             }
             data.add(ds);
@@ -96,10 +83,10 @@ public class PastBookingsSceneController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        title.setCellValueFactory(new PropertyValueFactory<BookingData, String>("Title"));              // ("[Whatever]")THIS MUST REFLECT THE 'get' methods in the data class
-        showDate.setCellValueFactory(new PropertyValueFactory<BookingData, String>("Date"));
-        showTime.setCellValueFactory(new PropertyValueFactory<BookingData, String>("Showtime"));                                                                                                    // Fucking stupid, not declared anywhere
-        seat.setCellValueFactory(new PropertyValueFactory<BookingData,String>("Seat"));
+        title.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Title"));              // ("[Whatever]")THIS MUST REFLECT THE 'get' methods in the data class
+        showDate.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Date"));
+        showTime.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Showtime"));                                                                                                    // Fucking stupid, not declared anywhere
+        seat.setCellValueFactory(new PropertyValueFactory<FilmData,String>("Seat"));
         try {
             tableView.getItems().setAll(parseXml());
         } catch (IOException e) {

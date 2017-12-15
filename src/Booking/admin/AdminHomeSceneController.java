@@ -1,43 +1,39 @@
 package Booking.admin;
 
 import java.io.IOException;
-
 import Booking.Main;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 
+/**
+ * This class controls the AdminHomeScene consisting of directional buttons for all capabilities on the Admin side
+ */
 public class AdminHomeSceneController {
-	
-	private Main main;
-	
-	@FXML private Button filmListBtn;
-	
-	@FXML private Button addFilmBtn;
-	
-	@FXML private Button logoutBtn;
-	
-	@FXML
-	public void toFilmsListScene() throws IOException{
+
+	/**
+	 * This method directs to the FilmsListScene
+	 */
+	@FXML public void toFilmsListScene() throws IOException{
 		Main.showFilmsListScene();
 	}
-	
-	@FXML
-	public void toAddFilmScene() throws IOException{
+
+	/**
+	 * This method directs to the AddFilmScene
+	 */
+	@FXML public void toAddFilmScene() throws IOException{
 		Main.showAddFilmScene();
 	}
-	
-	@FXML
-	public void toHomeScene() throws IOException{
-		Main.showMainItems();
-	}
 
-	@FXML
-	public void toCurrentUsersScene() throws IOException{
+	/**
+	 * This method directs to the CurrentUsersScene
+	 */
+	@FXML public void toCurrentUsersScene() throws IOException{
 		Main.showCurrentUsersScene();
 	}
 
-	@FXML
-	public void toCurrentAdminsScene() throws IOException{
+	/**
+	 * This method directs to the CurrentAdminsScene
+	 */
+	@FXML public void toCurrentAdminsScene() throws IOException{
 		Main.showCurrentAdminsScene();
 	}
 	

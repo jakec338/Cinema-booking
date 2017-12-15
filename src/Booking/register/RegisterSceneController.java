@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import Booking.register.AlertHelper;
 import javafx.scene.control.*;
 import javafx.stage.Window;
 import Booking.Main;
@@ -17,7 +16,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -28,46 +26,30 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+/**
+ * Controller for the Registration Scene
+ */
 public class RegisterSceneController {
 
-    Main main;
-    String username;
-    String firstName;
-    String surname;
-    String email;
-    String password;
-    String line;
-    List<String> userDetails = new ArrayList<String>();
+    private String username;
+    private String firstName;
+    private String surname;
+    private String email;
+    private String password;
+    private String line;
+    private List<String> userDetails = new ArrayList<String>();
 
-    @FXML
-    private Label usernameLabel;
-    @FXML
-    private TextField usernameTextField;
-    @FXML
-    private Label firstNameLabel;
-    @FXML
-    private TextField firstNameTextField;
-    @FXML
-    private Label surnameLabel;
-    @FXML
-    private TextField surnameTextField;
-    @FXML
-    private Label emailLabel;
-    @FXML
-    private TextField emailTextField;
-    @FXML
-    private Label passwordLabel;
-    @FXML
-    private PasswordField passwordField;
-    @FXML
-    private Label confirmPasswordLabel;
-    @FXML
-    private PasswordField confirmPasswordField;
-    @FXML
-    private Button submitDetailsBtn;
-    @FXML
-    private CheckBox staffConfirm;
+    @FXML private TextField usernameTextField;
+    @FXML private TextField firstNameTextField;
+    @FXML private TextField surnameTextField;
+    @FXML private TextField emailTextField;
+    @FXML private PasswordField passwordField;
+    @FXML private PasswordField confirmPasswordField;
+    @FXML private Button submitDetailsBtn;
 
+    /**
+     * This Method writes User Details (Username, First Name, Surname, Email and Password) to the User XML database
+     */
     private void writeToUserXML(String usernameInput, String firstNameInput, String surnameInput, String emailInput, String passwordInput) throws ParserConfigurationException, TransformerException, SAXException, IOException{
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -112,8 +94,10 @@ public class RegisterSceneController {
         tran.transform(source, stream);
     }
 
-    @FXML
-    public void handleSubmit() throws IOException, ParserConfigurationException, TransformerException, SAXException{
+    /**
+     * Handles submission and calls writeToXml method to write to the User XML database.
+     */
+    @FXML public void handleSubmit() throws IOException, ParserConfigurationException, TransformerException, SAXException{
 
         username = usernameTextField.getText();
         firstName = firstNameTextField.getText();
@@ -195,6 +179,9 @@ public class RegisterSceneController {
         Main.showMainItems();
     }
 
+    /**
+     * Validates email entry
+     */
     private boolean validateEmail() {
         Pattern p = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+");
         Matcher m = p.matcher(emailTextField.getText());

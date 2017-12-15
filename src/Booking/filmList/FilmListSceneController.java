@@ -1,17 +1,9 @@
 package Booking.filmList;
 
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.Scanner;
-
-import javax.activation.DataSource;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -20,35 +12,35 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
 import Booking.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+/**
+ * Controller for FilmListScene
+ */
 public class FilmListSceneController implements Initializable {
 
-	Main main;
 	@FXML private TableView<FilmData> tableView;
 	@FXML private TableColumn<FilmData, String> title;
 	@FXML private TableColumn<FilmData, String> director;
 	@FXML private TableColumn<FilmData, String> description;
 
-
-	@FXML
-	public ObservableList<FilmData> parseXml() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
+	/**
+	 * This method reads the XML Film database to obtain the necessary data for the film table view.
+	 */
+	@FXML private ObservableList<FilmData> parseXml() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
 		DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = db.newDocumentBuilder();
 		Document doc = dBuilder.parse("src/Booking/films.xml");
@@ -128,8 +120,9 @@ public class FilmListSceneController implements Initializable {
 		return data;
 	}
 
-
-
+	/**
+	 * This method initialises the data gathered from the parseXml() method above.
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		title.setCellValueFactory(new PropertyValueFactory<FilmData, String>("Title"));              // ("[Whatever]")THIS MUST REFLECT THE 'get' methods in the data class
@@ -152,8 +145,10 @@ public class FilmListSceneController implements Initializable {
 		}
 	}
 
+	/**
+	 * Navigates to SingleFilmSene
+	 */
 	@FXML public void toSingleFilmScene() throws IOException, XPathExpressionException, ParserConfigurationException, SAXException{
-		// if cell is not empty  TO ADD
 		Main.showSingleFilmScene(tableView);
 	}
 }

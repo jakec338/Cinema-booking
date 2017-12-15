@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicReference;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -22,8 +21,6 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-
-import Booking.pastBookings.BookingData;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -32,7 +29,6 @@ import javafx.scene.text.TextFlow;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
 import Booking.Main;
 import Booking.filmList.FilmData;
 import javafx.beans.value.ChangeListener;
@@ -44,35 +40,26 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * Controller for the Single Film booking scene
+ */
 public class BookSingleFilmSceneController {
 
     private FilmData selectedFilm;
 
     @FXML Label titleLabel;
     @FXML Label directorLabel;
-    @FXML
-    TextFlow descriptionTextFlow;
-    @FXML
-    ImageView filmImgView;
-    @FXML Button deleteBtn;
-
-
+    @FXML TextFlow descriptionTextFlow;
     @FXML FlowPane flowPane;
     @FXML VBox seatsVbox;
     @FXML VBox vBox;
     @FXML AnchorPane seatsAnchorPane;
     @FXML AnchorPane imgAnchor;
-    @FXML ImageView iV;
-
     @FXML ComboBox<String> dateComboBox;
-    @FXML Button addShowingBtn;
-
-
 
     private List<Button> buttons;
     private List<Button> seatButtons;
@@ -80,9 +67,11 @@ public class BookSingleFilmSceneController {
     private List<String> timeList;
     private List<String> seatList;
     private Label label;
+    private String defaultDate = new String("");
 
-    String defaultDate = new String("");
-
+    /**
+     * This method initiates the data from the selected film as selected from the previous screen (BookAllFilmsScene).
+     */
     public void initData(FilmData filmData) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
         selectedFilm = filmData;
         titleLabel.setText(selectedFilm.getTitle());
@@ -143,6 +132,9 @@ public class BookSingleFilmSceneController {
 
     }
 
+    /**
+     * This method navigates the XML database requiring only an xPath string for further use.
+     */
     public NodeList getNodes(String xpathString) throws ParserConfigurationException, XPathExpressionException, SAXException, IOException {
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
@@ -164,11 +156,13 @@ public class BookSingleFilmSceneController {
         return nodes2;
     }
 
+    /**
+     * This method provides the dates for the drop down dates box in the booking scene.
+     */
     public void datePicker() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
         ObservableList<String> options = FXCollections.observableArrayList();
         NodeList dateNodes = getNodes("//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date");
         int numDates = dateNodes.getLength();
-        System.out.println(numDates + "number of dates");
         if (numDates != 0) {
             for (int i = 0; i < numDates; i++) {
                 String date = dateNodes.item(i).getAttributes().item(0).getTextContent();
@@ -180,6 +174,9 @@ public class BookSingleFilmSceneController {
         dateComboBox.getItems().addAll(options);
     }
 
+    /**
+     * This method controls the creation and action of the buttons on the booking scene.
+     */
     public void timeBtns(String selectedDate) throws IOException {
         for (int i = 0; i < buttons.size(); i++) {
             final Button timeBtn = buttons.get(i);
@@ -187,7 +184,6 @@ public class BookSingleFilmSceneController {
             timeBtn.setOnAction(new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent event) {
                     try {
-
                         NodeList showTimeNodes = getNodes("//Title[text()='" + selectedFilm.getTitle()
                                 + "']/parent::Film/Dates/Date[@id='" + selectedDate + "']/ShowTimes/ShowTime");
                         String time = showTimeNodes.item(a).getAttributes().item(0).getTextContent();
@@ -206,12 +202,8 @@ public class BookSingleFilmSceneController {
                         timeList = new ArrayList<>();
                         seatList = new ArrayList<>();
                         int x = 0;
-                        for (int i = 0; i < columns; ++i) {// Iterate through
-                            // columns
-                            for (int j = 0; j < rows; ++j) {// Iterate through
-                                // rows
-                                // Color choice = chooseColor(rectColors);
-                                // Method that chooses a color
+                        for (int i = 0; i < columns; ++i) {
+                            for (int j = 0; j < rows; ++j) {
 
                                 rect = new Rectangle(horizontal * j, vertical * i, horizontal, vertical);
                                 seatLabel = new Label();
@@ -219,12 +211,8 @@ public class BookSingleFilmSceneController {
                                 seatLabel.setLayoutX(horizontal * (j));
                                 seatLabel.setLayoutY(vertical * (i));
 
-                                // Create a new
-                                // rectangle(PosY,PosX,width,height)
                                 rect.setFill(Color.AZURE);
                                 rect.setStroke(Color.BLUE);
-                                // Give rectangles an outline so I can see
-                                // rectangles
 
                                 String seat = null;
                                 switch (i) {
@@ -301,6 +289,9 @@ public class BookSingleFilmSceneController {
         }
     }
 
+    /**
+     * This method books the current User into a film in the seat clicked, the Confirmation pop up is called.
+     */
     public void addUserToShowing() throws IOException {
         int x = seatButtons.size();
 
@@ -370,6 +361,11 @@ public class BookSingleFilmSceneController {
         }
     }
 
+    /**
+     * This method calls a confirmation pop up upon clicking to book a seat.
+     * When Ok is clicked, this pop up disappears and the booking is completed.
+     * If cancel is clicked the pop up disappears but the booking is not completed.
+     */
     private void showConfirmation(String date, String time, String seat) throws IOException {
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicReference;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -21,7 +20,6 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -37,7 +35,6 @@ import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
 import Booking.Main;
 import Booking.filmList.FilmData;
 import javafx.beans.value.ChangeListener;
@@ -53,38 +50,34 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * Controller for the SingleFilmScene
+ */
 public class SingleFilmSceneController {
-
-    Main main;
-    private FilmData selectedFilm;
 
     @FXML Label titleLabel;
     @FXML Label directorLabel;
     @FXML TextFlow descriptionTextFlow;
-    @FXML ImageView filmImgView;
     @FXML Button deleteBtn;
-
-
     @FXML FlowPane flowPane;
     @FXML VBox seatsVbox;
     @FXML VBox vBox;
     @FXML AnchorPane seatsAnchorPane;
     @FXML AnchorPane imgAnchor;
-    @FXML ImageView iV;
-
     @FXML ComboBox<String> dateComboBox;
     @FXML Button addShowingBtn;
 
-
-
+    private FilmData selectedFilm;
     private List<Button> buttons;
     private List<Button> seatButtons;
     private List<String> dateList;
     private List<String> timeList;
     private List<String> seatList;
 
-    public void initData(FilmData filmData)
-            throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
+    /**
+     * This method initiates the data from the selected film as selected from the previous screen (BookAllFilmsScene).
+     */
+    public void initData(FilmData filmData) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
         System.out.println("ImageURL=");
         selectedFilm = filmData;
         titleLabel.setText(selectedFilm.getTitle());
@@ -144,8 +137,10 @@ public class SingleFilmSceneController {
 
     }
 
-    public NodeList getNodes(String xpathString)
-            throws ParserConfigurationException, XPathExpressionException, SAXException, IOException {
+    /**
+     * This method navigates the XML database requiring only an xPath string for further use.
+     */
+    public NodeList getNodes(String xpathString) throws ParserConfigurationException, XPathExpressionException, SAXException, IOException {
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
         Document doc = dBuilder.parse("src/Booking/films.xml");
@@ -166,6 +161,9 @@ public class SingleFilmSceneController {
         return nodes2;
     }
 
+    /**
+     * This method provides the dates for the drop down dates box in the booking scene.
+     */
     public void datePicker() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
         ObservableList<String> options = FXCollections.observableArrayList();
         NodeList dateNodes = getNodes("//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date");
@@ -182,12 +180,13 @@ public class SingleFilmSceneController {
         dateComboBox.getItems().addAll(options);
     }
 
-    @FXML
-    public void addShowing() throws IOException {
-        main.showAddShowingScene(selectedFilm.getTitle(), selectedFilm);
+    @FXML public void addShowing() throws IOException {
+        Main.showAddShowingScene(selectedFilm.getTitle(), selectedFilm);
     }
 
-
+    /**
+     * This method controls the creation and action of the buttons on the booking scene.
+     */
     public void timeBtns(String selectedDate) throws IOException {
         for (int i = 0; i < buttons.size(); i++) {
             final Button timeBtn = buttons.get(i);
@@ -309,6 +308,9 @@ public class SingleFilmSceneController {
         }
     }
 
+    /**
+     * This method books the current User into a film in the seat clicked, the Confirmation pop up is called.
+     */
     public void addUserToShowing(){
         int x = seatButtons.size();
 
@@ -372,8 +374,10 @@ public class SingleFilmSceneController {
 
     }
 
-    @FXML
-    public void deleteNode() throws ParserConfigurationException, FileNotFoundException, SAXException, IOException,
+    /**
+     * This method deletes the currently selected film from the database.
+     */
+    @FXML public void deleteNode() throws ParserConfigurationException, FileNotFoundException, SAXException, IOException,
             TransformerException {
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -401,7 +405,7 @@ public class SingleFilmSceneController {
         StreamResult stream = new StreamResult(file);
         tran.transform(source, stream);
 
-        main.showFilmsListScene();
+        Main.showFilmsListScene();
 
     }
 

@@ -8,7 +8,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -25,34 +24,25 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Controller for the SingleUserScene and the UpdateProfile Scene
+ */
 public class EditSingleUserSceneController {
 
-    @FXML
-    private TableView<UserData> tableView;
+    @FXML private TextField usernameField;
+    @FXML private TextField emailField;
+    @FXML private TextField passwordField;
+    @FXML private TextField firstNameField;
+    @FXML private TextField surnameField;
+    @FXML Label firstNameLabel;
+    @FXML Label surnameLabel;
+    @FXML Label usernameLabel;
+    @FXML Label emailLabel;
+    @FXML Label passwordLabel;
 
-    private UserData selectedUser;
-
-    @FXML
-    private TextField usernameField;
-    @FXML
-    private TextField emailField;
-    @FXML
-    private TextField passwordField;
-    @FXML
-    private TextField firstNameField;
-    @FXML
-    private TextField surnameField;
-    @FXML
-    Label firstNameLabel;
-    @FXML
-    Label surnameLabel;
-    @FXML
-    Label usernameLabel;
-    @FXML
-    Label emailLabel;
-    @FXML
-    Label passwordLabel;
-
+    /**
+     * This method initiates the data for the UpdateProfileScene
+     */
     public void Init() throws IOException, ParserConfigurationException, SAXException {
 
         File fXmlFile = new File("/Users/McLaughlin/Code/Cinema-booking/src/Booking/Users.xml");
@@ -102,6 +92,9 @@ public class EditSingleUserSceneController {
         }
     }
 
+    /**
+     * This method initiates the data for the EditSingleUserScene
+     */
     public void InitEdit() throws IOException, ParserConfigurationException, SAXException {
 
         File fXmlFile = new File("/Users/McLaughlin/Code/Cinema-booking/src/Booking/Users.xml");
@@ -150,11 +143,16 @@ public class EditSingleUserSceneController {
         }
     }
 
-    @FXML
-    public void toEditSingleUserScene() throws IOException, ParserConfigurationException, SAXException {
+    /**
+     * This navigates to the EditSingleUserScene
+     */
+    @FXML public void toEditSingleUserScene() throws IOException, ParserConfigurationException, SAXException {
         Main.showEditSingleUserScene();
     }
 
+    /**
+     * This method updates the XML database with the newly entered details
+     */
     public void handleEdit() throws IOException, SAXException, ParserConfigurationException, TransformerException {
         String filePath = "/Users/McLaughlin/Code/Cinema-booking/src/Booking/Users.xml";
         File xmlFile = new File(filePath);
@@ -186,6 +184,9 @@ public class EditSingleUserSceneController {
         Main.showUserHomeScene();
     }
 
+    /**
+     * This method updates the Username
+     */
     private void updateUsername(Document doc) throws ParserConfigurationException, SAXException, IOException {
         NodeList users = doc.getElementsByTagName("User");
         Element emp = null;
@@ -205,6 +206,9 @@ public class EditSingleUserSceneController {
         }
     }
 
+    /**
+     * This method updates the FirstName
+     */
     private void updateFirstName(Document doc) throws ParserConfigurationException, SAXException, IOException {
         NodeList users = doc.getElementsByTagName("User");
         Element emp = null;
@@ -223,6 +227,9 @@ public class EditSingleUserSceneController {
         }
     }
 
+    /**
+     * This method updates the Surname
+     */
     private void updateSurname(Document doc) throws ParserConfigurationException, SAXException, IOException {
         NodeList users = doc.getElementsByTagName("User");
         Element emp = null;
@@ -241,6 +248,9 @@ public class EditSingleUserSceneController {
         }
     }
 
+    /**
+     * This method updates the Email
+     */
     private void updateEmail(Document doc) throws ParserConfigurationException, SAXException, IOException {
         NodeList users = doc.getElementsByTagName("User");
         Element emp = null;
@@ -259,6 +269,9 @@ public class EditSingleUserSceneController {
         }
     }
 
+    /**
+     * This method updates the Password
+     */
     private void updatePassword(Document doc) throws ParserConfigurationException, SAXException, IOException {
         NodeList users = doc.getElementsByTagName("User");
         Element emp = null;

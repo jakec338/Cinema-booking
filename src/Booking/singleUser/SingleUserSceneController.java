@@ -1,8 +1,6 @@
 package Booking.singleUser;
 
 import java.io.*;
-import java.util.Scanner;
-
 import Booking.Main;
 import Booking.user.UserData;
 import javafx.fxml.FXML;
@@ -15,7 +13,6 @@ import org.w3c.dom.traversal.DocumentTraversal;
 import org.w3c.dom.traversal.NodeFilter;
 import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
@@ -25,9 +22,11 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+/**
+ * Controller for the SingleUserScene
+ */
 public class SingleUserSceneController {
 
-    Main main;
     private UserData selectedUser;
 
     @FXML Label usernameLabel;
@@ -37,6 +36,9 @@ public class SingleUserSceneController {
     @FXML Label passwordLabel;
     @FXML Button deleteBtn;
 
+    /**
+     * This method initiates the Data from the User XML database to be displayed as the User's current details.
+     */
     public void initData(UserData userData){
         selectedUser = userData;
         usernameLabel.setText(selectedUser.getUsername());
@@ -46,13 +48,10 @@ public class SingleUserSceneController {
         passwordLabel.setText(selectedUser.getPassword());
     }
 
-/*
-This method creates a new file containing all user info except the current deleted one.
-It then deletes the initial file and renames the new one
- */
-    @FXML
-    public void deleteUser() throws ParserConfigurationException, FileNotFoundException, SAXException, IOException,
-        TransformerException {
+    /**
+     * This method removes a User by Username from the Users XML database.
+     */
+    @FXML public void deleteUser() throws ParserConfigurationException, SAXException, IOException, TransformerException {
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     Document doc = factory.newDocumentBuilder().parse(new File("src/Booking/Users.xml"));
@@ -79,12 +78,14 @@ It then deletes the initial file and renames the new one
     StreamResult stream = new StreamResult(file);
     tran.transform(source, stream);
 
-    main.showCurrentUsersScene();
+    Main.showCurrentUsersScene();
 
 }
-    @FXML
-    public void deleteAdmin() throws ParserConfigurationException, FileNotFoundException, SAXException, IOException,
-            TransformerException {
+
+    /**
+     * This method removes an Admin by Username from the Admins XML database.
+     */
+    @FXML public void deleteAdmin() throws ParserConfigurationException, FileNotFoundException, SAXException, IOException, TransformerException {
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         Document doc = factory.newDocumentBuilder().parse(new File("src/Booking/Admins.xml"));
@@ -111,7 +112,7 @@ It then deletes the initial file and renames the new one
         StreamResult stream = new StreamResult(file);
         tran.transform(source, stream);
 
-        main.showCurrentAdminsScene();
+        Main.showCurrentAdminsScene();
 
     }
 }

@@ -4,15 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -22,81 +18,68 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
 import Booking.Main;
 import Booking.filmList.FilmData;
-import Booking.singleFilm.SingleFilmSceneController;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
+/**
+ * This class controls the addition of a showing of a specified film at a specified time and date and stores this in the Films XML database
+ */
 public class AddShowingSceneController {
 
-    @FXML
-    DatePicker datePicker;
-    @FXML
-    TextField timeTextField;;
-    @FXML
-    Button submitBtn;
-    @FXML
-    Button cancelBtn;
+    @FXML DatePicker datePicker;
+    @FXML TextField timeTextField;;
+    @FXML Button submitBtn;
 
-    Main main;
-    FilmData selectedFilm;
-    String selectedDate;
-    String selectedTime;
-    String selectedFilmTitle;
+    private FilmData selectedFilm;
+    private String selectedTime;
+    private String selectedFilmTitle;
 
+    /**
+     * This initiates the relevant data (the Film that has been selected)
+     */
     public void initData(String selectedFilmTitle, FilmData selectedFilm) {
         this.selectedFilmTitle = selectedFilmTitle;
         this.selectedFilm = selectedFilm;
-
     }
 
-    @FXML
-    public void addShowing() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException,
+    /**
+     * This method adds a showing of a specified film at a specified time and date and stores this in the Films XML database
+     */
+    @FXML public void addShowing() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException,
             TransformerException {
         LocalDate localDate = datePicker.getValue();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-LLLL-yyyy");
         String selectedDate = localDate.format(formatter);
         selectedTime = timeTextField.getText();
 
-        ///
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
-        // Document doc = dBuilder.parse("src/Booking/films.xml");
-        // doc.getDocumentElement().normalize();
+
         Document xmlDoc = dBuilder.parse("src/Booking/films.xml");
         xmlDoc.getDocumentElement().normalize();
         XPathFactory factory = XPathFactory.newInstance();
         XPath xpath = factory.newXPath();
-        // '//' in xpath means find an element anywhere in the object tree
-        // This xpath is saying -
-        // 1. Find an element where the title is the seleected film title
-        // 2. go up to its parent film
-        // 3. go down to into the showtime that matches the buttons showtime
-        // 4. get all the seats associated with that showtime
-        // 5.
+
+        /*
+          This xpath is saying:
+          1. Find an element where the title is the selected film title
+          2. Go up to its parent film
+          3. Go down to into the showtime that matches the buttons showtime
+          4. Get all the seats associated with that showtime
+         */
         XPathExpression expr2 = xpath.compile("//Title[text()='" + selectedFilmTitle + "']/parent::Film/Dates");
         NodeList result2 = (NodeList) expr2.evaluate(xmlDoc, XPathConstants.NODESET);
         Node filmNode = (Node) result2.item(0);
-        ///
-        // Node filmNode = getNodes("//Title[text()='" + selectedFilmTitle
-        // +"']/parent::Film/Dates").item(0);
-        // DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
-        // DocumentBuilder dBuilder = db.newDocumentBuilder();
 
-        // Should put in for loop really if you have time
         Element seatA1 = xmlDoc.createElement("Seat");
         seatA1.setAttribute("id", "A1");
         Element seatA2 = xmlDoc.createElement("Seat");
@@ -141,10 +124,6 @@ public class AddShowingSceneController {
         StreamResult stream = new StreamResult(file);
         tran.transform(source, stream);
 
-        main.showSingleFilmScene(selectedFilm);
-
+        Main.showSingleFilmScene(selectedFilm);
     }
-
-
-
 }

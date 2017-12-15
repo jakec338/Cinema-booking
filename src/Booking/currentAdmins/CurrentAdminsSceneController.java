@@ -1,16 +1,9 @@
 package Booking.currentAdmins;
 
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.Scanner;
-
 import Booking.Main;
 import Booking.user.UserData;
 import javafx.collections.FXCollections;
@@ -22,12 +15,13 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.*;
 
+/**
+ * Controller for CurrentAdminsScene.
+ */
 public class CurrentAdminsSceneController implements Initializable {
 
     @FXML private TableView<UserData> tableView;
@@ -37,7 +31,9 @@ public class CurrentAdminsSceneController implements Initializable {
     @FXML private TableColumn<UserData, String> email;
     @FXML private TableColumn<UserData, String> password;
 
-
+    /**
+     * This method reads the XML database to extract the information needed for the table view.
+     */
     public ObservableList<UserData> parseXml() throws ParserConfigurationException, SAXException, IOException{
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
@@ -111,9 +107,9 @@ public class CurrentAdminsSceneController implements Initializable {
         return data;
     }
 
-
-
-
+    /**
+     * This method initialises the data for the table view of all Current Admins.
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         username.setCellValueFactory(new PropertyValueFactory<UserData, String>("username"));
@@ -135,15 +131,18 @@ public class CurrentAdminsSceneController implements Initializable {
         }
     }
 
-
-    @FXML
-    public void toAddUserScene() throws IOException{
+    /**
+     * This method directs to the AddUserScene.
+     */
+    @FXML public void toAddUserScene() throws IOException{
         // if cell is not empty  TO ADD
         Main.showAddUserScene();
     }
 
-    @FXML
-    public void toSingleUserScene() throws IOException {
+    /**
+     * This method directs to the SingleAdminScene.
+     */
+    @FXML public void toSingleUserScene() throws IOException {
         Main.showSingleAdminScene(tableView);
     }
 }

@@ -10,39 +10,29 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+/**
+ * Controller for the UserHomeScene. Consisting of navigational buttons.
+ */
 public class UserHomeSceneController {
 
-    @FXML private TableView<UserData> tableView;
-
-    private UserData selectedUser;
-
-    @FXML private Button updateProfileBtn;
-
-    @FXML private Button bookingHistoryBtn;
-
-    @FXML private Button newBookingBtn;
-
-    @FXML private Button logoutBtn;
-
-    @FXML
-    public void toUpdateProfileScene() throws IOException, ParserConfigurationException, SAXException {
+    /**
+     * Navigates to UpdateProfileScene
+     */
+    @FXML public void toUpdateProfileScene() throws IOException, ParserConfigurationException, SAXException {
         Main.showUserHomeScene();
     }
 
-    @FXML
-    public void toBookingScene() throws IOException{
+    /**
+     * Navigates to BookingScene
+     */
+    @FXML public void toBookingScene() throws IOException{
         Main.showBookingScene();
     }
 
-    @FXML
-    public void toBookingHistoryScene() throws IOException{
+    /**
+     * Navigates to BookingHistoryScene
+     */
+    @FXML public void toBookingHistoryScene() throws IOException{
         Main.showBookingHistoryScene();
     }
-
-    @FXML
-    public void toHomeScene() throws IOException {
-        Main.showMainItems();
-    }
-
-
 }
