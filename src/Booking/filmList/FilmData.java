@@ -12,14 +12,18 @@ public class FilmData {
 	public SimpleStringProperty director = new SimpleStringProperty("");
 	public SimpleStringProperty description = new SimpleStringProperty("");
 	public SimpleStringProperty imageURL = new SimpleStringProperty("");
+	public SimpleStringProperty seat = new SimpleStringProperty("");
+    public SimpleStringProperty showTime = new SimpleStringProperty("");
+    public SimpleStringProperty showDate = new SimpleStringProperty("");
 
 
-	public FilmData(){
-		this(1,"","","","");
+
+    public FilmData(){
+		this(1,"","","","","","","");
 	}
 
 
-	public FilmData(int serial, String tit, String dir, String des, String ima){
+	public FilmData(int serial, String tit, String dir, String des, String ima, String se, String st, String sd){
 		setSerialNo(serial);
 		setDirector(dir);
 		setTitle(tit);
@@ -87,4 +91,40 @@ public class FilmData {
 	public void setImageURL(String i) {
 		this.imageURL.set(i);
 	}
+
+    /**
+     * Getter for Seat
+     */
+    public String getSeat(){return seat.get();}
+
+    /**
+     * Setter for Seat
+     */
+    public void setSeat(String se) {
+        this.seat.set(se);
+    }
+
+    /**
+     * Getter for ShowTime
+     */
+    public String getShowTime(){return showTime.get();}
+
+    /**
+     * Setter for ShowTime
+     */
+    public void setShowTime(String st) {
+        this.showTime.set(st);
+    }
+
+    /**
+     * Getter for ImageURL
+     */
+    public String getShowDate(){return showDate.get();}
+
+    /**
+     * Setter for ImageURL
+     */
+    public void setShowDate(String sd) {
+        this.showDate.set(sd);
+    }
 }

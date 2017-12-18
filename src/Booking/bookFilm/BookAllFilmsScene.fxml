@@ -9,9 +9,9 @@
             <children>
                 <TableView fx:id="tableView" layoutX="22.0" layoutY="14.0" onMouseClicked="#toSingleBookingScene" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                        <TableColumn fx:id="title" prefWidth="109.0" text="Title" />
-                        <TableColumn fx:id="director" prefWidth="126.0" text="Director" />
-                        <TableColumn fx:id="description" prefWidth="126.0" text="Description" />
+                        <TableColumn fx:id="title" prefWidth="300.0" text="Title" minWidth="300.0"/>
+                        <TableColumn fx:id="director" prefWidth="300.0" text="Director" minWidth="300.0"/>
+                        <TableColumn fx:id="description" prefWidth="300.0" text="Description" minWidth="300.0" />
                     </columns>
                 </TableView>
             </children>

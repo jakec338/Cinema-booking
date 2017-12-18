@@ -3,6 +3,7 @@ package Booking.singleFilm;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.parsers.DocumentBuilder;
@@ -62,7 +63,7 @@ public class SingleFilmSceneController {
     @FXML FlowPane flowPane;
     @FXML VBox seatsVbox;
     @FXML VBox vBox;
-    @FXML AnchorPane seatsAnchorPane;
+    @FXML AnchorPane seatsAnchorPane1;
     @FXML AnchorPane imgAnchor;
     @FXML ComboBox<String> dateComboBox;
     @FXML Button addShowingBtn;
@@ -73,6 +74,8 @@ public class SingleFilmSceneController {
     private List<String> dateList;
     private List<String> timeList;
     private List<String> seatList;
+    private Label label;
+    private String defaultDate = new String("");
 
     /**
      * This method initiates the data from the selected film as selected from the previous screen (BookAllFilmsScene).
@@ -101,6 +104,7 @@ public class SingleFilmSceneController {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldDate, String newDate) {
                 NodeList nodes2;
+                defaultDate = newDate;
                 try {
                     nodes2 = getNodes("//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
                             + newDate + "']/ShowTimes/ShowTime");
@@ -180,6 +184,9 @@ public class SingleFilmSceneController {
         dateComboBox.getItems().addAll(options);
     }
 
+    /**
+     * Navigates to the AddShowingScene.
+     */
     @FXML public void addShowing() throws IOException {
         Main.showAddShowingScene(selectedFilm.getTitle(), selectedFilm);
     }
@@ -285,13 +292,13 @@ public class SingleFilmSceneController {
                                 }
                                 seatLabel.setText(seat);
 
-
+                                System.out.println(seatsAnchorPane1.getChildren().size()+ "djhf");
                                 dateList.add(selectedDate);
                                 timeList.add(time);
                                 seatList.add(seat);
-                                seatsAnchorPane.getChildren().add(rect);
-                                seatsAnchorPane.getChildren().add(seatLabel);
-                                seatsAnchorPane.getChildren().addAll(seatButtons.get(x));
+                                seatsAnchorPane1.getChildren().add(rect);
+                                seatsAnchorPane1.getChildren().add(seatLabel);
+                                seatsAnchorPane1.getChildren().addAll(seatButtons.get(x));
                                 // Add Rectangle to board
 
                                 x++;

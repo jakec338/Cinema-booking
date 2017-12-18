@@ -37,7 +37,7 @@ public class CurrentAdminsSceneController implements Initializable {
     public ObservableList<UserData> parseXml() throws ParserConfigurationException, SAXException, IOException{
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
-        Document doc = dBuilder.parse("/Users/McLaughlin/Code/Cinema-booking/src/Booking/Admins.xml");
+        Document doc = dBuilder.parse("src/Booking/Admins.xml");
         doc.getDocumentElement().normalize();
         ObservableList<UserData> data = FXCollections.observableArrayList();
         NodeList nList = doc.getElementsByTagName("User");

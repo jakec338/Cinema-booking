@@ -10,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
+
 import javax.xml.parsers.*;
 import javax.xml.xpath.*;
 import java.io.File;
@@ -18,17 +19,21 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class PastBookingsSceneController implements Initializable{
-
-    @FXML private TableView<FilmData> tableView;
-    @FXML private TableColumn<FilmData, String> title;
-    @FXML private TableColumn<FilmData, String> showDate;
-    @FXML private TableColumn<FilmData, String> showTime;
-    @FXML private TableColumn<FilmData, String> seat;
+public class PastBookingsSceneController implements Initializable {
+    @FXML
+    private TableView<FilmData> tableView;
+    @FXML
+    private TableColumn<FilmData, String> title;
+    @FXML
+    private TableColumn<FilmData, String> showDate;
+    @FXML
+    private TableColumn<FilmData, String> showTime;
+    @FXML
+    private TableColumn<FilmData, String> seat;
 
 
     @FXML
-    public ObservableList<FilmData> parseXml() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
+    public ObservableList<FilmData> parseXml() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
         DocumentBuilderFactory db = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = db.newDocumentBuilder();
         Document doc = dBuilder.parse("src/Booking/films.xml");
@@ -37,42 +42,65 @@ public class PastBookingsSceneController implements Initializable{
         NodeList nList = doc.getElementsByTagName("Film");
 
         /// XPATH shit
+        String fileName = "src/Booking/CurrentSession.txt";
+        File currentSession = new File(fileName);
+        Scanner inputStream = new Scanner(currentSession);
+        String user = inputStream.nextLine();
         XPathFactory factory = XPathFactory.newInstance();
         XPath xpath = factory.newXPath();
-        XPathExpression expr = xpath.compile("//Root/Film/ShowTimes/ShowTime/Seats/Seat");
-        NodeList result = (NodeList)expr.evaluate(doc, XPathConstants.NODESET);
+        XPathExpression expr = xpath.compile("//Root/Film/Dates/Date/ShowTimes/ShowTime/Seats/Seat[text()='" + user
+                + "']/ancestor::Film");
+        NodeList result = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
         NodeList nodes = (NodeList) result;
+        System.out.println(nodes.getLength() + "filmkjfb" + user);
 
 
-        for (int i = 0; i < nodes.getLength(); i++) {
-            NamedNodeMap atts = nodes.item(i).getAttributes();
-            System.out.println(atts.item(0).getTextContent() + nodes.item(i).getTextContent());
-            Element eElement = (Element) nodes.item(i);
-        }
+//        for (int i = 0; i < nodes.getLength(); i++) {
+//            NamedNodeMap atts = nodes.item(i).getAttributes();
+//            ;
+//            System.out.println(atts.item(0).getTextContent() + nodes.item(i).getTextContent());
+//            Element eElement = (Element) nodes.item(i);
+
+//            System.out.println("First Name : " + eElement.getElementsByTagName("Title").item(0).getTextContent());
+
 
         //// end of XPATH shit
 
 
         int j = 1;
-        for(int i = 0; i < nList.getLength(); i++){
+        for (int i = 0; i < nodes.getLength(); i++) {
             FilmData ds = new FilmData();
-            Node nNode = nList.item(i);
-            System.out.println("\nCurrent Element : "
+            Node nNode = nodes.item(i);
+            System.out.println("\nCurrent Element :"
                     + nNode.getNodeName());
 
-            if (nNode.getNodeType() == Node.ELEMENT_NODE){
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                String fileName = "src/Booking/CurrentSession.txt";
-                File currentSession = new File(fileName);
-                Scanner inputStream = new Scanner(currentSession);
-                String user = inputStream.nextLine();
-                if(element.getElementsByTagName("Seat").item(0).getTextContent().equals(user)){
-                    ds.setTitle(element
-                            .getElementsByTagName("Title")
-                            .item(0)
-                            .getTextContent());
-                }
+//                String fileName = "src/Booking/CurrentSession.txt";
+//                File currentSession = new File(fileName);
+//                Scanner inputStream = new Scanner(currentSession);
+//                String user = inputStream.nextLine();
+                // see if
+                ds.setTitle(element
+                        .getElementsByTagName("Title")
+                        .item(0)
+                        .getTextContent());
+
+//                    ds.setShowDate(element
+//                            .getElementsByTagName("Date")
+//                            .item(0)
+//                            .getTextContent());
+//
+//                    ds.setShowTime(element
+//                            .getAttribute("id"));
+//
+//                    ds.setSeat(element
+//                            .getAttribute("id"));
+
+
                 ds.setSerialNo(j);
+
+
                 ++j;
             }
             data.add(ds);
@@ -111,4 +139,3 @@ public class PastBookingsSceneController implements Initializable{
 
 
 }
-

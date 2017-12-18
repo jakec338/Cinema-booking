@@ -49,7 +49,6 @@ import javafx.scene.shape.Rectangle;
  */
 public class BookSingleFilmSceneController {
 
-    private FilmData selectedFilm;
 
     @FXML Label titleLabel;
     @FXML Label directorLabel;
@@ -61,6 +60,7 @@ public class BookSingleFilmSceneController {
     @FXML AnchorPane imgAnchor;
     @FXML ComboBox<String> dateComboBox;
 
+    private FilmData selectedFilm;
     private List<Button> buttons;
     private List<Button> seatButtons;
     private List<String> dateList;
@@ -88,6 +88,7 @@ public class BookSingleFilmSceneController {
         iV.setFitHeight(img.getHeight()/3);
 
         imgAnchor.getChildren().add(iV);
+
         datePicker();
         dateComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
@@ -95,7 +96,6 @@ public class BookSingleFilmSceneController {
             public void changed(ObservableValue<? extends String> observable, String oldDate, String newDate) {
                 NodeList nodes2;
                 defaultDate = newDate;
-                System.out.println(defaultDate + " kjsbkjfb");
                 try {
                     nodes2 = getNodes("//Title[text()='" + selectedFilm.getTitle() + "']/parent::Film/Dates/Date[@id='"
                             + newDate + "']/ShowTimes/ShowTime");
@@ -157,7 +157,7 @@ public class BookSingleFilmSceneController {
     }
 
     /**
-     * This method provides the dates for the drop down dates box in the booking scene.
+     * This method provides the dates for the drop down dates box in the booking scene
      */
     public void datePicker() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
         ObservableList<String> options = FXCollections.observableArrayList();
@@ -175,7 +175,7 @@ public class BookSingleFilmSceneController {
     }
 
     /**
-     * This method controls the creation and action of the buttons on the booking scene.
+     * This method controls the creation and action of the buttons on
      */
     public void timeBtns(String selectedDate) throws IOException {
         for (int i = 0; i < buttons.size(); i++) {
@@ -291,6 +291,7 @@ public class BookSingleFilmSceneController {
 
     /**
      * This method books the current User into a film in the seat clicked, the Confirmation pop up is called.
+     *
      */
     public void addUserToShowing() throws IOException {
         int x = seatButtons.size();

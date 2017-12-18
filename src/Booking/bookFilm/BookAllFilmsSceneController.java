@@ -55,12 +55,10 @@ public class BookAllFilmsSceneController implements Initializable {
         XPathExpression expr = xpath.compile("//Root/Film/ShowTimes/ShowTime/Seats/Seat");
         NodeList result = (NodeList)expr.evaluate(doc, XPathConstants.NODESET);
         NodeList nodes = (NodeList) result;
-        System.out.println(nodes.getLength());
 
 
         for (int i = 0; i < nodes.getLength(); i++) {
             NamedNodeMap atts = nodes.item(i).getAttributes();
-            System.out.println(atts.item(0).getTextContent() + nodes.item(i).getTextContent());
             Element eElement = (Element) nodes.item(i);
         }
 

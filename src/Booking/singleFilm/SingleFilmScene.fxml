@@ -2,26 +2,29 @@
 
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
 
-<BorderPane stylesheets="/Booking/Styling.css" styleClass="background" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.singleFilm.SingleFilmSceneController">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking.singleFilm.SingleFilmSceneController">
     <center>
         <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
             <tabs>
                 <Tab text="Film Details">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="200.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <GridPane layoutX="28.0" layoutY="55.0" prefWidth="350.0">
+                                <GridPane layoutX="28.0" layoutY="31.0" prefHeight="215.0" prefWidth="296.0">
                                     <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                     </columnConstraints>
                                     <rowConstraints>
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
                                         <Label text="Title" />
@@ -29,15 +32,13 @@
                                         <Label text="Director" GridPane.rowIndex="1" />
                                         <Label fx:id="directorLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                         <Label text="Description" GridPane.rowIndex="2" />
-                                        <TextFlow fx:id="descriptionTextFlow" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <TextFlow fx:id="descriptionTextFlow" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                     </children>
                                 </GridPane>
-                                <Button fx:id="deleteBtn" layoutX="28.0" layoutY="350.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" textAlignment="JUSTIFY" />
-                                <AnchorPane fx:id="imgAnchor" layoutX="400.0" layoutY="55.0" prefHeight="202.0" prefWidth="159.0" maxWidth="100">
-                                    <ImageView/>
+                                <Button fx:id="deleteBtn" layoutX="28.0" layoutY="257.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" textAlignment="JUSTIFY" />
+                                <AnchorPane fx:id="imgAnchor" layoutX="409.0" layoutY="38.0" prefHeight="202.0" prefWidth="159.0">
                                 </AnchorPane>
-                            </children>
-                        </AnchorPane>
+                            </children></AnchorPane>
                     </content>
                 </Tab>
                 <Tab text="Showing Times">
@@ -47,16 +48,18 @@
                                 <FlowPane fx:id="flowPane" layoutX="15.0" layoutY="84.0" prefHeight="200.0" prefWidth="56.0">
                                     <children>
                                         <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0" />
-                                    </children></FlowPane>
+                                    </children>
+                                </FlowPane>
                                 <FlowPane layoutX="273.0" layoutY="14.0" prefHeight="0.0" prefWidth="92.0">
                                     <children>
                                         <VBox fx:id="seatsVbox" prefHeight="14.0" prefWidth="92.0" />
                                     </children>
                                 </FlowPane>
-                                <StackPane fx:id="seatsStackPane" layoutX="427.0" layoutY="76.0" prefHeight="150.0" prefWidth="161.0" />
+                                <AnchorPane fx:id="seatsAnchorPane1" layoutX="236.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
                                 <ComboBox fx:id="dateComboBox" layoutX="14.0" layoutY="38.0" prefWidth="150.0" promptText="Select Date" />
                                 <Button fx:id="addShowingBtn" layoutX="15.0" layoutY="8.0" mnemonicParsing="false" onAction="#addShowing" text="Add Showing" />
-                            </children></AnchorPane>
+                            </children>
+                        </AnchorPane>
                     </content>
                 </Tab>
             </tabs>
